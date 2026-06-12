@@ -16,7 +16,7 @@
     // Add your custom code here.
   };
 
-  var TITLE = "Social Democracy: Petrograd 1917" + '_' + "Autumn Chen";
+  var TITLE = "University: FAIS 2017" + '_' + "Ritual";
 
   window.showStats = function() {
     if (window.dendryUI.dendryEngine.state.sceneId.startsWith('library')) {

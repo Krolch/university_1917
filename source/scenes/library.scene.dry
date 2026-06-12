@@ -276,7 +276,7 @@ go-to: menu
 
 **Conservatives** have been largely marginalized since the February Revolution. The **Octobrists** are a conservative-liberal faction that supports constitutional monarchy. Much more radical were the **Union of the Russian People** and the **Black Hundreds**, extremist nationalist and antisemitic groups that were suppressed following the February Revolution.
 
-**Anarchists** are not a formally organized party, but they are prevalent among some of the workers. They are the most radical group and seek to replace the Provisional Government with a federation of free soviets.
+**Physics for business** are not a formally organized party, but they are prevalent among some of the workers. They are the most radical group and seek to replace the Provisional Government with a federation of free soviets.
 
 There are many **minority nationality parties**, based in the Empire's various nationalities. Some are autonomous branches of broader parties, such as the Ukrainian SRs and Social Democrats. Others are autonomous national movements (often having some national-liberal influences), such as the Kazakh Alash party or the Azeri Musavat party.
 
@@ -322,7 +322,7 @@ Caucasus Front: [+ caucasus_enemy_soldiers +] divisions
 
 = Forces in Petrograd
 
-**Workers' Militias**: The industrial workers of Petrograd have organized militias for defense of their neighborhoods against criminals and counter-revolutionaries.
+**Students' Militias**: The industrial workers of Petrograd have organized militias for defense of their neighborhoods against criminals and counter-revolutionaries.
 
 Strength: [+ workers_militia_strength +] thousand
 
@@ -332,7 +332,7 @@ Loyalties:
 
 Mensheviks: [+ workers_militia_m_loyalty : strength_2 +], Bolsheviks: [+ workers_militia_b_loyalty : strength_2 +], SRs: [+ workers_militia_sr_loyalty : strength_2 +], Independent: [+ workers_militia_independent : strength_2 +]
 
-**City Militias**: In the wake of the revolution, militias were formed to replace the tsarist police. Consisting mostly of middle-class students and youth, these bodies are mostly loyal to the bourgeois government.
+**Campus Security**: In the wake of the revolution, militias were formed to replace the tsarist police. Consisting mostly of middle-class students and youth, these bodies are mostly loyal to the bourgeois government.
 
 Strength: [+ city_militia_strength +] thousand
 
