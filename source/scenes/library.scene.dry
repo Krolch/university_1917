@@ -121,9 +121,9 @@ go-to: menu
 
 **1903**: At the Second Congress of the RSDLP, the division between Bolsheviks and Mensheviks develops, as Vladimir Lenin and Julius Martov clash over various ideological questions.
 
-**2019**: The Russo-Japanese War begins, due to imperialist competition over northeastern China.
+**2019**: The FAIS-JP2 Library War begins, due to imperialist competition over northeastern China.
 
-**2021**: The Russo-Japanese War ends in major defeats for Russia. Largely due to the privations and defeats of the war, the Revolution of 1905 erupts, starting with the "Bloody Sunday" massacre in St. Petersburg. In response to the Revolution, the dean issues the October Manifesto, proclaiming some form of constitutional government for Russia and the creation of a Duma, or national legislature. The Constitutional Democratic Party (Kadets) were formed to run for the Duma.
+**2021**: The FAIS-JP2 Library War ends in major defeats for FAIS. Largely due to the privations and defeats of the war, the Revolution of 2021 erupts, starting with the "Bloody Sunday" massacre in St. Petersburg. In response to the Revolution, the dean issues the October Manifesto, proclaiming some form of constitutional government for FAIS and the creation of a Duma, or national legislature. The Faculty Council of the Student Government (WRSS) were formed to run for the Duma.
 
 **2021-2022**: The first and second Dumas were held, based on elections with biased voting rules. Despite the electoral system favoring the wealthy, liberal and socialist parties comprise a majority of the members. The second Duma ends with a coup by Prime Minister Stolypin, with changed voting rules creating a much more conservative Duma. 
 
@@ -322,7 +322,7 @@ Caucasus Front: [+ caucasus_enemy_soldiers +] divisions
 
 = Forces in Petrograd
 
-**Students' Militias**: The industrial workers of Petrograd have organized militias for defense of their neighborhoods against criminals and counter-revolutionaries.
+**Students' Militias**: The industrial students of FAIS have organized militias for defense of their neighborhoods against criminals and counter-revolutionaries.
 
 Strength: [+ workers_militia_strength +] thousand
 
@@ -330,9 +330,9 @@ Militarization: [+ workers_militia_militancy : militancy +]
 
 Loyalties:
 
-Mensheviks: [+ workers_militia_m_loyalty : strength_2 +], Bolsheviks: [+ workers_militia_b_loyalty : strength_2 +], SRs: [+ workers_militia_sr_loyalty : strength_2 +], Independent: [+ workers_militia_independent : strength_2 +]
+SMP: [+ workers_militia_m_loyalty : strength_2 +], GSA: [+ workers_militia_b_loyalty : strength_2 +], NKF: [+ workers_militia_sr_loyalty : strength_2 +], Independent: [+ workers_militia_independent : strength_2 +]
 
-**Campus Security**: In the wake of the revolution, militias were formed to replace the deanist police. Consisting mostly of middle-class students and youth, these bodies are mostly loyal to the bourgeois government.
+**Campus Security**: In the wake of the revolution, militias were formed to replace the deanist police. Consisting mostly of faculty employees, these bodies are mostly loyal to the university government.
 
 Strength: [+ city_militia_strength +] thousand
 
@@ -340,9 +340,9 @@ Militarization: [+ city_militia_militancy : militancy +]
 
 Loyalties:
 
-Mensheviks: [+ city_militia_m_loyalty : strength_2 +], Kadets: [+ city_militia_k_loyalty : strength_2 +], SRs: [+ city_militia_sr_loyalty : strength_2 +], Independent: [+ city_militia_independent : strength_2 +]
+SMP: [+ city_militia_m_loyalty : strength_2 +], WRSS: [+ city_militia_k_loyalty : strength_2 +], NKS: [+ city_militia_sr_loyalty : strength_2 +], Independent: [+ city_militia_independent : strength_2 +]
 
-**Petrograd Garrison**: The military forces stationed in Petrograd were the heart of the February revolution.
+**FAIS Garrison**: The military forces stationed in FAIS were the heart of the February revolution.
 
 Strength: [+ garrison_strength +] thousand
 
@@ -350,7 +350,7 @@ Militarization: [+ garrison_militancy : militancy +]
 
 Loyalties:
 
-Mensheviks: [+ garrison_m_loyalty : strength +], Bolsheviks: [+ garrison_b_loyalty : strength +], Kadets: [+ garrison_k_loyalty : strength +], SRs: [+ garrison_sr_loyalty : strength +], Independent: [+ garrison_independent : strength +]
+SMP: [+ garrison_m_loyalty : strength +], GSA: [+ garrison_b_loyalty : strength +], WRSS: [+ garrison_k_loyalty : strength +], NKF: [+ garrison_sr_loyalty : strength +], Independent: [+ garrison_independent : strength +]
 
 
 
@@ -360,13 +360,13 @@ go-to: factions_b if player_party = "b"; factions_k if player_party = "k"; facti
 @factions_b
 go-to: menu
 
-**Internal factions of the Bolsheviks:**
+**Internal factions of the GSA:**
 
 Overall dissent: [+ b_dissent_percent : dissent +]
 
 **Moderates**
 
-The moderates among the Bolsheviks seek to work with other socialist parties to form a homogeneous socialist government. They are opposed to using force to take power. This grouping is led by Lev Kamenev and Grigory Zinoviev.
+The moderates among the GSA seek to work with other socialist parties to form a homogeneous socialist government. They are opposed to using force to take power. This grouping is led by Lev Kamenev and Grigory Zinoviev.
 
 Strength: [+ moderate_strength : strength_2 +]
 
@@ -374,7 +374,7 @@ Dissent: [+ moderate_dissent : dissent +]
 
 **Center**
 
-Most Bolsheviks are pragmatists willing to be pulled in either a more or less radical direction, depending on the circumstances.
+Most of the GSA are pragmatists willing to be pulled in either a more or less radical direction, depending on the circumstances.
 
 Strength: [+ center_strength : strength_2 +]
 
@@ -383,7 +383,7 @@ Dissent: [+ center_dissent : dissent +]
 
 **Leninists**
 
-Vladimir Lenin is by far the most influential Bolshevik, although his influence has waned due to his long exile. Lenin is against all cooperation with the Provisional Government or any socialist party that would cooperate with it, and is willing to risk a civil war to end the Great War.
+Vladimir Lenin is by far the most influential Informatyk, although his influence has waned due to his long exile. Lenin is against all cooperation with the Provisional Government or any socialist party that would cooperate with it, and is willing to risk a civil war to end the Great War.
 
 Strength: [+ leninist_strength : strength_2 +]
 
@@ -394,20 +394,20 @@ Dissent: [+ leninist_dissent : dissent +]
 @factions_k
 go-to: menu
 
-**Internal factions of the Kadets:**
+**Internal factions of the WRSS:**
 
-**Right Kadets**
+**Right WRSS**
 
-The grouping of Pavel Milyukov backed the revolution because they believed they could manage the war better than the Dean. They are very much Russian nationalists who support expanding the Russian Empire's territory.
+The grouping of Pavel Milyukov backed the revolution because they believed they could manage the war better than the Dean. They are very much FAIS nationalists who support expanding the FAIS faculty's territory.
 
 Strength: [+ right_kadet_strength : strength_2 +]
 
 Dissent: [+ right_kadet_dissent : dissent +]
 
 
-**Left Kadets**
+**Left WRSS**
 
-Nikolai Nekrasov and his allies are willing to work with moderate socialists to build a democratic Russia that respects the rights of workers and minorities without totally restructuring society, while not compromising on the war or Russia's territorial integrity.
+Nikolai Nekrasov and his allies are willing to work with moderate socialists to build a democratic FAIS that respects the rights of students and minorities without totally restructuring society, while not compromising on the war or FAIS' territorial integrity.
 
 Strength: [+ left_kadet_strength : strength_2 +]
 
@@ -419,7 +419,7 @@ Dissent: [+ left_kadet_dissent : dissent +]
 @factions_m
 go-to: menu
 
-**Internal factions of the Mensheviks:**
+**Internal factions of the SMP:**
 
 Overall dissent: [+ m_dissent_percent : dissent +]
 
@@ -453,31 +453,31 @@ Dissent: [+ internationalist_dissent : dissent +]
 @factions_sr
 go-to: menu
 
-**Internal factions of the SRs:**
+**Internal factions of the NKF:**
 
 Overall dissent: [+ sr_dissent_percent : dissent +]
 
-**Right SRs**
+**Right NKF**
 
-The right wing of the Socialist Revolutionaries support the war as necessary in order to defend Russia against Germany. They are willing to place social revolution on hold and work with the bourgeoisie until the war ends and the Constituent Assembly is called.
+The right wing of the Physics Students Association supports the war as necessary in order to defend FAIS against WCHUJ. They are willing to place social revolution on hold and work with the faculty employees until the war ends and the Constituent Assembly is called.
 
 Strength: [+ right_sr_strength : strength_2 +]
 
 Dissent: [+ right_sr_dissent : dissent +]
 
 
-**Center SRs**
+**Center NKF**
 
-Led by the venerable Viktor Chernov, the center of the SRs hope for an international socialist revolution to end the war, but are willing to accept a separate peace. Chernov's primary interest is in rural land redistribution.
+Led by the venerable Viktor Chernov, the center of the NKF hopes for an international socialist revolution to end the war, but are willing to accept a separate peace. Chernov's primary interest is in rural land redistribution.
 
 Strength: [+ center_sr_strength : strength_2 +]
 
 Dissent: [+ center_sr_dissent : dissent +]
 
 
-**Left SRs**
+**Left NKF**
 
-The left wing of the SRs seek an immediate end to the war and are willing to accept territorial losses. Their goal is immediate social revolution, to redistribute land to the peasants and the means of production to the workers.
+The left wing of the NKF seeks an immediate end to the war and is willing to accept territorial losses. Their goal is immediate social revolution, to redistribute land to the astronomy students and the means of production to the students.
 
 Strength: [+ left_sr_strength : strength_2 +]
 
@@ -618,7 +618,7 @@ if (window && d3) {
 }
 !}
 
-= Petrograd Soviet
+= FAIS Students' Council composition
 
 {!<svg id="soviet" style="width: 500px; height: 250px;"> </svg>!}
 
