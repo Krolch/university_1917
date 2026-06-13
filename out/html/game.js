@@ -16,7 +16,7 @@
     // Add your custom code here.
   };
 
-  var TITLE = "University: FAIS 2017" + '_' + "Ritual";
+  var TITLE = "University: FAIS 2027" + '_' + "Ritual";
 
   window.showStats = function() {
     if (window.dendryUI.dendryEngine.state.sceneId.startsWith('library')) {

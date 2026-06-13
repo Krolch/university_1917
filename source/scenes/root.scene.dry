@@ -9,7 +9,7 @@ new-page: true
 go-to: start_menu_2
 
 
-= University: FAIS 2017 - An Alternate History
+= University: FAIS 2027 - An Alternate History
 
 @start_menu_2
 
@@ -24,7 +24,7 @@ on-arrival: {!
 Q.started = 1;
 // time elapsed (in months)
 Q.time = 1;
-Q.year = 2017;
+Q.year = 2027;
 Q.month = 3;
 Q.week = 1;
 // how many actions have been taken this week?
