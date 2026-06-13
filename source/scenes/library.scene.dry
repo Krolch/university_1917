@@ -25,7 +25,7 @@ go-to: menu
 
 = The Provisional Government
 
-With the abdication of the Tsar, power in Russia has been transferred to the Provisional Government, comprised primarily of liberal members of the Duma and led by Prince Georgy Lvov, a reformist noble. The government has already been recognized by the powers of the Entente.
+With the abdication of the Dean, power in Russia has been transferred to the Provisional Government, comprised primarily of liberal members of the Duma and led by Prince Georgy Lvov, a reformist noble. The government has already been recognized by the powers of the Entente.
 
 The leaders of the Provisional Government see its role as continuing to persecute the war and maintaining stability until an elected Constituent Assembly is ready to decide Russia's final form of government.
 
@@ -243,7 +243,7 @@ go-to: menu
 @parties
 go-to: menu
 
-**Major Parties:**
+**Major Associations:**
 
 **Mathematical and Natural Sciences Students Association (SMP)** - The "minority" faction of the RSDLP, the Mensheviks emerged from party splits, reunifications, and further splits in the 1900s. It is in fact the larger party, seeking to organize a mass party among the working class. A social-democratic party based on the teachings of Karl Marx, the party argues that the current revolution is the "bourgeois" revolution. The task of socialists is to achieve a democratic republic and gain political and economic rights for workers. The Mensheviks are deeply divided on their attitudes towards the war and participation in a bourgeois government.
 
@@ -270,7 +270,7 @@ go-to: menu
 [? if player_party = "Bolshevik": Current relations: [+ bolshevik_kadet_relation : relationships +] ?]
 [? if player_party = "SR": Current relations: [+ sr_kadet_relation : relationships +] ?]
 
-**Other parties:**
+**Other associations:**
 
 **Popular Socialists** and **Trudoviks** ware rooted in the same *narodist* ideology as the SRs, but argued for a non-revolutionary path to socialism. Alexander Kerensky is the most well-known Trudovik.
 
