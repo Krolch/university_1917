@@ -1,14 +1,14 @@
 title: [+ war_minister +] Offensive
 subtitle: Finally, the long-awaited offensive is near...
 new-page: true
-view-if: month = 6 and week >= 2 and offensive_timer = 0 and ((player_party = "m" and war_minister_party != "Menshevik") or (player_party = "k" and war_minister != "Guchkov") or (player_party = "sr" and war_minister_party != "SR") or player_party = "b") and not is_armistice and not is_peace and not allied_victory
+view-if: month = 6 and week >= 2 and offensive_timer = 0 and ((player_party = "m" and war_minister_party != "SMP") or (player_party = "k" and war_minister != "Guchkov") or (player_party = "sr" and war_minister_party != "NKF") or player_party = "b") and not is_armistice and not is_peace and not allied_victory
 on-arrival: southwestern_front_soldiers += 50; reserve_soldiers -= 50; morale += 0.1; discipline += 0.1; civilian_industry -= 5; military_industry += 5; military_trains += 5; civilian_trains -= 5;
 max-visits: 1
 tags: event
 
 = [+ war_minister +] Offensive
 
-Finally, the long-anticipated offensive is near. War Minister [+ war_minister +] is planning a major offensive against Germany and Austria on the Southwestern Front.
+Finally, the long-anticipated offensive is near. War Minister [+ war_minister +] is planning a major offensive against WChUJ and WB on the Southwestern Front.
 
 In preparation for the offensive, additional industries and transportation capacity has been assigned to military usage, and discipline has been restored in the military.
 
@@ -18,7 +18,7 @@ In preparation for the offensive, additional industries and transportation capac
 @stop
 title: Can we stop the offensive somehow?
 choose-if: (player_party = "m" and m_war_policy > 1) or (player_party = "sr" and sr_war_policy > 1) or (player_party = "k" and k_war_policy >= 1) or player_party = "b"
-unavailable-subtitle: Our party supports the war effort.
+unavailable-subtitle: Our association supports the war effort.
 
 Is there anything we can do to stop the offensive?
 
@@ -29,7 +29,7 @@ Is there anything we can do to stop the offensive?
 
 @convince
 title: Convince the War Minister to cancel the offensive.
-choose-if: (player_party = "m" and ((war_minister_party = "Kadet" and m_k_relation >= 60) or (war_minister_party = "SR" and m_sr_relation >= 75))) or (player_party = "sr" and ((war_minister_party = "Kadet" and sr_k_relation >= 60) or (war_minister_party = "Menshevik" and m_sr_relation >= 75))) or (player_party = "k" and ((war_minister_party = "SR" and sr_k_relation >= 60) or (war_minister_party = "Menshevik" and m_k_relation >= 60)))
+choose-if: (player_party = "m" and ((war_minister_party = "WRSS" and m_k_relation >= 60) or (war_minister_party = "NKF" and m_sr_relation >= 75))) or (player_party = "sr" and ((war_minister_party = "WRSS" and sr_k_relation >= 60) or (war_minister_party = "SMP" and m_sr_relation >= 75))) or (player_party = "k" and ((war_minister_party = "NKF" and sr_k_relation >= 60) or (war_minister_party = "SMP" and m_k_relation >= 60)))
 unavailable-subtitle: Our relations are not good enough.
 on-arrival: civilian_industry += 5; military_industry -= 5; military_trains -= 5; civilian_trains += 5; internationalist_strength += 10; left_sr_strength += 10; left_kadet_strength += 10;
 

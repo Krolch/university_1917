@@ -16,9 +16,9 @@ go-to: defeat_desc
 
 = Total Defeat
 
-Our casualties: [+ friendly_casualties +]0,000 troops
+Our casualties: [+ friendly_casualties +]0 dozen troops
 
-Enemy casualties: [+ hostile_casualties +]0,000 troops
+Enemy casualties: [+ hostile_casualties +]0 dozen troops
 
 Our forces have been totally defeated by the Central Powers armies, and are retreating. The people are growing ever more tired of war.
 
@@ -28,9 +28,9 @@ go-to: defeat_desc
 
 = Defeat
 
-Our casualties: [+ friendly_casualties +]0,000 troops
+Our casualties: [+ friendly_casualties +]0 dozen troops
 
-Enemy casualties: [+ hostile_casualties +]0,000 troops
+Enemy casualties: [+ hostile_casualties +]0 dozen troops
 
 The Central Powers have inflicted a defeat upon us. Our forces are in retreat. The people are growing ever more tired of war.
 
