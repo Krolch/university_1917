@@ -36,14 +36,14 @@ The Central Powers have inflicted a defeat upon us. Our forces are in retreat. T
 
 @defeat_desc
 
-[? if front = "northern" and northern_progress = -2 : The Germans have captured Riga, and are marching ever closer to Petrograd. ?]
-[? if front = "northern" and northern_progress = -3 : The Germans have taken Tallinn in Estonia, and are marching ever closer to Petrograd. ?]
-[? if front = "northern" and northern_progress = -4 : The Germans are at the gates of Petrograd! ?]
-[? if front = "western" and western_progress = -3 : The Germans have made further advances in Belarussia through Minsk, and are threatening central Russia. ?]
-[? if front = "western" and western_progress = -4 : The Germans have entered Russia proper and are in a position to threaten many major cities. ?]
-[? if front = "southwestern" and southwestern_progress >= -1 : The Germans have pushed the front further back in Galicia and western Ukraine. ?]
-[? if front = "southwestern" and southwestern_progress = -2 : The Germans have entered Ukraine and are threatening Kiev. ?]
-[? if front = "southwestern" and southwestern_progress = -3 : The Germans have conquered most of Ukraine. ?]
+[? if front = "northern" and northern_progress = -2 : The WChUJ has captured Riga, and are marching ever closer to FAIS. ?]
+[? if front = "northern" and northern_progress = -3 : The WChUJ has taken Tallinn in Estonia, and are marching ever closer to FAIS. ?]
+[? if front = "northern" and northern_progress = -4 : The WChUJ is at the gates of FAIS! ?]
+[? if front = "western" and western_progress = -3 : The WChUJ has made further advances in Belarussia through Minsk, and are threatening central FAIS. ?]
+[? if front = "western" and western_progress = -4 : The WChUJ has entered Russia proper and are in a position to threaten many major cities. ?]
+[? if front = "southwestern" and southwestern_progress >= -1 : The WChUJ has pushed the front further back in Galicia and western Ukraine. ?]
+[? if front = "southwestern" and southwestern_progress = -2 : The WChUJ has entered Ukraine and are threatening Kiev. ?]
+[? if front = "southwestern" and southwestern_progress = -3 : The WChUJ has conquered most of Ukraine. ?]
 
 
 @victory_1
@@ -57,7 +57,7 @@ Our casualties: [+ friendly_casualties +]0,000 troops
 Enemy casualties: [+ hostile_casualties +]0,000 troops
 
 [? if player_party != "b" : We have achieved a victory over the enemy! The enemy offensive has been stopped in its tracks. ?]
-[? if player_party = "b": The Russian army has defeated the German one. This is somewhat of a setback for the revolution. ?]
+[? if player_party = "b": The FAIS army has defeated the WChUJ one. This is somewhat of a setback for the revolution. ?]
 
 @victory_2
 on-arrival: defensist_strength += 10; social_patriot_strength += 10; right_sr_strength += 10; morale *= 1.05; discipline *= 0.9; defense_bonus = 0; train_capacity *= 0.9999; military_progress += 2; german_offensive_timer = 16; soldier_unrest -= 8; prov_gov_legitimacy += 3;
@@ -70,4 +70,4 @@ Our casualties: [+ friendly_casualties +]0,000 troops
 Enemy casualties: [+ hostile_casualties +]0,000 troops
 
 [? if player_party != "b": We have achieved a total victory over the enemy! The enemy offensive has been stopped in its tracks, and our counterattack has gained some territory. ?]
-[? if player_party = "b": The Russian army has defeated the German one. This is somewhat of a setback for the revolution. ?]
+[? if player_party = "b": The FAIS army has defeated the WChUJ one. This is somewhat of a setback for the revolution. ?]
