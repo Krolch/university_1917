@@ -5,7 +5,7 @@ on-arrival: {!
 Q.position = "";
 if (Q.player_party == 'm') {
     if (Q.m_in_exco) {
-        Q.position = 'Soviet Executive Committee';
+        Q.position = 'Students Council Executive Committee';
         if (Q.m_in_gov) {
             Q.position += ', in government';
         }
@@ -16,7 +16,7 @@ if (Q.player_party == 'm') {
     }
 } else if (Q.player_party == 'b') {
     if (Q.b_in_exco) {
-        Q.position = 'Soviet Executive Committee';
+        Q.position = 'Students Council Executive Committee';
         if (Q.b_in_gov) {
             Q.position += ', in government';
         }
@@ -27,7 +27,7 @@ if (Q.player_party == 'm') {
     }
 } else if (Q.player_party == 'sr') {
     if (Q.sr_in_exco) {
-        Q.position = 'Soviet Executive Committee';
+        Q.position = 'Students Council Executive Committee';
         if (Q.sr_in_gov) {
             Q.position += ', in government';
         }
@@ -47,23 +47,23 @@ if (Q.player_party == 'm') {
 // TODO: create a list of governing parties
 Q.governing_parties = [];
 if (Q.k_in_gov) {
-    Q.governing_parties.push("Kadets");
+    Q.governing_parties.push("WRSS");
 }
 if (Q.sr_in_gov) {
-    Q.governing_parties.push("SRs");
+    Q.governing_parties.push("NKF");
 }
 if (Q.m_in_gov) {
-    Q.governing_parties.push("Mensheviks");
+    Q.governing_parties.push("SMP");
 }
 if (Q.b_in_gov) {
-    Q.governing_parties.push("Bolsheviks");
+    Q.governing_parties.push("GSA");
 }
 Q.governing_parties_str = Q.governing_parties.join(", ");
 
 Q.exco_parties = [];
 
 if (Q.m_in_exco) {
-    Q.exco_parties.push("Mensheviks");
+    Q.exco_parties.push("SMP");
 }
 if (Q.defensist_in_exco) {
     Q.exco_parties.push("Menshevik-Defensists");
@@ -72,7 +72,7 @@ if (Q.internationalist_in_exco) {
     Q.exco_parties.push("Menshevik-Internationalists");
 }
 if (Q.sr_in_exco) {
-    Q.exco_parties.push("SRs");
+    Q.exco_parties.push("NKF");
 }
 if (Q.left_sr_in_exco) {
     Q.exco_parties.push("Left-SRs");
@@ -81,10 +81,10 @@ if (Q.right_sr_in_exco) {
     Q.exco_parties.push("Right-SRs");
 }
 if (Q.b_in_exco) {
-    Q.exco_parties.push("Bolsheviks");
+    Q.exco_parties.push("GSA");
 }
 if (Q.k_in_exco) {
-    Q.exco_parties.push("Kadets");
+    Q.exco_parties.push("WRSS");
 }
 
 Q.exco_parties_str = Q.exco_parties.join(", ");
@@ -143,7 +143,7 @@ Others: [+ other_soviet +]%
 [? if right_sr_split: Right-SRs: [+ right_sr_soviet_votes_dec +]% ?]
 [? if left_sr_split: Left-SRs: [+ left_sr_soviet_votes_dec +]% ?]
 
-= Peace
+= Applied Computer Sciences
 
 War progress: [+ war_progress : war_score +]
 
@@ -159,7 +159,7 @@ War weariness: [+ war_weariness : war_weariness +]
 
 Computer Science Students unrest: [+ soldier_unrest : war_weariness +]
 
-= Land
+= Astronomy
 
 Land reform policy: [+ land_reform : land_reform +]
 
@@ -167,7 +167,7 @@ Land reform progress: [+ land_reform_progress : land_reform_progress +]
 
 Astronomy Students unrest: [+ rural_unrest : war_weariness +]
 
-= Bread
+= Physics
 
 # Real income (% of 1913): [+ income +]%
 Monthly inflation: [+ monthly_inflation +]% ([+ inflation +]% annually)
