@@ -10,10 +10,10 @@ Herein contains relevant information about revolutionary Russia in 1917.
 @menu
 
 - @government: The structure of the Provisional Government
-- @timeline: Timeline of recent Russian history
-- @soviet_: Details of the Petrograd Soviet
+- @timeline: Timeline of recent FAIS history
+- @soviet_: Details of the FAIS Students' Council
 - @demographics: Demographics
-- @parties: Parties
+- @parties: Associations
 - @economy: Economics
 - @paramilitaries: Defense and military affairs
 - @factions: Internal factions
@@ -62,7 +62,7 @@ Provisional government legitimacy: [+ prov_gov_legitimacy : legitimacy +]
 @soviet_
 go-to: menu
 
-= Petrograd Soviet
+= FAIS Students' Council
 
 The Petrograd Soviet of Workers' and Soldiers' Deputies is an elected council comprised of representatives of workers and soldiers throughout the city. Organized in the wake of the general strike and the breakdown of the established order, it harkens back to the Petrograd Soviet of 1905, which functioned as an alternative government in the city during the revolution of that year.
 
@@ -70,23 +70,23 @@ The leaders of the Soviet were mostly Social Democrat and SR intellectuals who o
 
 Chair: [+ soviet_chair +] ([+ soviet_chair_party +])
 
-Executive committee: [? if m_in_exco: Mensheviks, ?] [? if sr_in_exco: SRs ?] [? if b_in_exco: Bolsheviks ?]
+Executive committee: [? if m_in_exco: SMP, ?] [? if sr_in_exco: NKF ?] [? if b_in_exco: GSA ?]
 
 Overal composition:
 
-Mensheviks: [+ m_soviet +] %
+SMP: [+ m_soviet +] %
 
-Bolsheviks: [+ b_soviet +] %
+GSA: [+ b_soviet +] %
 
-SRs: [+ sr_soviet +] %
+NKF: [+ sr_soviet +] %
 
-Anarchists: [+ anarchist_soviet +] %
+Fifi: [+ anarchist_soviet +] %
 
 Others: [+ other_soviet +] %
 
-Soviet efficacy: [+ soviet_efficacy : efficacy +]
+Council efficacy: [+ soviet_efficacy : efficacy +]
 
-Soviet cooperation with Provisional Government: [+ soviet_cooperation : efficacy +]
+Council cooperation with Provisional Government: [+ soviet_cooperation : efficacy +]
 
 
 
@@ -94,7 +94,7 @@ Soviet cooperation with Provisional Government: [+ soviet_cooperation : efficacy
 @timeline
 go-to: menu
 
-= Timeline of recent Russian history
+= Timeline of recent FAIS history
 
 # What is to be done? Land and Liberty, People's Will
 # Emancipation of the serfs
@@ -145,15 +145,15 @@ go-to: menu
 
 **Demographic Groups**
 
-**Peasants**: The largest demographic in Russia, peasants are subsistence farmers who were largely serfs before the emancipation of Tsar Alexander II, and are still deeply tied to the traditional communes. They are a majority of Russia's population, but obviously have very little presence in the city.
+**Astronomy Students**: The largest demographic in Russia, peasants are subsistence farmers who were largely serfs before the emancipation of Tsar Alexander II, and are still deeply tied to the traditional communes. They are a majority of Russia's population, but obviously have very little presence in the city.
 
-**Working Class**: The urban working class - blue-collar workers in factories, workshops, mines, and the like. Most are socialist, supporting either the Bolsheviks, Mensheviks, or SRs. Around 10-20% nationally (much increased due to the war), but a much larger proportion in Petrograd.
+**Physics Students**: The urban working class - blue-collar workers in factories, workshops, mines, and the like. Most are socialist, supporting either the Bolsheviks, Mensheviks, or SRs. Around 10-20% nationally (much increased due to the war), but a much larger proportion in Petrograd.
 
-**Middle Class**: Urban traders and merchants, bureaucrats, professionals, and the intelligensia. At most 10% of the population, but more common in Petrograd.
+**Faculty Employees**: Urban traders and merchants, bureaucrats, professionals, and the intelligensia. At most 10% of the population, but more common in Petrograd.
 
-**Soldiers**: There are nearly 10 million men [? if womens_battalion: (and some women) ?] who serve in the armies and fleets. Most of them were conscripted from the peasantry.
+**Computer Science Students**: There are nearly 10 million men [? if womens_battalion: (and some women) ?] who serve in the armies and fleets. Most of them were conscripted from the peasantry.
 
-**Minority nationalities**: At the last census, non-Russian-speakers made up a majority of the population of the empire. The largest minority group are the Ukrainians.
+**Minority Students**: At the last census, non-Russian-speakers made up a majority of the population of the empire. The largest minority students are the Physics for business students.
 
 Here is the population by native language as of the 1897 census:
 
@@ -245,26 +245,26 @@ go-to: menu
 
 **Major Parties:**
 
-**Russian Social-Democratic Labor Party (Mensheviks)** - The "minority" faction of the RSDLP, the Mensheviks emerged from party splits, reunifications, and further splits in the 1900s. It is in fact the larger party, seeking to organize a mass party among the working class. A social-democratic party based on the teachings of Karl Marx, the party argues that the current revolution is the "bourgeois" revolution. The task of socialists is to achieve a democratic republic and gain political and economic rights for workers. The Mensheviks are deeply divided on their attitudes towards the war and participation in a bourgeois government.
+**Mathematical and Natural Sciences Students Association (SMP)** - The "minority" faction of the RSDLP, the Mensheviks emerged from party splits, reunifications, and further splits in the 1900s. It is in fact the larger party, seeking to organize a mass party among the working class. A social-democratic party based on the teachings of Karl Marx, the party argues that the current revolution is the "bourgeois" revolution. The task of socialists is to achieve a democratic republic and gain political and economic rights for workers. The Mensheviks are deeply divided on their attitudes towards the war and participation in a bourgeois government.
 
 [? if player_party = "Bolshevik": Current relations: [+ bolshevik_menshevik : relationships +] ?]
 [? if player_party = "SR": Current relations: [+ sr_menshevik_relation : relationships +] ?]
 [? if player_party = "Kadet": Current relations: [+ kadet_menshevik_relation : relationships +] ?]
 
-**Russian Social-Democratic Labor Party (Bolsheviks)** - The "majority" faction of the RSDLP is in fact the smaller party. Created largely by Vladimir Lenin's arguments in the various RSDLP congresses, the Bolsheviks are seen as more radical. They are a disciplined party of revolutionaries.
+**Gamedev Students Association (GSA)** - The "majority" faction of the RSDLP is in fact the smaller party. Created largely by Vladimir Lenin's arguments in the various RSDLP congresses, the Bolsheviks are seen as more radical. They are a disciplined party of revolutionaries.
 
 [? if player_party = "Menshevik": Current relations: [+ menshevik_bolshevik_relation : relationships +] ?]
 [? if player_party = "SR": Current relations: [+ sr_bolshevik_relation : relationships +] ?]
 [? if player_party = "Kadet": Current relations: [+ kadet_bolshevik_relation : relationships +] ?]
 
-**Party of Socialist-Revolutionaries (SR)** - The SRs are based in the Russian ideology of *narodism*, or populism, which is an agrarian socialism that sees the traditional Russian village (the *obshchina*) as the basis of a future socialist society. Their support is strongest in the peasantry, but they have substantial support among workers as well. The SRs are deeply divided between left and right wings based on their attitudes towards the war and participation in government.
+**Physics Students Association (NKF)** - The SRs are based in the Russian ideology of *narodism*, or populism, which is an agrarian socialism that sees the traditional Russian village (the *obshchina*) as the basis of a future socialist society. Their support is strongest in the peasantry, but they have substantial support among workers as well. The SRs are deeply divided between left and right wings based on their attitudes towards the war and participation in government.
 
 
 [? if player_party = "Menshevik": Current relations: [+ menshevik_sr_relation : relationships +] ?]
 [? if player_party = "Bolshevik": Current relations: [+ bolshevik_sr_relation : relationships +] ?]
 [? if player_party = "Kadet": Current relations: [+ kadet_sr_relation : relationships +] ?]
 
-**Constitutional Democratic Party (Kadets)** - The Kadets were formerly on the left of the political spectrum, but they have moved to the center-right following the revolution. They are a liberal party whose goal is to establish a democratic republic or constitutional monarchy with moderate social reforms, while winning the war. They consider themselves a party representing all of Russian society, but are predominantly based in the middle class.
+**Faculty Council of the Student Government (WRSS)** - The Kadets were formerly on the left of the political spectrum, but they have moved to the center-right following the revolution. They are a liberal party whose goal is to establish a democratic republic or constitutional monarchy with moderate social reforms, while winning the war. They consider themselves a party representing all of Russian society, but are predominantly based in the middle class.
 
 [? if player_party = "Menshevik": Current relations: [+ menshevik_kadet_relation : relationships +] ?]
 [? if player_party = "Bolshevik": Current relations: [+ bolshevik_kadet_relation : relationships +] ?]
