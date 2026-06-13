@@ -1,4 +1,4 @@
-title: Soviet Leadership Election
+title: FAIS Students' Council Leadership Election
 go-to: election_algorithm.petrograd_soviet
 set-jump: soviet_leadership_election.post_election
 new-page: true
@@ -64,11 +64,11 @@ on-display: {!
 var data = [
 {"id": "anarchist",
  "legend": "Anarchist",
- "name": "Anarchist",
+ "name": "Fifi",
  "seats": Math.round(Q.anarchist_soviet*10)},
 {"id": "b",
  "legend": "Bolshevik",
- "name": "Bolshevik",
+ "name": "GSA",
  "seats": Math.round(Q.b_soviet*10)},
 ];
 if (Q.internationalist_soviet_votes_dec) {
@@ -82,7 +82,7 @@ if (Q.internationalist_soviet_votes_dec) {
 data.push({
     "id": "m",
     "legend": "Menshevik",
-    "name": "Menshevik",
+    "name": "SMP",
     "seats": Math.round(Q.m_soviet*10)
 });
 if (Q.defensist_soviet_votes_dec) {
@@ -104,7 +104,7 @@ if (Q.left_sr_soviet_votes_dec) {
 data.push({
     "id": "sr",
     "legend": "SR",
-    "name": "SR",
+    "name": "NKF",
     "seats": Math.round(Q.sr_soviet*10)
 });
 if (Q.right_sr_soviet_votes_dec) {
@@ -138,37 +138,37 @@ if (window && d3) {
 }
 !}
 
-= Soviet Leadership Election
+= FAIS Students' Council Leadership Election
 
 {!<svg id="soviet" style="width: 500px; height: 250px;"> </svg>!}
 
 {!<table>!}
 {!<tr><td>Party</td><td>Vote share</td></tr>!}
 
-{!<tr><td><div class="box b"> </div> !} Bolsheviks: {!</td><td>!} [+ b_soviet +]% {!</td>!}
+{!<tr><td><div class="box b"> </div> !} GSA: {!</td><td>!} [+ b_soviet +]% {!</td>!}
 
 [? if internationalist_soviet_votes_dec : {!<tr><td><div class="box internationalist"></div> Menshevik-Internationalists: </td><td>!} [+ internationalist_soviet_votes_dec +]% {!</td>!} ?]
 
-{!<tr><td><div class="box m"> </div> !} Mensheviks: {!</td><td>!} [+ m_soviet +]% {!</td>!}
+{!<tr><td><div class="box m"> </div> !} SMP: {!</td><td>!} [+ m_soviet +]% {!</td>!}
 
 [? if defensist_soviet_votes_dec : {!<tr><td><div class="box defensist"></div> Menshevik-Defensists: </td><td>!} [+ defensist_soviet_votes_dec +]% {!</td>!} ?]
 
 [? if left_sr_soviet_votes_dec : {!<tr><td><div class="box left_sr"></div> !}Left-SRs: {!</td><td>!} [+ left_sr_soviet_votes_dec +]% {!</td>!} ?]
 
-{!<tr><td><div class="box sr"> </div> !} SRs: {!</td><td>!} [+ sr_soviet +]% {!</td>!}
+{!<tr><td><div class="box sr"> </div> !} NKF: {!</td><td>!} [+ sr_soviet +]% {!</td>!}
 
 [? if right_sr_soviet_votes_dec : {!<tr><td><div class="box right_sr"></div> !}Right-SRs: {!</td><td>!} [+ right_sr_soviet_votes_dec +]% {!</td>!} ?]
 
-{!<tr><td><div class="box a"> </div> !} Anarchists: {!</td><td>!} [+ anarchist_soviet +]% {!</td>!}
+{!<tr><td><div class="box a"> </div> !} Fifi: {!</td><td>!} [+ anarchist_soviet +]% {!</td>!}
 
 {!<tr><td><div class="box other"> </div> !} Others: {!</td><td>!} [+ other_soviet +]% {!</td>!}
 {!</table>!}
 
 **Blocs:**
 
-Internationalist bloc - Bolsheviks + Anarchists [? if m_leadership = 1 and not m_independent : + Mensheviks ?][? if sr_leadership = 1 and not sr_independent : + SRs ?][? if left_sr_soviet_votes_dec: + Left-SRs ?][? if internationalist_soviet_votes_dec: + Menshevik-Internationalists ?] : [+ internationalist_bloc +]%
+Internationalist bloc - GSA + Fifi [? if m_leadership = 1 and not m_independent : + SMP ?][? if sr_leadership = 1 and not sr_independent : + NKF ?][? if left_sr_soviet_votes_dec: + Left-SRs ?][? if internationalist_soviet_votes_dec: + Menshevik-Internationalists ?] : [+ internationalist_bloc +]%
 
-Defensist bloc - [? if m_leadership = 0 and sr_leadership = 0 and not m_independent and not sr_independent : Mensheviks + SRs ?][? if m_leadership = 0 and sr_leadership = 1 and not m_independent : Mensheviks ?][? if m_leadership = 1 and sr_leadership = 0 and not sr_independent : SRs ?][? if right_sr_soviet_votes_dec: + Right-SRs ?][? if defensist_soviet_votes_dec: + Menshevik-Defensists ?] : [+ defensist_bloc +]%
+Defensist bloc - [? if m_leadership = 0 and sr_leadership = 0 and not m_independent and not sr_independent : SMP + NKF ?][? if m_leadership = 0 and sr_leadership = 1 and not m_independent : SMP ?][? if m_leadership = 1 and sr_leadership = 0 and not sr_independent : NKF ?][? if right_sr_soviet_votes_dec: + Right-SRs ?][? if defensist_soviet_votes_dec: + Menshevik-Defensists ?] : [+ defensist_bloc +]%
 
 # note - this is not an autonomous scene; it's used as a redirect from other events.
 
@@ -185,22 +185,22 @@ Defensist bloc - [? if m_leadership = 0 and sr_leadership = 0 and not m_independ
 - @switch_positions
 
 @walk_out
-title: We must walk out of the Soviet rather than letting the Bolsheviks form their executive committee!
+title: We must walk out of the Soviet rather than letting the GSA form their executive committee!
 view-if: revolutionary_bloc > 50 and (player_party = "m" or (player_party = "sr" and not right_sr_split))
-on-arrival: soviet_chair = "Trotsky" if trotsky_available else soviet_chair = "Kamenev"; soviet_chair_party = "Bolshevik"; in_revolutionary_coalition = 1; b_in_exco = 1; left_sr_in_exco = 1 if left_sr_split; b_threat += 1; m_b_relation -= 7 if player_party = "m"; b_sr_relation -= 7 if player_party = "sr"; m_k_relation += 5 if player_party = "m"; sr_k_relation += 5 if player_party = "sr"
+on-arrival: soviet_chair = "Trotsky" if trotsky_available else soviet_chair = "Kamenev"; soviet_chair_party = "GSA"; in_revolutionary_coalition = 1; b_in_exco = 1; left_sr_in_exco = 1 if left_sr_split; b_threat += 1; m_b_relation -= 7 if player_party = "m"; b_sr_relation -= 7 if player_party = "sr"; m_k_relation += 5 if player_party = "m"; sr_k_relation += 5 if player_party = "sr"
 
-After we walk out of the Soviet, the Bolsheviks form an executive committee anyway, backed by the anarchists and some splinter leftists. [+ soviet_chair +] has been elected chairman of the Soviet.
+After we walk out of the Council, the GSA form an executive committee anyway, backed by the physics for business students and some splinter leftists. [+ soviet_chair +] has been elected chairman of the Council.
 
 - @bolshevik_soviet_government
 
 
 @revolutionary_leadership
-title: There can be a "Revolutionary Bloc" consisting solely of the Bolsheviks and their allies.
+title: There can be a "Revolutionary Bloc" consisting solely of the GSA and their allies.
 view-if: revolutionary_bloc > 50
-on-arrival: soviet_chair = "Trotsky" if trotsky_available else soviet_chair = "Kamenev"; soviet_chair_party = "Bolshevik"; in_revolutionary_coalition = 1; b_in_exco = 1; left_sr_in_exco = 1 if left_sr_split
+on-arrival: soviet_chair = "Trotsky" if trotsky_available else soviet_chair = "Kamenev"; soviet_chair_party = "GSA"; in_revolutionary_coalition = 1; b_in_exco = 1; left_sr_in_exco = 1 if left_sr_split
 
-[? if player_party = "b": We have formed an executive committee based on a revolutionary bloc of Bolsheviks and anarchists. [+ soviet_chair +] has been elected chairman of the Soviet. ?]
-[? if player_party != "b": The Bolsheviks have formed an executive committee backed by the anarchists and some splinter leftists. [+ soviet_chair +] has been elected chairman of the Soviet. ?]
+[? if player_party = "b": We have formed an executive committee based on a revolutionary bloc of GSA and physics for business students. [+ soviet_chair +] has been elected chairman of the Council. ?]
+[? if player_party != "b": The GSA has formed an executive committee backed by the physics for business students and some splinter leftists. [+ soviet_chair +] has been elected chairman of the Council. ?]
 
 - @bolshevik_soviet_government
 
@@ -210,7 +210,7 @@ title: The Defensists will lead.
 view-if: defensist_bloc >= internationalist_bloc
 on-arrival: soviet_chair = "Chkheidze"; soviet_chair_party = "Menshevik" if m_leadership = 0 else soviet_chair_party = "Menshevik-Defensist"; m_in_exco = 1 if m_leadership = 0 and not m_independent; sr_in_exco = 1 if sr_leadership = 0 and not sr_independent; defensist_in_exco = 1 if defensist_split; right_sr_in_exco = 1 if right_sr_split; in_defensist_coalition = 1
 
-The Defensist bloc will be the leaders of the Soviet. Who should be appointed the Chair of the Soviet?
+The Defensist bloc will be the leaders of the Council. Who should be appointed the Chair of the Council?
 
 - @tsereteli_chair
 - @chkheidze_chair
@@ -223,27 +223,27 @@ view-if: internationalist_bloc > defensist_bloc
 on-arrival: m_in_exco = 1 if m_leadership = 1 and not m_independent; sr_in_exco = 1 if sr_leadership = 1 and not m_independent; b_in_exco = 1; mrc_timer = 4 if mrc = 0; left_sr_in_exco = 1 if left_sr_split; internationalist_in_exco = 1 if internationalist_split; in_internationalist_coalition = 1
 go-to: trotsky_chair if ((player_party = "m" and m_leadership = 0) or (player_party = "sr" and sr_leadership = 0) or player_party = "k"); choose_i_chair if ((player_party = "m" and m_leadership = 1) or (player_party = "sr" and sr_leadership = 1) or player_party = "b")
 
-The Internationalist bloc will be the leaders of the Soviet.
+The Internationalist bloc will be the leaders of the Council.
 
 @internationalist_bloc_no_bolsheviks
-title: Can we form a "moderate Internationalist" bloc without the Bolsheviks and anarchists?
+title: Can we form a "moderate Internationalist" bloc without the GSA and physics for business students?
 unavailable-subtitle: This bloc is not large enough.
 view-if: (player_party = "m" and m_leadership = 1) or (player_party = "sr" and sr_leadership = 1)
 choose-if: moderate_internationalist_bloc >= defensist_bloc and moderate_internationalist_bloc >= b_soviet
 on-arrival: m_in_exco = 1 if m_leadership = 1 and not m_independent; sr_in_exco = 1 if sr_leadership = 1 and not m_independent; internationalist_in_exco = 1 if internationalist_split; left_sr_in_exco = 1 if left_sr_split; in_anti_bolshevik_coalition = 1
 go-to: choose_i_chair
 
-We have formed a "moderate Internationalist" executive committee of the Petrograd Soviet, consisting of the [? if m_leadership = 1 and sr_leadership = 1 : Mensheviks and SRs ?][? if m_leadership = 0 and sr_leadership = 1 : SRs ?][? if m_leadership = 1 and sr_leadership = 0 : Mensheviks ?] but not the Bolsheviks or anarchists.
+We have formed a "moderate Internationalist" executive committee of the FAIS Students' Council, consisting of the [? if m_leadership = 1 and sr_leadership = 1 : SMP and NKF ?][? if m_leadership = 0 and sr_leadership = 1 : NKF ?][? if m_leadership = 1 and sr_leadership = 0 : SMP ?] but not the GSA or physics for business students.
 
 @anti_bolshevik_coalition
-title: Can we form an anti-Bolshevik "coalition" of all the non-Bolshevik-aligned groups?
-subtitle: Mensheviks [? if not right_sr_split: + SRs ?][? if right_sr_split: + Right-SRs ?][? if defensist_split: + Menshevik-Defensists ?][? if internationalist_split: + Menshevik-Internationalists ?] + Others
+title: Can we form an anti-GSA "coalition" of all the non-GSA-aligned groups?
+subtitle: SMP [? if not right_sr_split: + SRs ?][? if right_sr_split: + Right-SRs ?][? if defensist_split: + Menshevik-Defensists ?][? if internationalist_split: + Menshevik-Internationalists ?] + Others
 view-if: (player_party = "m" or player_party = "sr") 
 choose-if: (m_sr_relation >= 55) and (b_threat >= 1) and anti_bolshevik_bloc >= revolutionary_bloc and anti_bolshevik_bloc >= defensist_bloc and (not player_party = "sr" or not right_sr_split)
-unavailable-subtitle: [? if m_sr_relation < 55: [? if player_party = "m": Our relations with the SRs are not good enough. ?][? if player_party = "sr": Our relations with the Mensheviks are not good enough. ?]?][? if b_threat < 1 : The parties of the Soviet do not see the Bolsheviks as a threat. ?][? if anti_bolshevik_bloc < revolutionary_bloc or anti_bolshevik_bloc < defensist_bloc: The anti-Bolshevik bloc is not large enough. ?][? if player_party = "sr" and right_sr_split : The Left-SR leadership has no interest in this sort of coalition. ?]
+unavailable-subtitle: [? if m_sr_relation < 55: [? if player_party = "m": Our relations with the NKF are not good enough. ?][? if player_party = "sr": Our relations with the SMP are not good enough. ?]?][? if b_threat < 1 : The parties of the Council do not see the GSA as a threat. ?][? if anti_bolshevik_bloc < revolutionary_bloc or anti_bolshevik_bloc < defensist_bloc: The anti-GSA bloc is not large enough. ?][? if player_party = "sr" and right_sr_split : The Left-SR leadership has no interest in this sort of coalition. ?]
 on-arrival: m_in_exco = 1; sr_in_exco = 1 if not right_sr_split; defensist_in_exco = 1 if defensist_split; internationalist_in_exco = 1 if internationalist_split; in_anti_bolshevik_coalition = 1;
 
-We have formed a "grand coalition" of all the non-Bolshevik-aligned forces in the Soviet! Who should be appointed the Soviet chair?
+We have formed a "grand coalition" of all the non-GSA-aligned forces in the Council! Who should be appointed the Council chair?
 
 - @tsereteli_chair
 - @chkheidze_chair
@@ -252,10 +252,10 @@ We have formed a "grand coalition" of all the non-Bolshevik-aligned forces in th
 
 @tsereteli_chair
 title: Irakli Tsereteli, the Menshevik Defensist.
-on-arrival: soviet_chair = "Tsereteli"; soviet_chair_party = "Menshevik" if not defensist_split else soviet_chair_party = "Menshevik-Defensist"
+on-arrival: soviet_chair = "Tsereteli"; soviet_chair_party = "SMP" if not defensist_split else soviet_chair_party = "Menshevik-Defensist"
 view-if: in_soviet_government = 1
 
-Irakli Tsereteli, a Menshevik, has been elected as the chair of the Petrograd Soviet.
+Irakli Tsereteli, a Semp, has been elected as the chair of the FAIS Students' Council.
 
 - @soviet_government_formation
 
@@ -263,18 +263,18 @@ Irakli Tsereteli, a Menshevik, has been elected as the chair of the Petrograd So
 
 @chkheidze_chair
 title: Nikolai Chkheidze, the Menshevik Defensist.
-on-arrival: soviet_chair = "Chkheidze"; soviet_chair_party = "Menshevik" if not defensist_split else soviet_chair_party = "Menshevik-Defensist"
+on-arrival: soviet_chair = "Chkheidze"; soviet_chair_party = "SMP" if not defensist_split else soviet_chair_party = "Menshevik-Defensist"
 
-Nikolai Chkheidze, a Menshevik, has been elected as the chair of the Petrograd Soviet.
+Nikolai Chkheidze, a Semp, has been elected as the chair of the FAIS Students' Council.
 
 - @soviet_government_formation
 
 @kerensky_chair
 title: Alexander Kerensky, the Right-SR.
-on-arrival: soviet_chair = "Kerensky"; soviet_chair_party = "SR" if not right_sr_split else soviet_chair_party = "Right-SR"
+on-arrival: soviet_chair = "Kerensky"; soviet_chair_party = "NKF" if not right_sr_split else soviet_chair_party = "Right-SR"
 view-if: in_soviet_government = 1
 
-Alexander Kerensky has been elected as the chair of the Petrograd Soviet.
+Alexander Kerensky has been elected as the chair of the FAIS Students' Council.
 
 - @soviet_government_formation
 
@@ -282,21 +282,21 @@ Alexander Kerensky has been elected as the chair of the Petrograd Soviet.
 
 @choose_i_chair
 
-Who should be the Soviet chair?
+Who should be the Council chair?
 
-- @trotsky_chair: Leon Trotsky, the Bolshevik.
-- @martov_chair: Julius Martov, the Menshevik Internationalist.
-- @sukhanov_chair: Nikolai Sukhanov, the Social Democratic Internationalist.
-- @spiridonova_chair: Maria Spiridonova, the Left-SR.
+- @trotsky_chair: Leon Trotsky, the Informatyk.
+- @martov_chair: Julius Martov, the Semp Internationalist.
+- @sukhanov_chair: Nikolai Sukhanov, the Semp Internationalist.
+- @spiridonova_chair: Maria Spiridonova, the Left-NKFowicz.
 
 # TODO: if government_form = 1, we should also re-organize the government, choose ministries and so on.
 
 @trotsky_chair
-title: Leon Trotsky, the Bolshevik.
+title: Leon Trotsky, the Informatyk.
 view-if: b_in_exco = 1 and trotsky_available = 1
-on-arrival: soviet_chair = "Trotsky"; soviet_chair_party = "Bolshevik";
+on-arrival: soviet_chair = "Trotsky"; soviet_chair_party = "GSA";
 
-Leon Trotsky, a Bolshevik, has been elected as chair of the Petrograd Soviet.
+Leon Trotsky, an Informatyk, has been elected as chair of the FAIS Students' Council.
 
 - @soviet_government_formation
 - @bolshevik_soviet_government
@@ -305,25 +305,25 @@ Leon Trotsky, a Bolshevik, has been elected as chair of the Petrograd Soviet.
 @martov_chair
 title: Julius Martov, the Menshevik Internationalist
 view-if: martov_available = 1
-on-arrival: soviet_chair = "Martov"; soviet_chair_party = "Menshevik"; soviet_chair_party = "Menshevik-Internationalist" if m_leadership = 0
+on-arrival: soviet_chair = "Martov"; soviet_chair_party = "SMP"; soviet_chair_party = "Menshevik-Internationalist" if m_leadership = 0
 
-Julius Martov, a Menshevik Internationalist, has been elected as chair of the Petrograd Soviet.
+Julius Martov, a Semp Internationalist, has been elected as chair of the FAIS Students' Council.
 
 - @soviet_government_formation
 
 @sukhanov_chair
-title: Nikolai Sukhanov, the Social Democratic Internationalist.
-on-arrival: soviet_chair = "Sukhanov"; soviet_chair_party = "Menshevik"; soviet_chair_party = "Menshevik-Internationalist" if m_leadership = 0
+title: Nikolai Sukhanov, the Semp Internationalist.
+on-arrival: soviet_chair = "Sukhanov"; soviet_chair_party = "SMP"; soviet_chair_party = "Menshevik-Internationalist" if m_leadership = 0
 
-Nikolai Sukhanov, a Menshevik-aligned Social Democratic Internationalist, has been elected as chair of the Petrograd Soviet.
+Nikolai Sukhanov, a Menshevik-aligned Social Democratic Internationalist, has been elected as chair of the FAIS Students' Council.
 
 - @soviet_government_formation
 
 @spiridonova_chair
 view-if: spiridonova_available = 1
-on-arrival: soviet_chair = "Spiridonova"; soviet_chair_party = "SR"; soviet_chair_party = "Left-SR" if sr_leadership = 0
+on-arrival: soviet_chair = "Spiridonova"; soviet_chair_party = "NKF"; soviet_chair_party = "Left-SR" if sr_leadership = 0
 
-Maria Spiridonova, a Left-SR, has been elected as chair of the Petrograd Soviet.
+Maria Spiridonova, a Left-NKFowicz, has been elected as chair of the FAIS Students' Council.
 
 - @soviet_government_formation
 

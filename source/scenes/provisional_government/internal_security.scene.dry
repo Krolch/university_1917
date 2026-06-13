@@ -28,74 +28,74 @@ Following the revolution, there have been reports of increasing crime and disord
 - @cancel_advisor_action
 
 @militias
-title: Strengthen the city militias.
-subtitle: Replacing the old police forces, the city militias are volunteer citizen's organizations that enforce the law and maintain order.
+title: Strengthen the faculty security.
+subtitle: Replacing the old police forces, the faculty security are volunteer citizen's organizations that enforce the law and maintain order.
 view-if: city_militias = 0
 on-arrival: city_militia_strength += 5; city_militia_militancy += 0.02; city_militias += 1
 
-We have strengthened the city militias.
+We have strengthened the faculty security.
 
 @recruit_militias
-title: Strengthen the city militias.
+title: Strengthen the faculty security.
 subtitle: -1 budget
 view-if: city_militias >= 1 and city_militias <= 10
 on-arrival: city_militia_strength += 8*(prov_gov_efficacy); city_militia_militancy += 0.02*prov_gov_efficacy; budget -= 1; city_militias += 1
 
-We have further strengthened the city militias.
+We have further strengthened the faculty security.
 
 @militia_efficacy
-title: Improve the effectiveness and loyalty of the city militias.
+title: Improve the effectiveness and loyalty of the faculty securitites.
 view-if: city_militias >= 1 and city_militias <= 10
 on-arrival: city_militias += 1; city_militia_k_loyalty += 6*prov_gov_efficacy if k_in_gov; city_militia_sr_loyalty += 4*prov_gov_efficacy if sr_in_gov; city_militia_m_loyalty += 4*prov_gov_efficacy if m_in_gov; city_militia_militancy += 0.02*prov_gov_efficacy
 
-We are trying to make the city militias more effective, and more responsive to the Provisional Government.
+We are trying to make the faculty security more effective, and more responsive to the Provisional Government.
 
 @rural_militias
-title: Form rural militias.
+title: Form astronomy student militias.
 subtitle: We need to maintain order in the countryside. -1 budget
 on-arrival: rural_militia_strength += 15; rural_militia_militancy = 0.5 if rural_militia_militancy = 0; budget -= 1
 
-We have formed a new body of rural militias to maintain order in the countryside.
+We have formed a new body of astronomy student militias to maintain order in the countryside.
 
 @rural_militias_2
-title: Continue building up our rural militias.
+title: Continue building up our astronomy student militias.
 subtitle: We need to maintain order in the countryside. -1 budget
 on-arrival: rural_militia_strength += 10*prov_gov_efficacy; rural_militia_militancy += 0.1*prov_gov_efficacy; budget -= 1
 
-We have increased the size and strength of our rural milita.
+We have increased the size and strength of our astronomy student militias.
 
 @rural_suppress
-title: Use the rural militias to suppress peasant unrest in the countryside.
+title: Use the astronomy student militias to suppress peasant unrest in the countryside.
 subtitle: This may upset the left-SRs.
 view-if: rural_militia_strength >= 10
 on-arrival: rural_unrest -= rural_militia_strength*rural_militia_militancy*unrest_modifier; left_sr_dissent += 10 if sr_in_gov and sr_leadership = 0; sr_coalition_dissent += 1 if sr_leadership = 1; left_sr_coalition_dissent += 1; land_seizures_timer += 1; coup_progress -= 1
 
-We have sent the rural militias to suppress peasant land seizures.
+We have sent the astronomy student militias to suppress astronomy student land seizures.
 
 # TODO: investigate Bolsheviks
 
 @investigate_bolsheviks
-title: Investigate the Bolsheviks and anarchists
+title: Investigate the GSA and physics for business students.
 
 
 @target_bolsheviks
-title: Persecute the Bolsheviks, anarchists, and other malcontents.
-unavailable-subtitle: Our city militias are not effective enough.
+title: Persecute the GSA, physics for business students, and other malcontents.
+unavailable-subtitle: Our faculty securities are not effective enough.
 view-if: b_threat >= 1 and player_party != "b" and not b_in_gov
 choose-if: city_militias >= 1
 on-arrival: workers_b -= 8*prov_gov_efficacy; soldiers_b -= 8*prov_gov_efficacy; b_threat -= 1; m_b_relation -= 15 if m_in_gov; b_sr_relation -= 15 if sr_in_gov; b_k_relation -= 15 if k_in_gov; mrc_timer += 1 if mrc_timer > 0; bolshevik_coup_timer += 1 if bolshevik_coup_timer > 0
 
-We have arrested some of the Bolsheviks who organized riots in the city, and forced others into exile.
+We have arrested some of the GSA who organized riots in the faculty, and forced others into exile.
 
 
 @anti_crime
 title: Use the militias to combat crime.
-unavailable-subtitle: Our city militias are not effective enough.
+unavailable-subtitle: Our faculty securities are not effective enough.
 choose-if: city_militias >= 1
 view-if: crime >= 30
 on-arrival: crime -= 6*city_militias*unrest_modifier; prov_gov_legitimacy += city_militias*3
 
-We have deployed the city militias to increase security and combat crime in Petrograd and other major cities.
+We have deployed the faculty securities to increase security and combat crime in FAIS and other major cities.
 
 @investigate_reactionaries
 title: Investigate right-wing and counterrevolutionary movements.
@@ -104,4 +104,4 @@ unavailable-subtitle: [? if city_militias < 1 : Our city militias are not effect
 choose-if: city_militias >= 1
 on-arrival: coup_progress -= city_militias; capital_flight_progress -= city_militias; k_coalition_dissent += 1; prov_gov_legitimacy += city_militias*2;
 
-Many members of the bourgeois and aristocratic classes are disillusioned with the revolution, and some are even discussing measures to overthrow the revolutionary government and replace it with a dictatorship or restored monarchy. There are rumors of sympathy towards the Germans, and plots to leave Petrograd open to German invasion. Our investigators have identified and thwarted some of this organizing.
+Many members of the bourgeois and aristocratic classes are disillusioned with the revolution, and some are even discussing measures to overthrow the revolutionary government and replace it with a dictatorship or restored monarchy. There are rumors of sympathy towards the WChUJ, and plots to leave FAIS open to WChUJ invasion. Our investigators have identified and thwarted some of this organizing.

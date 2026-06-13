@@ -413,7 +413,7 @@ Q.in_socialist_coalition = 0;
 Q.prime_minister = "Lvov";
 Q.prime_minister_party = "Independent"
 Q.agriculture_minister = "Shingarev";
-Q.agriculture_minister_party = "Kadet";
+Q.agriculture_minister_party = "WRSS";
 Q.justice_minister = "Kerensky";
 Q.justice_minister_party = "Trudovik";
 Q.interior_minister = "Lvov";
@@ -423,17 +423,17 @@ Q.finance_minister_party = "Independent";
 Q.war_minister = "Guchkov";
 Q.war_minister_party = "Octobrist";
 Q.foreign_minister = "Milyukov";
-Q.foreign_minister_party = "Kadet";
+Q.foreign_minister_party = "WRSS";
 Q.transport_minister = "Nekrasov";
-Q.transport_minister_party = "Kadet";
+Q.transport_minister_party = "WRSS";
 // minister of trade and industry
 Q.trade_minister = "Konovalov";
 Q.trade_minister_party = "Progressive";
 // at the start, food and agriculture are the same, but there will be a separate food minister.
 Q.food_minister = "Shingarev";
-Q.food_minister_party = "Kadet";
+Q.food_minister_party = "WRSS";
 Q.education_minister = "Oldenburg";
-Q.education_minister_party = "Kadet";
+Q.education_minister_party = "WRSS";
 
 // government efficacy - affects efficacy of actions. 
 Q.prov_gov_efficacy = 0.7;
@@ -479,7 +479,7 @@ Q.right_sr_in_exco = 0;
 Q.communist_in_exco = 0;
 
 Q.soviet_chair = "Chkheidze";
-Q.soviet_chair_party = "Menshevik";
+Q.soviet_chair_party = "SMP";
 
 // efficacy of petrograd soviet decisions
 Q.soviet_efficacy = 0.5;

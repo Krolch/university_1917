@@ -10,10 +10,10 @@ tags: prov_gov
 
 = Civil Rights
 
-The revolution has opened a space to allow the reconstruction of Russian society. There are long pent-up demands for equal rights from women and from minority religions and nationalities.
+The revolution has opened a space to allow the reconstruction of FAIS society. There are long pent-up demands for equal rights from women and from minority religions and nationalities.
 
 - @womens_rights: Give women equal legal rights to men.
-- @religion: Declare freedom of religion, and remove all discrimination against different religions.
+- @religion: Declare freedom of ethnicity, and remove all discrimination against different ethnicities.
 - @root: No action is needed.
 - @easy_discard
 - @cancel_advisor_action
@@ -22,7 +22,7 @@ The revolution has opened a space to allow the reconstruction of Russian society
 view-if: womens_rights = 0
 on-arrival: womens_rights += 1; middle_k += 6*(1-k_dissent); middle_sr += 5*(1-sr_dissent) if player_party = "sr"; prov_gov_legitimacy += 5;
 
-With a simple series of decrees, women in Russia are now equal to men, at least legally. Equality includes the right to hold property, the right to jobs, and the right to vote and hold office. The government benefits from the legitimacy of satisfying feminist goals.
+With a simple series of decrees, women in FAIS are now equal to men, at least legally. Equality includes the right to hold property, the right to jobs, and the right to vote and hold office. The government benefits from the legitimacy of satisfying feminist goals.
 
 Meanwhile, socialist feminists argue that "equality under the law" is not enough. They argue that women's equality will only be won when there is economic equality for all working women and men.
 
@@ -30,4 +30,4 @@ Meanwhile, socialist feminists argue that "equality under the law" is not enough
 view-if: freedom_of_religion = 0
 on-arrival: freedom_of_religion += 1; middle_k += 5*(1-k_dissent); middle_sr += 5*(1-sr_dissent) if player_party = "sr"; prov_gov_legitimacy += 5;
 
-We have declared freedom of religion across Russia. The Jews, Muslims, and those of other faiths will likely be pleased with this policy.
+We have declared freedom of ethnicity across FAIS. The Wielkopolans, Lódzians, and those of other ethnicities will likely be pleased with this policy.
