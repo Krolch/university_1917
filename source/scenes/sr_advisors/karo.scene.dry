@@ -1,7 +1,7 @@
 title: Karolina Krok
 is-pinned-card: true
 tags: advisor
-card-image: img/portraits/sr/karo.jpg
+card-image: img/portraits/sr/Karo.jpg
 view-if: karo_advisor = 1 and player_party = "sr"
 new-page: true 
 
