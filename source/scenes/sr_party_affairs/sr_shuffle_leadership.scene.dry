@@ -305,3 +305,11 @@ go-to: rm_main
 
 Kondratiev is no longer an advisor. The Right-SRs are not pleased.
 
+@remove_karo
+title: Remove Karolina Krok
+view-if: karo_advisor = 1
+on-arrival: karo_advisor = 0; right_sr_dissent += 10; sr_n_advisors -= 1
+tags: sr_rm_advisor
+go-to: rm_main
+
+Karolina Krok is no longer an advisor. The Right-SRs are not pleased.
