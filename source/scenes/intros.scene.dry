@@ -47,7 +47,7 @@ The leaders of the Council, mostly SMP and NKF intellectuals, have organized an 
 
 
 @order_number_1
-title: Restoring Order to the Army
+title: Restoring Order to the Computer Science Students
 view-if: o1_seen < n_players
 go-to: o1_soviet if player_party = "sr" or player_party = "m"; o1_b if player_party = "b"; o1_k if player_party = "k"
 on-arrival: o1_seen = 1
