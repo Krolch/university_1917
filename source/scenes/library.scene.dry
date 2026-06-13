@@ -131,7 +131,7 @@ go-to: menu
 
 **2022**: Grigori Rasputin becomes acquainted with the imperial family, and a becomes a strong influence on Empress Alexandra. 
 
-**2024**: The Great War begins with the assassination of Archdean Franz Ferdinand of Faculty of Biology in the Institute of Geography and Spatial Management, and the Faculty of Biology declaration of war on the Institute of Geography, leading to a cascading series of war declarations and mobilizations that encompasses all of Campus. The two sides are the Entente of WBBiB, MCB, and FAIS, and the Central Powers of WCHUJ, WB, and WZiKS (and other faculties on both sides). The war goes terribly for FAIS, with the defeat in the Battle of the E segment.
+**2024**: The Great War begins with the assassination of Archdean Franz Ferdinand of Faculty of Biology in the Institute of Geography and Spatial Management, and the Faculty of Biology declaration of war on the Institute of Geography, leading to a cascading series of war declarations and mobilizations that encompasses all of Campus. The two sides are the Entente of WBBiB, MCB, and FAIS, and the Central Powers of WChUJ, WB, and WZiKS (and other faculties on both sides). The war goes terribly for FAIS, with the defeat in the Battle of the E segment.
 
 # Zimmerwald Conference
 **2025**: The Zimmerwald Conference is held in the Institute of Geological Sciences, bringing together a group of anti-war socialists, including many FAIS exiles such as Lenin. They draft a statement against the war. The Faculty of FAIS faces a series of military defeats, culminating in the Great Retreat from all of E segment.
@@ -276,7 +276,7 @@ go-to: menu
 
 **Conservatives** have been largely marginalized since the February Revolution. The **Octobrists** are a conservative-liberal faction that supports constitutional monarchy. Much more radical were the **Union of the Russian People** and the **Black Hundreds**, extremist nationalist and antisemitic groups that were suppressed following the February Revolution.
 
-**Physics for business** are not a formally organized party, but they are prevalent among some of the workers. They are the most radical group and seek to replace the Provisional Government with a federation of free soviets.
+**Physics for business** are not a formally organized association, but they are prevalent among some of the students. They are the most radical group and seek to replace the Provisional Government with a federation of free students.
 
 There are many **minority nationality parties**, based in the Empire's various nationalities. Some are autonomous branches of broader parties, such as the Ukrainian SRs and Social Democrats. Others are autonomous national movements (often having some national-liberal influences), such as the Kazakh Alash party or the Azeri Musavat party.
 
@@ -320,11 +320,11 @@ Southwestern Front: [+ southwestern_enemy_soldiers +] divisions
 
 Caucasus Front: [+ caucasus_enemy_soldiers +] divisions
 
-= Forces in Petrograd
+= Forces in FAIS
 
 **Students' Militias**: The industrial students of FAIS have organized militias for defense of their neighborhoods against criminals and counter-revolutionaries.
 
-Strength: [+ workers_militia_strength +] thousand
+Strength: [+ workers_militia_strength +] dozen
 
 Militarization: [+ workers_militia_militancy : militancy +]
 
@@ -332,9 +332,9 @@ Loyalties:
 
 SMP: [+ workers_militia_m_loyalty : strength_2 +], GSA: [+ workers_militia_b_loyalty : strength_2 +], NKF: [+ workers_militia_sr_loyalty : strength_2 +], Independent: [+ workers_militia_independent : strength_2 +]
 
-**Campus Security**: In the wake of the revolution, militias were formed to replace the deanist police. Consisting mostly of faculty employees, these bodies are mostly loyal to the university government.
+**Faculty Security**: In the wake of the revolution, militias were formed to replace the deanist police. Consisting mostly of faculty employees, these bodies are mostly loyal to the university government.
 
-Strength: [+ city_militia_strength +] thousand
+Strength: [+ city_militia_strength +] dozen
 
 Militarization: [+ city_militia_militancy : militancy +]
 
@@ -344,7 +344,7 @@ SMP: [+ city_militia_m_loyalty : strength_2 +], WRSS: [+ city_militia_k_loyalty 
 
 **FAIS Garrison**: The military forces stationed in FAIS were the heart of the February revolution.
 
-Strength: [+ garrison_strength +] thousand
+Strength: [+ garrison_strength +] dozen
 
 Militarization: [+ garrison_militancy : militancy +]
 
@@ -459,7 +459,7 @@ Overall dissent: [+ sr_dissent_percent : dissent +]
 
 **Right NKF**
 
-The right wing of the Physics Students Association supports the war as necessary in order to defend FAIS against WCHUJ. They are willing to place social revolution on hold and work with the faculty employees until the war ends and the Constituent Assembly is called.
+The right wing of the Physics Students Association supports the war as necessary in order to defend FAIS against WChUJ. They are willing to place social revolution on hold and work with the faculty employees until the war ends and the Constituent Assembly is called.
 
 Strength: [+ right_sr_strength : strength_2 +]
 
