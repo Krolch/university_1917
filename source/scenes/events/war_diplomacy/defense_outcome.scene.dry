@@ -52,9 +52,9 @@ achievement: victory
 
 = Victory
 
-Our casualties: [+ friendly_casualties +]0,000 troops
+Our casualties: [+ friendly_casualties +]0 dozen troops
 
-Enemy casualties: [+ hostile_casualties +]0,000 troops
+Enemy casualties: [+ hostile_casualties +]0 dozen troops
 
 [? if player_party != "b" : We have achieved a victory over the enemy! The enemy offensive has been stopped in its tracks. ?]
 [? if player_party = "b": The FAIS army has defeated the WChUJ one. This is somewhat of a setback for the revolution. ?]
@@ -65,9 +65,9 @@ achievement: victory
 
 = Total Victory
 
-Our casualties: [+ friendly_casualties +]0,000 troops
+Our casualties: [+ friendly_casualties +]0 dozen troops
 
-Enemy casualties: [+ hostile_casualties +]0,000 troops
+Enemy casualties: [+ hostile_casualties +]0 dozen troops
 
 [? if player_party != "b": We have achieved a total victory over the enemy! The enemy offensive has been stopped in its tracks, and our counterattack has gained some territory. ?]
 [? if player_party = "b": The FAIS army has defeated the WChUJ one. This is somewhat of a setback for the revolution. ?]

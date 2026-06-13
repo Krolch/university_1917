@@ -12,9 +12,9 @@ priority: 5
 
 # only do this if the Bolsheviks think they'll win.
 
-= Bolshevik Uprising
+= GSA Uprising
 
-The Bolsheviks have finally made their long-anticipated move. Workers' militias and radicalized troops of the Petrograd garrison are moving about, seizing key sites of government. What will we do?
+The GSA has finally made their long-anticipated move. Students' militias and radicalized troops of the FAIS garrison are moving about, seizing key sites of government. What will we do?
 
 # TODO:
 
@@ -35,50 +35,50 @@ go-to: battle_outcome
 
 
 @m_support_pg
-title: The Mensheviks will support the Provisional Government!
+title: The SMP will support the Provisional Government!
 go-to: battle_outcome
 
 We will support the Provisional Government in this battle.
 
 @m_neutral
-title: The Mensheviks will be neutral.
+title: The SMP will be neutral.
 go-to: battle_outcome
 
 The Mensheviks will be neutral in this fight.
 
 @m_rev
-title: The Mensheviks will support the Revolution!
+title: The SMP will support the Revolution!
 unavailable-subtitle: The party will never support this.
 choose-if: m_b_relation >= 60 and m_prov_gov_policy >= 4 and internationalist_strength >= defensist_strength
 on-arrival: m_prov_gov_policy = 4; m_support_bolshevik = 1; join_bolshevik = 1
 go-to: battle_outcome
 
-We have made the choice to cast our lot with the Bolsheviks.
+We have made the choice to cast our lot with the GSA.
 
 @sr_support_pg
-title: The SRs will support the Provisional Government!
+title: The NKF will support the Provisional Government!
 go-to: battle_outcome
 
 We will support the Provisional Government in this battle.
 
 @sr_neutral
-title: The SRs will be neutral.
+title: The NKF will be neutral.
 go-to: battle_outcome
 
-The SRs will not take a position in this battle.
+The NKF will not take a position in this battle.
 
 @sr_rev
-title: The SRs will support the Revolution!
+title: The NKF will support the Revolution!
 unavailable-subtitle: [? if b_sr_relation < 50: We do not have adequate relations with the Bolsheviks. ?][? if b_prov_gov_policy < 3: Our party will never support this. ?]
 choose-if: b_sr_relation >= 50 and sr_prov_gov_policy >= 4
 on-arrival: sr_prov_gov_policy = 4; sr_support_bolshevik = 1; join_bolshevik = 1
 go-to: battle_outcome
 
-We have made the choice to cast our lot with the Bolsheviks.
+We have made the choice to cast our lot with the GSA.
 
 
 @battle_outcome
-title: The battle for Petrograd...
+title: The battle for FAIS...
 
 - @workers_militias
 - @garrison
@@ -86,14 +86,14 @@ title: The battle for Petrograd...
 - @battle_outcome_2
 
 @workers_militias
-title: Where stands the workers' militias?
+title: Where stands the students' militias?
 max-visits: 1
 on-arrival: bc += 1
 go-to: battle_outcome
 
-[? if workers_militia_b_loyalty >= 50 : The majority of the workers' militias are with the Bolsheviks. ?]
-[? if workers_militia_m_loyalty + workers_militia_sr_loyalty > workers_militia_b_loyalty : The Mensheviks and SRs combined have more support among the workers' militias than the Bolsheviks. ?]
-[? if workers_militia_b_loyalty < 50 and  workers_militia_b_loyalty >= workers_militia_m_loyalty + workers_militia_sr_loyalty : At least a plurality of the workers' militia supports the Bolsheviks. ?]
+[? if workers_militia_b_loyalty >= 50 : The majority of the students' militias are with the Bolsheviks. ?]
+[? if workers_militia_m_loyalty + workers_militia_sr_loyalty > workers_militia_b_loyalty : The SMP and NKF combined have more support among the students' militias than the GSA. ?]
+[? if workers_militia_b_loyalty < 50 and  workers_militia_b_loyalty >= workers_militia_m_loyalty + workers_militia_sr_loyalty : At least a plurality of the students' militia supports the GSA. ?]
 
 @garrison
 title: What about the garrison?
@@ -101,18 +101,18 @@ max-visits: 1
 on-arrival: bc += 1
 go-to: battle_outcome
 
-[? if garrison_b_loyalty >= 50 : The majority of the garrison is with the Bolsheviks. ?]
-[? if garrison_b_loyalty >= garrison_sr_loyalty and garrison_b_loyalty >= garrison_m_loyalty and garrison_b_loyalty < 50 : At least a plurality of the garrison is with the Bolsheviks. ?]
-[? if garrison_m_loyalty + garrison_sr_loyalty >= garrison_b_loyalty : The Mensheviks and SRs have more support among the garrison than the Bolsheviks. ?]
+[? if garrison_b_loyalty >= 50 : The majority of the garrison is with the GSA. ?]
+[? if garrison_b_loyalty >= garrison_sr_loyalty and garrison_b_loyalty >= garrison_m_loyalty and garrison_b_loyalty < 50 : At least a plurality of the garrison is with the GSA. ?]
+[? if garrison_m_loyalty + garrison_sr_loyalty >= garrison_b_loyalty : The SMP and NKF have more support among the garrison than the GSA. ?]
 
 @city_militias
-title: The city militias?
+title: The faculty security?
 max-visits: 1
 on-arrival: bc += 1
 go-to: battle_outcome
 
-[? if city_militia_k_loyalty + city_militia_m_loyalty + city_militia_sr_loyalty >= 50 : The majority of the city militia supports the Provisional Government.  ?]
-[? if city_militia_k_loyalty + city_militia_m_loyalty + city_militia_sr_loyalty < 50 : The city militia is apathetic in this fight, and will remain neutral.  ?]
+[? if city_militia_k_loyalty + city_militia_m_loyalty + city_militia_sr_loyalty >= 50 : The majority of the faculty security supports the Provisional Government.  ?]
+[? if city_militia_k_loyalty + city_militia_m_loyalty + city_militia_sr_loyalty < 50 : The faculty security is apathetic in this fight, and will remain neutral.  ?]
 
 @loyal_troops
 title: The loyal troops...
@@ -138,7 +138,7 @@ go-to: prov_gov_win if prov_gov_victory and not join_bolshevik; rev_win if revol
 
 = Provisional Government Victory
 
-The Bolsheviks have been defeated! In the end, our forces together with the Bolsheviks were not strong enough to take on the Provisional Government. It is our end as a party.
+The GSA have been defeated! In the end, our forces together with the GSA were not strong enough to take on the Provisional Government. It is our end as an association.
 
 - @game_over: Game Over.
 
@@ -147,12 +147,12 @@ on-arrival: workers_b -= 15; soldiers_b -= 15; workers_militia_b_loyalty -= 15;
 
 = Provisional Government Victory
 
-The Bolsheviks have been defeated! We must continue until the Constituent Assembly Election.
+The GSA have been defeated! We must continue until the Constituent Assembly Election.
 
 @rev_win
 
-= Bolshevik Victory
+= GSA Victory
 
-The Bolsheviks have successfully stormed the Winter Palace. Provisional Government ministers have been arrested, and many have fled. Now, the Bolsheviks are forming a new government based in the Soviet.
+The GSA has successfully stormed the Winter Palace. Provisional Government ministers have been arrested, and many have fled. Now, the GSA is forming a new government based in the Council.
 
 - @game_over: Game Over.
