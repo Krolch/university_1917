@@ -129,7 +129,7 @@ go-to: advisor_menu
 
 Kondratiev has been added as an advisor.
 
-@add_karo
+@add_krok
 title: Karolina Krok
 subtitle: Karolina Krok is a try at creating advisors. 
 view-if: karo_advisor = 0 and sr_n_advisors < max_advisors and right_sr_split = 0
@@ -211,7 +211,17 @@ on-arrival: chernov_advisor = 1; sr_n_advisors += 1;
 tags: sr_advisor, center_sr
 go-to: advisor_menu
 
-Chernov has been added as an advisor.
+Chernov has been added as an advisor. 
+
+@add_grewenda
+title: Tomasz Grewenda
+subtitle: Grewenda is a highly esteemed member of NKF.
+view-if: grewenda_advisor = 0 and sr_n_advisors < max_advisors and grewenda_available = 1
+on-arrival: grewenda_advisor = 1; sr_n_advisors += 1; 
+tags: sr_advisor, center_sr
+go-to: advisor_menu
+
+Tomasz Grewenda has been added as an advisor.
 
 
 #################################### removing advisors
@@ -315,10 +325,10 @@ go-to: rm_main
 
 Kondratiev is no longer an advisor. The Right-SRs are not pleased.
 
-@remove_karo
+@remove_krok
 title: Remove Karolina Krok
-view-if: karo_advisor = 1
-on-arrival: karo_advisor = 0; right_sr_dissent += 10; sr_n_advisors -= 1
+view-if: krok_advisor = 1
+on-arrival: krok_advisor = 0; right_sr_dissent += 10; sr_n_advisors -= 1
 tags: sr_rm_advisor
 go-to: rm_main
 
@@ -331,4 +341,13 @@ on-arrival: gmurowska_advisor = 0; right_sr_dissent += 10; sr_n_advisors -= 1
 tags: sr_rm_advisor
 go-to: rm_main
 
-Aleksandra Gmurowska is no longer an advisor. The Right-SRs are not pleased.
+Aleksandra Gmurowska is no longer an advisor. The Right-SRs are not pleased. 
+
+@remove_grewenda
+title: Remove Tomasz Grewenda
+view-if: grewenda_advisor = 1
+on-arrival: grewenda_advisor = 0; right_sr_dissent += 5; left_sr_dissent += 5; center_sr_dissent += 10; sr_n_advisors -= 1
+tags: sr_rm_advisor
+go-to: rm_main
+
+Tomasz Grewenda is no longer an advisor.

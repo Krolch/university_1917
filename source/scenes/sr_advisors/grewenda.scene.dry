@@ -1,0 +1,32 @@
+title:  Tomasz Grewenda
+is-pinned-card: true
+tags: advisor
+card-image: img/portraits/sr/grewenda.jpg
+view-if: grewenda_advisor = 1 and player_party = "sr"
+new-page: true
+
+= Tomasz Grewenda 
+
+Grewenda is a highly esteemed member of NKF, glad to help the grassroots of the association. He represents the center of the NKF. 
+
+- @organizing_workers
+- @party_unity
+- @root: Return to main 
+
+@party_unity 
+title: Association Unity
+subtitle: Reduce dissent across the NKF.
+choose-if: advisor_action_timer = 0
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] weeks before next advisor action. ?]
+on-arrival: advisor_action_timer = 4; left_sr_dissent -= sr_discipline_change+1; right_sr_dissent -= sr_discipline_change+1; center_sr_dissent -= sr_discipline_change+4;
+
+With Grewenda's help, we have reduced dissent across the NKF. 
+
+@organizing_workers
+title: Organizing the Physics Students
+subtitle: Grewenda seeks to be helpful to the young members of the NKF.
+choose-if: advisor_action_timer = 0
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] weeks before next advisor action. ?]
+on-arrival: advisor_action_timer = 4; last_advisor_action = 1; workers_sr += 5*(1-sr_dissent); sr_workers_org += 1; workers_sr -= 2 if sr_in_gov and prov_gov_legitimacy <= 50;
+
+We have organized among the physics students. [? if sr_in_gov and prov_gov_legitimacy <= 50 : Our participation in the unpopular Provisional Government limits our support. ?]
