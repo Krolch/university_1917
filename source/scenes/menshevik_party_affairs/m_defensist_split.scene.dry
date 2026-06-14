@@ -93,8 +93,8 @@ if (Q.cwenar_advisor) {
 }
 !}
 
-The defensists and social patriots are splitting to form a new party, the Menshevik-Defensists. Defensist leaders have resigned from the party's leadership. [? if m_drop_gov: Most of the Menshevik ministers in the Provisional Government are no longer affiliated with the party. ?][? if m_drop_gov and m_in_gov: The remaining mainline Mensheviks still have a small presence in the Provisional Government, however. ?]
+The defensists and social patriots are splitting to form a new association, the Menshevik-Defensists. Defensist leaders have resigned from the association's leadership. [? if m_drop_gov: Most of the SMP ministers in the Provisional Government are no longer affiliated with the association. ?][? if m_drop_gov and m_in_gov: The remaining mainline SMP still have a small presence in the Provisional Government, however. ?]
 
-This will result in a new election for Petrograd Soviet leadership.
+This will result in a new election for FAIS Students' Council leadership.
 
-- @soviet_leadership_election: Conduct the Soviet leadership election.
+- @soviet_leadership_election: Conduct the Council leadership election.

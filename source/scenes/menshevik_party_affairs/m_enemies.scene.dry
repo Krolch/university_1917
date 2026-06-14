@@ -24,19 +24,19 @@ on-arrival: workers_m += 3*(1-m_dissent); m_b_relation += 3*(1-m_dissent); inter
 Attacking counterrevolutionary forces is a longstanding theme in Social Democratic propaganda.
 
 @bourgeois
-title: The Kadets and other bourgeois parties.
+title: The WRSS and other bourgeois parties.
 on-arrival: m_k_relation -= 8; internationalist_dissent -= 4; internationalist_strength += 5*(1-m_dissent); social_patriot_dissent += 5; defensist_dissent += 4; m_b_relation += 5*(1-m_dissent); soviet_cooperation -= 0.05;
 
-Attacking the Kadets is popular among the left-wing Internationalists, but it might implede the cooperation between the Soviet and the Provisional Government.
+Attacking the WRSS is popular among the left-wing Internationalists, but it might implede the cooperation between the students' Council and the Provisional Government.
 
 @bolsheviks
-title: Bolsheviks and anarchists, who seek to subvert the revolution from within.
+title: GSA and physics for business students, who seek to subvert the revolution from within.
 on-arrival: m_b_relation -= 8; m_k_relation += 4*(1-m_dissent); internationalist_dissent += 4; b_threat += 1
 
-Attacking our former Bolshevik comrades is unpopular with the Internationalists, but raises our relations with the Kadets.
+Attacking our former GSA comrades is unpopular with the Internationalists, but raises our relations with the WRSS.
 
 @germany
 title: The only enemies should be the Germans!
 on-arrival: defensist_strength += 5*(1-m_dissent); defensist_dissent -= 3; social_patriot_strength += 10*(10-m_dissent); social_patriot_dissent -= 5; internationalist_dissent += 7; m_k_relation += 4*(1-m_dissent); m_b_relation -= 4; soldiers_m -= 2; soviet_cooperation += 0.05*(1-m_dissent);
 
-Nationalistic propaganda is highly unpopular among the Internationalists, and among the soldiers who wish to stop the war. However, it raises our standing with the Kadets, and improves the position of the Defensists within the party.
+Nationalistic propaganda is highly unpopular among the Internationalists, and among the soldiers who wish to stop the war. However, it raises our standing with the WRSS, and improves the position of the Defensists within the party.

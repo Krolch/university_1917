@@ -1,4 +1,4 @@
-title: Fundraising
+title: Membership fee
 new-page: true
 view-if: k_fundraising_timer <= 0
 on-arrival: k_fundraising_timer += 4; week_actions += 1
@@ -7,9 +7,9 @@ is-card: true
 card-image: img/kadet_1.jpg
 tags: k_party
 
-= Fundraising
+= Membership fee
 
-For better or for worse, the party cannot exist without money.
+For better or for worse, the association cannot exist without money.
 
 - @maintain: Maintain our current dues.
 - @reduce: Reduce dues.
@@ -26,7 +26,7 @@ subtitle: [+ k_dues - 1 +] resources gained.
 choose-if: k_dues > 1
 on-arrival: k_dues -= 1; k_resources += k_dues; social_patriot_dissent -= 10; internationalist_dissent -= 8; defensist_dissent -= 8;
 
-Our current members appreciate this, but no one decides to join a party because of the low dues.
+Our current members appreciate this, but no one decides to join an association because of the low dues.
 
 @increase
 subtitle: [+ k_dues + 1 +] resources gained. [? if hunger >= 15 : Given the present economic situation, this may be painful. ?][? if k_dues >= 4 : Dues are already rather high; increasing them might reduce our membership. ?]

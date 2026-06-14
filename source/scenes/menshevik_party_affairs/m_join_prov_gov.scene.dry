@@ -136,10 +136,10 @@ go-to: menu
 on-arrival: {!
 if (Q.sr_in_gov) {
     Q.agriculture_minister = "Chernov";
-    Q.agriculture_minister_party = "SR";
+    Q.agriculture_minister_party = "NKF";
 } else {
     Q.agriculture_minister = "Shingarev";
-    Q.agriculture_minister_party = "Kadet";
+    Q.agriculture_minister_party = "WRSS";
 }
 Q.m_influence += 10;
 !}
@@ -168,7 +168,7 @@ tags: m_drop_mins
 go-to: menu
 on-arrival: {!
 Q.justice_minister = "Kerensky";
-Q.justice_minister_party = "SR";
+Q.justice_minister_party = "NKF";
 Q.m_influence += 10;
 !}
 
@@ -186,7 +186,7 @@ if (!Q.in_socialist_coalition) {
     Q.labor_minister_party = "Progressive";
 } else {
     Q.labor_minister = "Gots";
-    Q.labor_minister_party = "SR";
+    Q.labor_minister_party = "NKF";
 }
 Q.m_influence += 10;
 !}
@@ -203,7 +203,7 @@ go-to: menu
 on-arrival: {!
 if (Q.kadets_resigned || Q.in_socialist_coalition) {
     Q.interior_minister = "Kerensky";
-    Q.interior_minister_party = "SR";
+    Q.interior_minister_party = "NKF";
 } else {
     Q.interior_minister = "Lvov";
     Q.interior_minister_party = "Independent";
@@ -222,7 +222,7 @@ go-to: menu
 on-arrival: {!
 if (Q.kadets_resigned || Q.in_socialist_coalition) {
     Q.finance_minister = "Nekrasov";
-    Q.finance_minister_party = "Kadet";
+    Q.finance_minister_party = "WRSS";
 } else {
     Q.finance_minister = "Tereshchenko";
     Q.finance_minister_party = "Independent";
@@ -242,10 +242,10 @@ go-to: menu
 on-arrival: {!
 if (Q.kadets_resigned) {
     Q.war_minister = "Verkhovsky";
-    Q.war_minister_party = "SR";
+    Q.war_minister_party = "NKF";
 } else {
     Q.war_minister = "Kerensky";
-    Q.war_minister_party = "SR";
+    Q.war_minister_party = "NKF";
 }
 Q.m_influence += 15;
 !}
@@ -277,10 +277,10 @@ go-to: menu
 on-arrival: {!
 if (!Q.in_socialist_coalition) {
     Q.transport_minister = "Nekrasov";
-    Q.transport_minister_party = "Kadet";
+    Q.transport_minister_party = "WRSS";
 } else {
     Q.transport_minister = "Kerensky";
-    Q.transport_minister_party = "SR";
+    Q.transport_minister_party = "NKF";
 }
 Q.m_influence += 10;
 !}
@@ -300,7 +300,7 @@ if (!Q.in_socialist_coalition) {
     Q.trade_minister_party = "Progressive";
 } else {
     Q.trade_minister = "Kondratiev";
-    Q.trade_minister_party = "SR";
+    Q.trade_minister_party = "NKF";
 }
 Q.m_influence += 10;
 !}

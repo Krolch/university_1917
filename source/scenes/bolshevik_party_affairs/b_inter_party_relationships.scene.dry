@@ -1,4 +1,4 @@
-title: Inter-Party Relationships
+title: Inter-Association Relationships
 new-page: true
 view-if: b_inter_party_relationships_timer <= 0 and player_party = "b"
 is-card: true
@@ -7,9 +7,9 @@ card-image: img/portraits/taburin_b_m.jpg
 max-visits: 12
 tags: b_party
 
-= Inter-Party Relationships
+= Inter-Association Relationships
 
-We can improve our relations with the other democratic or socialist parties.
+We can improve our relations with the other democratic or socialist associations.
 
 - @sr
 - @m
@@ -19,17 +19,17 @@ We can improve our relations with the other democratic or socialist parties.
 
 
 @sr
-title: Improve our relations with the Socialist-Revolutionaries.
+title: Improve our relations with the NKF.
 on-arrival: b_sr_relation += 6*(1-b_dissent); b_resources -= 1;
 choose-if: b_resources >= 1
 subtitle: -1 resource
 
-We have improved our relations with the Party of Socialist-Revolutionaries.
+We have improved our relations with the Physics Students' Association.
 
 @m
-title: Can we repair our relations with the Mensheviks?
+title: Can we repair our relations with the SMP?
 on-arrival: m_b_relation += 5*(1-b_dissent); m_b_relation -= 3 if leninist_strength >= moderate_strength; b_resources -= 1;
 choose-if: b_resources >= 1
 subtitle: -1 resource
 
-We have attempted to build closer ties with the Mensheviks, our wayward cousins in the RSDLP. [? if leninist_strength >= moderate_strength : The influence of Lenin makes it difficult for us to build these relationships. ?]
+We have attempted to build closer ties with the SMP, our wayward cousins in the RSDLP. [? if leninist_strength >= moderate_strength : The influence of Lenin makes it difficult for us to build these relationships. ?]
