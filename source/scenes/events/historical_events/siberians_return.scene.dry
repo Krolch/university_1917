@@ -24,9 +24,9 @@ For the Bolsheviks, the returned exiles include Josef Stalin, Yakov Sverdlov, an
 @siberians_return_sr
 on-arrival: sr_siberians_return_seen = 1;
 
-For the SRs, the exiles include Maria Spiridonova, the famed assassin and left-SR leader. Others are Abram Gots, a more moderate SR who seeks to work with the Soviets, and Catherine Breshkovskaya, the "babushka" of the revolution who has taking a strong defensist stance.
+For the SRs, the exiles include Maria Spiridonova, the famed assassin and left-SR leader. Others are Abram Gots, a more moderate SR who seeks to work with the Soviets, and Catherine Breshkovskaya, the "babushka" of the revolution who has taking a strong defensist stance, and Tomasz Grewenda, a highly esteemed member of NKF who represents the center of the NKF.
 
 @siberians_return_k
 on-arrival: k_siberians_return_seen = 1
 
-Among the returning exiles are the Menshevik group led by Irakli Tsereteli, the SRs Maria Spiridonova, Abram Gots, and Catherine Breshkovskaya, and the Bolsheviks Josef Stalin and Lev Kamenev.
+Among the returning exiles are the Menshevik group led by Irakli Tsereteli, the SRs Maria Spiridonova, Abram Gots, Catherine Breshkovskaya, and Tomasz Grewenda, and the Bolsheviks Josef Stalin and Lev Kamenev.
