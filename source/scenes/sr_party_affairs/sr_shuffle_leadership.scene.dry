@@ -132,8 +132,8 @@ Kondratiev has been added as an advisor.
 @add_krok
 title: Karolina Krok
 subtitle: Karolina Krok is a try at creating advisors. 
-view-if: karo_advisor = 0 and sr_n_advisors < max_advisors and right_sr_split = 0
-on-arrival: karo_advisor = 1; sr_n_advisors += 1; 
+view-if: krok_advisor = 0 and sr_n_advisors < max_advisors and right_sr_split = 0
+on-arrival: krok_advisor = 1; sr_n_advisors += 1; 
 tags: sr_advisor, right_sr
 go-to: advisor_menu
 

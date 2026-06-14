@@ -988,10 +988,13 @@ Q.avksentiev_advisor = 0; // Nikolai Avksentiev
 Q.savinkov_advisor = 0; // Boris Savinkov
 Q.kondratiev_advisor = 0; // Nikolai Kondratiev
 Q.breshkovskaya_advisor = 0; //Catherine Breshko-Breshkovskaya
+Q.gmurowska_advisor = 0; // Aleksandra Gmurowska
+Q.krok_advisor = 0; // Karolina Krok
 // center-sr
 Q.chernov_advisor = 0; // Viktor Chernov - April week 1
 Q.gots_advisor = 0; // Abram Gots
-Q.zenzinov_advisor = 1; // Vladimir Zenzinov
+Q.zenzinov_advisor = 1; // Vladimir Zenzinov 
+Q.grewenda_advisor = 0; // Tomasz Grewenda
 // left-sr
 Q.spiridonova_advisor = 0; // Maria Spiridonova
 Q.natanson_advisor = 0; // Mark Natanson
