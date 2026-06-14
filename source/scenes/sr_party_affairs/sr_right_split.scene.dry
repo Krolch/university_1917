@@ -109,6 +109,10 @@ if (Q.savinkov_advisor) {
   Q.sr_n_advisors -= 1;
   Q.savinkov_advisor = 0;
 }
+if (Q.gmurowska_advisor) {
+  Q.sr_n_advisors -= 1;
+  Q.gmurowska_advisor = 0;
+}
 !}
 
 The Right-SRs are splitting to form a new party. Right-SR leaders have resigned from the party's leadership, and their supporters will follow them. [? if sr_drop_gov: Most of the SR-affiliated ministers in the Provisional Government are no longer affiliated with the party. ?]

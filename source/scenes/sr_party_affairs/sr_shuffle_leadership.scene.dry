@@ -137,7 +137,17 @@ on-arrival: karo_advisor = 1; sr_n_advisors += 1;
 tags: sr_advisor, right_sr
 go-to: advisor_menu
 
-Karolina Krok has been added as an advisor.
+Karolina Krok has been added as an advisor. 
+
+@add_gmurowska
+title: Aleksandra Gmurowska
+subtitle: Aleksandra Gmurowska is a try at creating advisors.
+view-if: gmurowska_advisor = 0 and sr_n_advisors < max_advisors and right_sr_split = 0
+on-arrival: gmurowska_advisor = 1; sr_n_advisors += 1; 
+tags: sr_advisor, right_sr
+go-to: advisor_menu
+
+Aleksandra Gmurowska has been added as an advisor.
 
 
 # left_srs
@@ -312,4 +322,13 @@ on-arrival: karo_advisor = 0; right_sr_dissent += 10; sr_n_advisors -= 1
 tags: sr_rm_advisor
 go-to: rm_main
 
-Karolina Krok is no longer an advisor. The Right-SRs are not pleased.
+Karolina Krok is no longer an advisor. The Right-SRs are not pleased. 
+
+@remove_gmurowska
+title: Remove Aleksandra Gmurowska
+view-if: gmurowska_advisor = 1
+on-arrival: gmurowska_advisor = 0; right_sr_dissent += 10; sr_n_advisors -= 1
+tags: sr_rm_advisor
+go-to: rm_main
+
+Aleksandra Gmurowska is no longer an advisor. The Right-SRs are not pleased.
