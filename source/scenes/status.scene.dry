@@ -228,7 +228,7 @@ switch (Q.player_party) {
 [? if player_party != "b": </br> Leadership: [+ b_leadership : b_leadership +] ?]
 
 
-[? if player_party != "sr": SRs: [+ sr_relation : relationships +] ?]
+[? if player_party != "sr": NKF: [+ sr_relation : relationships +] ?]
 [? if player_party != "sr": </br> Leadership: [+ sr_leadership : sr_leadership +] ?]
 
 
