@@ -112,7 +112,7 @@ Vladimir Voitinsky has been added as an advisor.
 @add_cwenar
 title: Julia Cwenar
 subtitle: Revolutionary Defensist
-view-if: cwenar_advisor = 0 and m_n_advisors < max_advisors and defensist_split = 0 and cwenar_available = 1
+view-if: cwenar_advisor = 0 and m_n_advisors < max_advisors and defensist_split = 0
 on-arrival: cwenar_advisor = 1; m_n_advisors += 1; 
 tags: m_advisor, m_defensist
 go-to: advisor_menu
