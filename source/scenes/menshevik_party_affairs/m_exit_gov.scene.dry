@@ -1,67 +1,67 @@
 title: Mensheviks leave the Provisional Government.
 on-arrival: {!
 Q.m_in_gov = 0;
-if (Q.agriculture_minister_party = "Menshevik") {
+if (Q.agriculture_minister_party = "SMP") {
     if (Q.sr_in_gov) {
         Q.agriculture_minister = "Chernov";
-        Q.agriculture_minister_party = "SR";
+        Q.agriculture_minister_party = "NKF";
     } else {
         Q.agriculture_minister = "Shingarev";
-        Q.agriculture_minister_party = "Kadet";
+        Q.agriculture_minister_party = "WRSS";
     }
 }
-if (Q.justice_minister_party = "Menshevik") {
+if (Q.justice_minister_party = "SMP") {
     Q.justice_minister = "Kerensky";
-    Q.justice_minister_party = "SR";
+    Q.justice_minister_party = "NKF";
 }
-if (Q.interior_minister_party = "Menshevik") {
+if (Q.interior_minister_party = "SMP") {
     if (Q.kadets_resigned) {
         Q.interior_minister = "Kerensky";
-        Q.interior_minister_party = "SR";
+        Q.interior_minister_party = "NKF";
     } else {
         Q.interior_minister = "Lvov";
         Q.interior_minister_party = "Independent";
     }
 }
-if (Q.finance_minister_party = "Menshevik") {
+if (Q.finance_minister_party = "SMP") {
     if (Q.kadets_resigned) {
         Q.finance_minister = "Nekrasov";
-        Q.finance_minister_party = "Kadet";
+        Q.finance_minister_party = "WRSS";
     } else {
         Q.finance_minister = "Tereshchenko";
         Q.finance_minister_party = "Independent";
     }
 }
-if (Q.war_minister_party = "Menshevik") {
+if (Q.war_minister_party = "SMP") {
     if (Q.kadets_resigned) {
         Q.war_minister = "Verkhovsky";
-        Q.war_minister_party = "SR";
+        Q.war_minister_party = "NKF";
     } else {
         Q.war_minister = "Kerensky";
-        Q.war_minister_party = "SR";
+        Q.war_minister_party = "NKF";
     }
 }
-if (Q.foreign_minister_party = "Menshevik") {
+if (Q.foreign_minister_party = "SMP") {
     Q.foreign_minister = "Tereshchenko";
     Q.foreign_minister_party = "Independent";
 }
-if (Q.transport_minister_party = "Menshevik") {
+if (Q.transport_minister_party = "SMP") {
     Q.transport_minister = "Nekrasov";
-    Q.transport_minister_party = "Kadet";
+    Q.transport_minister_party = "WRSS";
 }
-if (Q.trade_minister_party = "Menshevik") {
+if (Q.trade_minister_party = "SMP") {
     Q.trade_minister = "Konovalov";
     Q.trade_minister_party = "Progressive";
 }
-if (Q.food_minister_party = "Menshevik") {
+if (Q.food_minister_party = "SMP") {
     Q.food_minister = "Peshekhonov";
     Q.food_minister_party = "Popular Socialist";
 }
-if (Q.labor_minister_party = "Menshevik") {
+if (Q.labor_minister_party = "SMP") {
     Q.labor_minister = 0;
     Q.labor_minister_party = 0;
 }
-if (Q.post_minister_party = "Menshevik") {
+if (Q.post_minister_party = "SMP") {
     Q.post_minister = 0;
     Q.post_minister_party = 0;
 }
