@@ -109,6 +109,16 @@ go-to: advisor_menu
 
 Vladimir Voitinsky has been added as an advisor.
 
+@add_cwenar
+title: Julia Cwenar
+subtitle: Revolutionary Defensist
+view-if: cwenar_advisor = 0 and m_n_advisors < max_advisors and defensist_split = 0 and cwenar_available = 1
+on-arrival: cwenar_advisor = 1; m_n_advisors += 1; 
+tags: m_advisor, m_defensist
+go-to: advisor_menu
+
+Julia Cwenar has been added as an advisor.
+
 # internationalists
 
 @add_martov
@@ -322,3 +332,14 @@ tags: m_rm_advisor
 go-to: rm_main
 
 Zasulich is no longer an advisor. The Defensists are not pleased.
+
+@remove_cwenar
+title: Remove Cwenar
+view-if: cwenar_advisor = 1
+choose-if: defensist_strength < 50
+unavailable-subtitle: The Defensist faction is too strong.
+on-arrival: cwenar_advisor = 0; defensist_dissent += 10; m_n_advisors -= 1
+tags: m_rm_advisor
+go-to: rm_main
+
+Cwenar is no longer an advisor. The Revolutionary Defensists are not pleased.

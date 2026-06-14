@@ -1,0 +1,43 @@
+title: Julia Cwenar
+is-pinned-card: true
+tags: advisor
+card-image: img/portraits/m/cwenar.jpg
+view-if: cwenar_advisor = 1 and player_party = "m"
+new-page: true 
+
+= Julia Cwenar
+
+Irakli Tsereteli is a Georgian Menshevik revolutionary who returned from Siberian exile. He is widely viewed as the leader of the Mensheviks. In exile, he developed a nuanced position on the war, calling for a negotiated end to the war without defeatism, although in Petrograd he tends to support the Provisional Government's policies.
+
+# actions: fundraising, organizing workers, inter-party relations, clear the agenda
+# actions: media, students' militia, war ministry
+
+- @media
+- @militias_ 
+- military_
+- @root: Return to main
+
+@media
+title: Media Campaigning
+subtitle: Use our media apparatus to support the SMP. -1 resource
+choose-if: advisor_action_timer <= 0
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] weeks before next advisor action. ?][? if m_resources < 1: Not enough resources. ?]
+on-arrival: advisor_action_timer = 4; workers_m += 4*(1-m_dissent); soldiers_m += 4*(1-m_dissent); soldiers_m -= 2 if (war_weariness >= 60 and m_war_policy <= 1);
+
+Our propaganda campaign encourages support for the SMP among the students and the computer science students.
+
+@militias_
+title: Students' Militias
+subtitle: Build up the Students' Militias.
+choose-if: advisor_action_timer = 0 and m_in_exco
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] weeks before next advisor action. ?] [? if not m_in_exco : We are not in the Students' Council Executive Committee. ?]
+on-arrival: advisor_action_timer = 4; militias_timer -= 4; last_advisor_action = 1
+go-to: militias
+
+@military_
+title: Military Policy
+subtitle: We control the Ministry of War.
+choose-if: advisor_action_timer = 0 and war_minister = "Cwenar"
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] weeks before next advisor action. ?] [? if war_minister != "Cwenar" : We do not control the Ministry of War. ?]
+on-arrival: advisor_action_timer = 4; military_policy_timer -= 3; last_advisor_action = 1 
+go-to: military_policy

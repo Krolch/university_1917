@@ -87,6 +87,10 @@ if (Q.voitinsky_advisor) {
   Q.m_n_advisors -= 1;
   Q.voitinsky_advisor = 0;
 }
+if (Q.cwenar_advisor) {
+  Q.m_n_advisors -= 1;
+  Q.cwenar_advisor = 0;
+}
 !}
 
 The defensists and social patriots are splitting to form a new party, the Menshevik-Defensists. Defensist leaders have resigned from the party's leadership. [? if m_drop_gov: Most of the Menshevik ministers in the Provisional Government are no longer affiliated with the party. ?][? if m_drop_gov and m_in_gov: The remaining mainline Mensheviks still have a small presence in the Provisional Government, however. ?]
