@@ -971,6 +971,7 @@ Q.broido_advisor = 0; // Eva Broido
 Q.liber_advisor = 0; // Mikhail Liber (Bundist)
 Q.zasulich_advisor = 0; // Vera Zasulich
 Q.cwenar_advisor = 1; // Julia Cwenar
+Q.gajewska_advisor = 0; // Natalia Gajewska - arrive March week 3
 // center/non-aligned
 Q.groman_advisor = 0; // Vladimir Groman - economist
 Q.skobelev_advisor = 1; // Matvei Skobelev

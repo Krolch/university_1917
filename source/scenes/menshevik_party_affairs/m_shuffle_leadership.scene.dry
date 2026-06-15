@@ -119,6 +119,14 @@ go-to: advisor_menu
 
 Julia Cwenar has been added as an advisor.
 
+@add_gajewska
+title: Natalia Gajewska
+subtitle: Revolutionary Defensist
+view-if: gajewska_advisor = 0 and m_n_advisors < max_advisors and defensist_split = 0
+on-arrival: gajewska_advisor = 1; m_n_advisors += 1; 
+tags: m_advisor, m_defensist
+go-to: advisor_menu
+
 # internationalists
 
 @add_martov
@@ -343,3 +351,14 @@ tags: m_rm_advisor
 go-to: rm_main
 
 Cwenar is no longer an advisor. The Revolutionary Defensists are not pleased.
+
+@remove_gajewska
+title: Remove Gajewska
+view-if: gajewska_advisor = 1
+choose-if: defensist_strength < 50
+unavailable-subtitle: The Defensist faction is too strong.
+on-arrival: gajewska_advisor = 0; defensist_dissent += 10; m_n_advisors -= 1
+tags: m_rm_advisor
+go-to: rm_main
+
+Gajewska is no longer an advisor. The Revolutionary Defensists are not pleased.
