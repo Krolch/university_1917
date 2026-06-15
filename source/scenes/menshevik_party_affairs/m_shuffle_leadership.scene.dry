@@ -122,7 +122,7 @@ Julia Cwenar has been added as an advisor.
 @add_gajewska
 title: Natalia Gajewska
 subtitle: Revolutionary Defensist
-view-if: gajewska_advisor = 0 and m_n_advisors < max_advisors and defensist_split = 0
+view-if: gajewska_advisor = 0 and m_n_advisors < max_advisors and defensist_split = 0 and gajewska_available = 1
 on-arrival: gajewska_advisor = 1; m_n_advisors += 1; 
 tags: m_advisor, m_defensist
 go-to: advisor_menu
