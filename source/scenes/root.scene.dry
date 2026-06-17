@@ -998,6 +998,7 @@ Q.chernov_advisor = 0; // Viktor Chernov - April week 1
 Q.gots_advisor = 0; // Abram Gots
 Q.zenzinov_advisor = 1; // Vladimir Zenzinov 
 Q.grewenda_advisor = 0; // Tomasz Grewenda
+Q.rog_advisor = 0; // Matylda Róg
 // left-sr
 Q.spiridonova_advisor = 0; // Maria Spiridonova
 Q.natanson_advisor = 0; // Mark Natanson

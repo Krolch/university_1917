@@ -223,6 +223,15 @@ go-to: advisor_menu
 
 Tomasz Grewenda has been added as an advisor.
 
+@add_rog
+title: Matylda Róg
+subtitle: Róg is an experienced coworker of academic employees.
+view-if: rog_advisor = 0 and sr_n_advisors < max_advisors and rog_available = 1
+on-arrival: rog_advisor = 1; sr_n_advisors += 1; 
+tags: sr_advisor, center_sr
+go-to: advisor_menu
+
+Matylda Róg has been added as an advisor.
 
 #################################### removing advisors
 
@@ -351,3 +360,12 @@ tags: sr_rm_advisor
 go-to: rm_main
 
 Tomasz Grewenda is no longer an advisor.
+
+@remove_rog
+title: Remove Matylda Róg
+view-if: rog_advisor = 1
+on-arrival: rog_advisor = 0; right_sr_dissent += 5; left_sr_dissent += 5; center_sr_dissent += 10; sr_n_advisors -= 1
+tags: sr_rm_advisor
+go-to: rm_main
+
+Matylda Róg is no longer an advisor.
