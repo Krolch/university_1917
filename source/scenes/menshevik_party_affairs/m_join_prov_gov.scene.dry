@@ -110,9 +110,9 @@ tags: m_mins
 choose-if: m_influence >= 10
 view-if: transport_minister_party != "SMP"
 go-to: menu
-on-arrival: m_influence -= 10; transport_minister = "Plekhanov"; transport_minister_party = "SMP"
+on-arrival: m_influence -= 10; transport_minister = "Winiarski"; transport_minister_party = "SMP"
 
-Georgi Plekhanov has been appointed Transportation [+ government_form : minister +].
+Mateusz Winiarski has been appointed Transportation [+ government_form : minister +].
 
 
 @trade
@@ -122,9 +122,9 @@ tags: m_mins
 choose-if: m_influence >= 10
 view-if: trade_minister_party != "SMP"
 go-to: menu
-on-arrival: m_influence -= 10; trade_minister = "Groman"; trade_minister_party = "SMP"
+on-arrival: m_influence -= 10; trade_minister = "Winiarski"; trade_minister_party = "SMP"
 
-Vladimir Groman has been appointed Trade and Industry [+ government_form : minister +].
+Mateusz Winiarski has been appointed Trade and Industry [+ government_form : minister +].
 
 
 

@@ -1,4 +1,4 @@
-title: SRs leave the Provisional Government.
+title: NKF leaves the Provisional Government.
 on-arrival: {!
 Q.sr_in_gov = 0;
 if (Q.agriculture_minister_party = "NKF") {

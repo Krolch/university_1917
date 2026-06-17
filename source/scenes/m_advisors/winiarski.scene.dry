@@ -21,15 +21,15 @@ Mateusz 'the Black' Winiarski is a Krośnian SMP revolutionary. He is known from
 title: Transportation Policy
 subtitle: Winiarski is the Transport Minister in the Provisional Government.
 choose-if: advisor_action_timer = 0 and transport_minister = "Winiarski"
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] weeks before next advisor action. ?] [? if transport_minister != "Winiarski" : Winiarski is not the Transport Minister. ?]
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] weeks before next advisor action. ?] [? if transport_minister != "Winiarski" : Winiarski is not the Transport [+ government_form : minister +]. ?]
 on-arrival: advisor_action_timer = 4; transport_policy_timer -= 4; last_advisor_action = 1
 go-to: transport_policy
 
 @industrial_
 title: Industrial Policy
-subtitle: Winiarski is the Industrial Minister in the Provisional Government.
+subtitle: Winiarski is the Industry and Trade Minister in the Provisional Government.
 choose-if: advisor_action_timer = 0 and industrial_minister = "Winiarski"
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] weeks before next advisor action. ?] [? if industrial_minister != "Winiarski" : Winiarski is not the Industrial Minister. ?]
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] weeks before next advisor action. ?] [? if industrial_minister != "Winiarski" : Winiarski is not the Industry and Trade [+ government_form : minister +]. ?]
 on-arrival: advisor_action_timer = 4; industrial_policy_timer -= 4; last_advisor_action = 1
 go-to: industrial_policy
 

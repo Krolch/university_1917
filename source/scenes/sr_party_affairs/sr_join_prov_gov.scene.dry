@@ -1,5 +1,5 @@
 title: Join the Provisional Government!
-view-if: player_party = "NKF"
+view-if: player_party = "sr"
 go-to: menu
 
 Which ministerial positions should we take?
@@ -287,7 +287,7 @@ if (!Q.in_socialist_coalition) {
     Q.transport_minister = "Nekrasov";
     Q.transport_minister_party = "WRSS";
 } else {
-    Q.transport_minister = "Plekhanov";
+    Q.transport_minister = "Winiarski";
     Q.transport_minister_party = "SMP";
 }
 Q.sr_influence += 10;
@@ -307,7 +307,7 @@ if (!Q.in_socialist_coalition) {
     Q.trade_minister = "Konovalov";
     Q.trade_minister_party = "Progressive";
 } else {
-    Q.trade_minister = "Groman";
+    Q.trade_minister = "Winiarski";
     Q.trade_minister_party = "SMP";
 }
 Q.sr_influence += 10;

@@ -68,9 +68,9 @@ if (Q.player_party == 'm') {
     Q.war_minister_party = "SMP";
     Q.foreign_minister = "Martov";
     Q.foreign_minister_party = "SMP";
-    Q.transport_minister = "Plekhanov";
+    Q.transport_minister = "Winiarski";
     Q.transport_minister_party = "SMP";
-    Q.trade_minister = "Groman";
+    Q.trade_minister = "Winiarski";
     Q.trade_minister_party = "SMP";
     Q.education_minister_party = "Independent";
 }

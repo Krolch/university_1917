@@ -38,6 +38,6 @@ go-to: militias
 title: Military Policy
 subtitle: We control the Ministry of War.
 choose-if: advisor_action_timer = 0 and war_minister = "Cwenar"
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] weeks before next advisor action. ?] [? if war_minister != "Cwenar" : We do not control the Ministry of War. ?]
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] weeks before next advisor action. ?] [? if war_minister != "Cwenar" : Cwenar is not the War [+ government_form : minister +]. ?]
 on-arrival: advisor_action_timer = 4; military_policy_timer -= 3; last_advisor_action = 1 
 go-to: military_policy
