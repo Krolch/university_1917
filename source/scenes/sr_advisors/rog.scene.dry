@@ -12,7 +12,7 @@ Matylda Róg is a member of NKF and an experienced coworker of academic employee
 - @inter_party_relations
 - @root: Return to main
 
-@inter_party_relations
+@inter_party_relations 
 title: Inter-party Relations
 subtitle: Improve cooperation with the moderate pro-government parties.
 choose-if: advisor_action_timer <= 0
