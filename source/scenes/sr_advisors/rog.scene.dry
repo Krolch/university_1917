@@ -17,6 +17,6 @@ title: Inter-party Relations
 subtitle: Improve cooperation with the moderate pro-government parties.
 choose-if: advisor_action_timer <= 0
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] weeks before next advisor action. ?]
-on-arrival: advisor_action_timer = 4; soviet_cooperation += 0.05; m_k_relation += 5*(1-m_dissent); m_sr_relation += 5*(1-m_dissent) if not right_sr_split; soviet_efficacy += 0.01
+on-arrival: advisor_action_timer = 4; soviet_cooperation += 0.05; sr_k_relation += 5*(1-sr_dissent); m_sr_relation += 5*(1-sr_dissent) if not defensist_split; soviet_efficacy += 0.01
 
-We have improved relations with the Kadets[? if right_sr_split:. ?][? if not right_sr_split: and the SRs. ?]
+We have improved relations with the WRSS[? if defensist_split:. ?][? if not defensist_split: and the SMP. ?]
