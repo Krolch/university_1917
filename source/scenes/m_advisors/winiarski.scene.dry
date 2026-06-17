@@ -1,0 +1,43 @@
+title: Mateusz Winiarski
+is-pinned-card: true
+tags: advisor
+card-image: img/portraits/m/winiarski.jpg
+view-if: winiarski_advisor = 1 and player_party = "m"
+new-page: true 
+
+= Mateusz Winiarski
+
+Mateusz 'the Black' Winiarski is a Krośnian SMP revolutionary. He is known from his strong belief regarding Linux supremacy. 
+
+# actions: fundraising, organizing workers, inter-party relations, clear the agenda
+# actions: transportation ministry, industrial ministry, relations with WRSS, ddd
+
+- @trans_
+- @industrial_
+- @inter_party_relations
+- @root: Return to main
+
+@trans_
+title: Transportation Policy
+subtitle: Winiarski is the Transport Minister in the Provisional Government.
+choose-if: advisor_action_timer = 0 and transport_minister = "Winiarski"
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] weeks before next advisor action. ?] [? if transport_minister != "Winiarski" : Winiarski is not the Transport Minister. ?]
+on-arrival: advisor_action_timer = 4; transport_policy_timer -= 4; last_advisor_action = 1
+go-to: transport_policy
+
+@industrial_
+title: Industrial Policy
+subtitle: Winiarski is the Industrial Minister in the Provisional Government.
+choose-if: advisor_action_timer = 0 and industrial_minister = "Winiarski"
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] weeks before next advisor action. ?] [? if industrial_minister != "Winiarski" : Winiarski is not the Industrial Minister. ?]
+on-arrival: advisor_action_timer = 4; industrial_policy_timer -= 4; last_advisor_action = 1
+go-to: industrial_policy
+
+@inter_party_relations
+title: Inter-party Relations
+subtitle: Improve cooperation with the moderate pro-government parties.
+choose-if: advisor_action_timer <= 0
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] weeks before next advisor action. ?]
+on-arrival: advisor_action_timer = 4; soviet_cooperation += 0.05; m_k_relation += 5*(1-m_dissent); m_sr_relation += 5*(1-m_dissent) if not right_sr_split; soviet_efficacy += 0.01
+
+We have improved relations with the WRSS[? if right_sr_split:. ?][? if not right_sr_split: and the NKF. ?]

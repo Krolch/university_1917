@@ -161,7 +161,12 @@ go-to: advisor_menu
 
 Vladimir Groman has been added as an advisor.
 
-
+@add_winiarski
+title: Mateusz Winiarski 
+subtitle: Mateusz 'the Black' is an internationalist semp.
+view-if: winiarski_advisor = 0 and m_n_advisors < max_advisors and internationalist_split = 0
+tags: m_advisor, m_internationalist
+go-to: advisor_menu
 
 # axelrod
 
@@ -361,4 +366,15 @@ on-arrival: gajewska_advisor = 0; defensist_dissent += 10; m_n_advisors -= 1
 tags: m_rm_advisor
 go-to: rm_main
 
-Gajewska is no longer an advisor. The Revolutionary Defensists are not pleased.
+Gajewska is no longer an advisor. The Revolutionary Defensists are not pleased. 
+
+@remove_winiarski
+title: Remove Winiarski
+view-if: winiarski_advisor = 1
+choose-if: internationalist_strength < 50
+unavailable-subtitle: The Internationalist faction is too strong.
+on-arrival: winiarski_advisor = 0; internationalist_dissent += 10; m_n_advisors -= 1
+tags: m_rm_advisor
+go-to: rm_main
+
+Winiarski is no longer an advisor. The Internationalists are not pleased. 
