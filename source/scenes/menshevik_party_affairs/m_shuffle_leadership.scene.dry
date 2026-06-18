@@ -127,6 +127,13 @@ on-arrival: gajewska_advisor = 1; m_n_advisors += 1;
 tags: m_advisor, m_defensist
 go-to: advisor_menu
 
+@add_yushchuk
+title: Anastasiya Yushchuk
+subtitle: Ideological Theoretician
+view-if: yushchuk_advisor = 0 and m_n_advisors < max_advisors 
+on-arrival: yushchuk_advisor = 1; m_n_advisors += 1; 
+tags: m_advisor, m_defensist
+
 # internationalists
 
 @add_martov
@@ -379,3 +386,14 @@ tags: m_rm_advisor
 go-to: rm_main
 
 Winiarski is no longer an advisor. The Internationalists are not pleased. 
+
+@remove_yushchuk
+title: Remove Yushchuk
+view-if: yushchuk_advisor = 1
+choose-if: defensist_strength < 50
+unavailable-subtitle: The Defensist faction is too strong.
+on-arrival: yushchuk_advisor = 0; defensist_dissent += 10; m_n_advisors -= 1
+tags: m_rm_advisor
+go-to: rm_main
+
+Yushchuk is no longer an advisor. The Defensists are not pleased.

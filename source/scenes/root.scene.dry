@@ -976,7 +976,8 @@ Q.gajewska_advisor = 0; // Natalia Gajewska - arrive March week 3
 Q.groman_advisor = 0; // Vladimir Groman - economist
 Q.winiarski_advisor = 0; // Mateusz Winiarski
 Q.skobelev_advisor = 1; // Matvei Skobelev
-Q.voitinsky_advisor = 0; // Vladimir Voitinsky - arrive March week 3 (defensist-leaning)
+Q.voitinsky_advisor = 0; // Vladimir Voitinsky - arrive March week 3 (defensist-leaning) 
+Q.yushchuk_advisor = 0; // Anastasiya Yushchuk - ideology theoretician
 // internationalists
 Q.martov_advisor = 0; // Julius Martov - arrive April week 4
 Q.axelrod_advisor = 0; // Pavel Axelrod

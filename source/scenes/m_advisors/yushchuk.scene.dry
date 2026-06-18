@@ -1,0 +1,53 @@
+title: Anastasiya Yushchuk
+is-pinned-card: true
+tags: advisor
+card-image: img/portraits/m/yushchuk.jpg
+view-if: yushchuk_advisor = 1 and player_party = "m"
+new-page: true 
+
+= Anastasiya Yushchuk
+
+Anastasiya uYushchuk is one of the more ideologically advanced member of the SMP. As such, she can steer the main body of our association in either direction.
+Julia Cwenar is a Georgian SMP revolutionary who returned from Siberian exile. She is widely viewed as the leader of the SMP. In exile, she developed a nuanced position on the war, calling for a negotiated end to the war without defeatism, although in FAIS she tends to support the Provisional Government's policies.
+
+# actions: fundraising, organizing workers, inter-party relations, clear the agenda
+# actions: relations with the NKF, support revdef, adopt revdef, support inter, adopt inter
+
+- @improve_relations
+- @support_defensism 
+- @internationalism
+- @adopt_internationalism
+- @root: Return to main
+
+@improve_relations
+title: Improve our relations with the neighbours of our association.
+subtitle: Yushchuk utilizes her previous position in the NKF leadership and her contacts to improve standing of our association in their eyes.
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] weeks before next advisor action. ?]
+choose-if: advisor_action_timer <= 0
+on-arrival: advisor_action_timer = 4; m_sr_relation += 8*(1-m_dissent);
+
+@support_defensism
+title: Support Revolutionary Defensism
+subtitle: Increase support for revolutionary defensism within our association.
+choose-if: advisor_action_timer <= 0
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] weeks before next advisor action. ?]
+on-arrival: advisor_action_timer = 4; defensist_strength += m_support_change; defensist_dissent -= 5; internationalist_strength -= 4;
+
+Tsereteli is advocating in favor of the Revolutionary Defensist position. 
+
+@internationalism
+title: Support Internationalism
+subtitle: Increase support for internationalism among our association.
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] weeks before next advisor action. ?][? if m_war_policy = 2 : We already have an internationalist war policy. ?]
+choose-if: advisor_action_timer <= 0 and m_war_policy != 2
+on-arrival: advisor_action_timer = 4; internationalist_strength += m_support_change; internationalist_dissent -= 3; defensist_dissent += 5
+
+We are building up support for internationalism within the association, so that we may eventually adopt this position.
+
+@adopt_internationalism
+title: Adopt Internationalism as our association policy.
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] weeks before next advisor action. ?][? if m_war_policy = 2 : We already have an internationalist war policy. ?][? if internationalist_strength < defensist_strength + social_patriot_strength: There is not enough support for this position within the association. ?]
+choose-if: advisor_action_timer <= 0 and internationalist_strength >= defensist_strength + social_patriot_strength and m_war_policy != 2
+on-arrival: advisor_action_timer = 4; m_war_policy = 2; internationalist_strength += 5; internationalist_dissent -= 5; defensist_dissent += 15; social_patriot_dissent += 30; m_leadership = 1;
+
+We have adopted an internationalist position, calling for an immediate end to the war.
