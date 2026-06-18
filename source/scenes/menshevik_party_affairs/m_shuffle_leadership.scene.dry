@@ -111,10 +111,10 @@ Vladimir Voitinsky has been added as an advisor.
 
 @add_cwenar
 title: Julia Cwenar
-subtitle: Revolutionary Defensist
+subtitle: Social Patriot
 view-if: cwenar_advisor = 0 and m_n_advisors < max_advisors and defensist_split = 0
 on-arrival: cwenar_advisor = 1; m_n_advisors += 1; 
-tags: m_advisor, m_defensist
+tags: m_advisor, m_social_patriot
 go-to: advisor_menu
 
 Julia Cwenar has been added as an advisor.
@@ -363,7 +363,7 @@ on-arrival: cwenar_advisor = 0; defensist_dissent += 10; m_n_advisors -= 1
 tags: m_rm_advisor
 go-to: rm_main
 
-Cwenar is no longer an advisor. The Revolutionary Defensists are not pleased.
+Cwenar is no longer an advisor. The Defensists are not pleased.
 
 @remove_gajewska
 title: Remove Gajewska
