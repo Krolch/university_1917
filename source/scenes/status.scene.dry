@@ -66,19 +66,19 @@ if (Q.m_in_exco) {
     Q.exco_parties.push("SMP");
 }
 if (Q.defensist_in_exco) {
-    Q.exco_parties.push("Menshevik-Defensists");
+    Q.exco_parties.push("SMP-Defensists");
 }
 if (Q.internationalist_in_exco) {
-    Q.exco_parties.push("Menshevik-Internationalists");
+    Q.exco_parties.push("SMP-Internationalists");
 }
 if (Q.sr_in_exco) {
     Q.exco_parties.push("NKF");
 }
 if (Q.left_sr_in_exco) {
-    Q.exco_parties.push("Left-SRs");
+    Q.exco_parties.push("Left-NKF");
 }
 if (Q.right_sr_in_exco) {
-    Q.exco_parties.push("Right-SRs");
+    Q.exco_parties.push("Right-NKF");
 }
 if (Q.b_in_exco) {
     Q.exco_parties.push("GSA");
@@ -138,10 +138,10 @@ GSA: [+ b_soviet +]%
 NKF: [+ sr_soviet +]%
 Fifi: [+ anarchist_soviet +]%
 Others: [+ other_soviet +]%
-[? if defensist_split: Menshevik-Defensists: [+ defensist_soviet_votes_dec +]% ?]
-[? if internationalist_split: Menshevik-Internationalists: [+ internationalist_soviet_votes_dec +]% ?]
-[? if right_sr_split: Right-SRs: [+ right_sr_soviet_votes_dec +]% ?]
-[? if left_sr_split: Left-SRs: [+ left_sr_soviet_votes_dec +]% ?]
+[? if defensist_split: SMP-Defensists: [+ defensist_soviet_votes_dec +]% ?]
+[? if internationalist_split: SMP-Internationalists: [+ internationalist_soviet_votes_dec +]% ?]
+[? if right_sr_split: Right-NKF: [+ right_sr_soviet_votes_dec +]% ?]
+[? if left_sr_split: Left-NKF: [+ left_sr_soviet_votes_dec +]% ?]
 
 = Applied Computer Sciences
 
@@ -263,13 +263,13 @@ switch (Q.player_party) {
 [? if player_party == "k": Left-Kadet ?]
 [? if player_party == "k": dissent: [+ left_kadet_dissent : dissent +], strength: [+ left_kadet_strength : strength_2 +]?]
 
-[? if player_party == "sr": Right-SR ?]
+[? if player_party == "sr": Right-NKF ?]
 [? if player_party == "sr": dissent: [+ right_sr_dissent : dissent +], strength: [+ right_sr_strength : strength_2 +]?]
 
-[? if player_party == "sr": Center-SR ?]
+[? if player_party == "sr": Center-NKF ?]
 [? if player_party == "sr": dissent: [+ center_sr_dissent : dissent +], strength: [+ center_sr_strength : strength_2 +]?]
 
-[? if player_party == "sr": Left-SR ?]
+[? if player_party == "sr": Left-NKF ?]
 [? if player_party == "sr": dissent: [+ left_sr_dissent : dissent +], strength: [+ left_sr_strength : strength_2 +]?]
 
 = [+ player_party_name +] Association Positions
@@ -331,10 +331,10 @@ GSA: [+ b_soviet +]%
 NKF: [+ sr_soviet +]%
 Fifi: [+ anarchist_soviet +]%
 Others: [+ other_soviet +]%
-[? if defensist_split: Menshevik-Defensists: [+ defensist_soviet_votes_dec +]% ?]
-[? if internationalist_split: Menshevik-Internationalists: [+ internationalist_soviet_votes_dec +]% ?]
-[? if right_sr_split: Right-SRs: [+ right_sr_soviet_votes_dec +]% ?]
-[? if left_sr_split: Left-SRs: [+ left_sr_soviet_votes_dec +]% ?]
+[? if defensist_split: SMP-Defensists: [+ defensist_soviet_votes_dec +]% ?]
+[? if internationalist_split: SMP-Internationalists: [+ internationalist_soviet_votes_dec +]% ?]
+[? if right_sr_split: Right-NKF: [+ right_sr_soviet_votes_dec +]% ?]
+[? if left_sr_split: Left-NKF: [+ left_sr_soviet_votes_dec +]% ?]
 
 Council efficacy: [+ soviet_efficacy : efficacy +]
 
@@ -403,22 +403,22 @@ title: Defense
 
 = Armies and Fronts
 
-Northern Front: [+ northern_front_soldiers +] divisions
+Northern Front: [+ northern_front_soldiers +] soldiers
 {!</br>!}[+ northern_progress : war_progress +]
 
-Western Front: [+ western_front_soldiers +] divisions
+Western Front: [+ western_front_soldiers +] soldiers 
 {!</br>!}[+ western_progress : war_progress +]
 
-Southwestern Front: [+ southwestern_front_soldiers +] divisions
+Southwestern Front: [+ southwestern_front_soldiers +] soldiers
 {!</br>!}[+ southwestern_progress : war_progress +]
 
-Romanian Front: [+ romanian_front_soldiers +] divisions
+Romanian Front: [+ romanian_front_soldiers +] soldiers
 {!</br>!}[+ romanian_progress : war_progress +]
 
-Caucasus Front: [+ caucasus_front_soldiers +] divisions
+Caucasus Front: [+ caucasus_front_soldiers +] soldiers
 {!</br>!}[+ caucasus_progress : war_progress +]
 
-Garrisons and reserves: [+ reserve_soldiers +] divisions
+Garrisons and reserves: [+ reserve_soldiers +] soldiers
 
 Morale: [+ morale : efficacy +]
 
@@ -442,23 +442,23 @@ title: Internal Security
 
 = FAIS Forces
 
-Students' militias: [+ workers_militia_strength +] dozen
+Students' militias: [+ workers_militia_strength +] students
 
 Students' militia allegiance: SMP: [+ workers_militia_m_loyalty : strength_2 +], GSA: [+ workers_militia_b_loyalty : strength_2 +], NKF: [+ workers_militia_sr_loyalty : strength_2 +], Independent: [+ workers_militia_independent : strength_2 +]
-[? if right_sr_split: Right-SRs: [+ workers_militia_right_sr_loyalty : strength_2 +] ?]
-[? if left_sr_split: Left-SRs: [+ workers_militia_left_sr_loyalty : strength_2 +] ?]
+[? if right_sr_split: Right-NKF: [+ workers_militia_right_sr_loyalty : strength_2 +] ?]
+[? if left_sr_split: Left-NKF: [+ workers_militia_left_sr_loyalty : strength_2 +] ?]
 
-Faculty security: [+ city_militia_strength +] dozen
+Faculty security: [+ city_militia_strength +] 
 
 Faculty security allegiance: SMP: [+ city_militia_m_loyalty : strength_2 +], WRSS: [+ city_militia_k_loyalty : strength_2 +], NKF: [+ city_militia_sr_loyalty : strength_2 +], Independent: [+ city_militia_independent : strength_2 +]
 
-Garrison: [+ garrison_strength +] dozen
+Garrison: [+ garrison_strength +] soldiers
 
 Garrison allegiance: SMP: [+ garrison_m_loyalty : strength +], GSA: [+ garrison_b_loyalty : strength +], WRSS: [+ garrison_k_loyalty : strength +], NKF: [+ garrison_sr_loyalty : strength +], Independent: [+ garrison_independent : strength +]
-[? if defensist_split: Menshevik-Defensists: [+ garrison_defensist_loyalty : strength_2 +] ?]
-[? if internationalist_split: Menshevik-Internationalists: [+ garrison_internationalist_loyalty : strength_2 +] ?]
-[? if right_sr_split: Right-SRs: [+ garrison_right_sr_loyalty : strength_2 +] ?]
-[? if left_sr_split: Left-SRs: [+ garrison_left_sr_loyalty : strength_2 +] ?]
+[? if defensist_split: SMP-Defensists: [+ garrison_defensist_loyalty : strength_2 +] ?]
+[? if internationalist_split: SMP-Internationalists: [+ garrison_internationalist_loyalty : strength_2 +] ?]
+[? if right_sr_split: Right-NKF: [+ garrison_right_sr_loyalty : strength_2 +] ?]
+[? if left_sr_split: Left-NKF: [+ garrison_left_sr_loyalty : strength_2 +] ?]
 
 [? if loyal_troops > 0 : Loyal troops (Battalions of Death): [+ loyal_troops_strength +] thousand ?]
 
