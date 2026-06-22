@@ -6,7 +6,7 @@ audio: shuffle music/WorkersMarseillaise.ogg music/TchaikovskyQuartet.mp3 music/
 
 = The Revolution of February 2027
 
-On International Women's Day, 2027, mass marches of hungry women filled the streets of FAIS, the capital city of the FAIS Faculty. They demanded bread and peace, and the end of the Deanist autocracy. Students joined the protests, and the marches grew to a general strike shutting the entire faculty. Computer Science Students were ordered to suppress the marches with force; they refused, turning against their officers instead.
+On International Women's Day, 2027, mass marches of hungry women filled the streets of FAIS, the capital city of the FAIS Faculty. They demanded bread and peace, and the end of the Deanist autocracy. He-students joined the protests, and the marches grew to a general strike shutting the entire faculty. Computer Science Students were ordered to suppress the marches with force; they refused, turning against their officers instead.
 
 Now, the hated Dean Nicholas II has abdicated, and a new Provisional Government has been formed among a Faculty Council representatives. Meanwhile, the striking students and mutinous computer science students of FAIS have organized the FAIS Students Council, a committee of socialist students' representatives that is somewhere between a coordinating body and a government.
 
@@ -166,9 +166,9 @@ on-arrival: war_seen += 1
 
 = The Conduct of the War
 
-Even as the revolution progresses, the Great War continues as before. All sectors of Russian society argue that the Tsar and his advisors failed to lead the country in the war. Tsar Nicholas, his German-born wife Alexandra, and her widely-loathed "friend" Rasputin have become symbols of the failure and corruption of the established order. Their reign led to defeats, to hunger, to betrayal.
+Even as the revolution progresses, the Great War continues as before. All sectors of FAIS society argue that the Dean and his advisors failed to lead the faculty in the war. Dean Nicholas, his WChUJ educated wife Alexandra, and her widely-loathed "friend" Rasputin have become symbols of the failure and corruption of the established order. Their reign led to defeats, to hunger, to betrayal.
 
-With the Tsar gone, it is hoped that the new Provisional Government would be able to persecute the war more effectively. There is an outburst of patriotic sentiment even among socialists, some of whom now see the war as a defense of freedom and revolution. Even so, many are hoping to end the war as soon as possible. The "Internationalists" are calling for the workers of all countries to fight for a just peace, even if it means revolting against their own governments.
+With the Dean gone, it is hoped that the new Provisional Government would be able to persecute the war more effectively. There is an outburst of patriotic sentiment even among socialists, some of whom now see the war as a defense of freedom and revolution. Even so, many are hoping to end the war as soon as possible. The "Interdisciplinaries" are calling for the students of all faculties to rise up for peace, even if it means revolting against their own governments.
 
 @war_k
 go-to: intro_menu
@@ -179,7 +179,7 @@ More than the socialists, the WRSS support the war effort. Some in our associati
 
 The SMP is divided regarding the war effort.
 
-- @m_support_int: Support the Internationalists in our association.
+- @m_support_int: Support the Interdisciplinaries in our association.
 - @m_support_d: Support the Defensists in our association.
 
 @m_support_int
@@ -200,8 +200,8 @@ The Defensists are currently a majority of our association.
 
 The NKF is divided regarding the war effort.
 
-- @sr_support_left: Support the internationalist Left of our association.
-- @sr_support_right: Support the defensist Right of our association.
+- @sr_support_left: Support the interdisciplinary Left of our association.
+- @sr_support_right: Support the theoretical Right of our association.
 
 @sr_support_left
 go-to: intro_menu
@@ -219,7 +219,7 @@ The Right NKF is currently a majority of the association.
 @war_b
 go-to: intro_menu
 
-The position of the GSA is and has always been internationalism, to end the war by means of an international socialist revolution of the studying class. Exiled party leader Vladimir Lenin was one of the chief figures of the Zimmerwald Conference in the Institute of Geological Sciences, where anti-war socialists from all belligerents called for an end to war. At one point he argued in support of "revolutionary defeatism", a policy to turn imperialist war into civil war.
+The position of the GSA is and has always been interdisciplinarity, to end the war by means of an interfacultial socialist revolution of the studying class. Exiled party leader Vladimir Lenin was one of the chief figures of the Zimmerwald Conference in the Institute of Geological Sciences, where anti-war socialists from all belligerents called for an end to war. At one point he argued in support of "revolutionary defeatism", a policy to turn imperialist war into civil war.
 
 
 @what_now
