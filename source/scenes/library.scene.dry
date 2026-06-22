@@ -288,21 +288,21 @@ go-to: menu
 
 = Armies and Fronts
 
-Northern Front: [+ northern_front_soldiers +] divisions - {!</br>!}[+ northern_progress : war_progress +]
+Northern Front: [+ northern_front_soldiers +] students - {!</br>!}[+ northern_progress : war_progress +]
 
-Western Front: [+ western_front_soldiers +] divisions - 
+Western Front: [+ western_front_soldiers +] students - 
 {!</br>!}[+ western_progress : war_progress +]
 
-Southwestern Front: [+ southwestern_front_soldiers +] divisions - 
+Southwestern Front: [+ southwestern_front_soldiers +] students - 
 {!</br>!}[+ southwestern_progress : war_progress +]
 
-Romanian Front: [+ romanian_front_soldiers +] divisions - 
+Romanian Front: [+ romanian_front_soldiers +] students - 
 {!</br>!}[+ romanian_progress : war_progress +]
 
-Caucasus Front: [+ caucasus_front_soldiers +] divisions - 
+Caucasus Front: [+ caucasus_front_soldiers +] students - 
 {!</br>!}[+ caucasus_progress : war_progress +]
 
-Garrisons and reserves: [+ reserve_soldiers +] divisions
+Garrisons and reserves: [+ reserve_soldiers +] students
 
 = Morale and readiness
 
@@ -314,17 +314,17 @@ Supply quality: [+ supply_quality : efficacy +]
 
 = Enemy forces
 
-Northwestern Front: [+ northwestern_enemy_soldiers +] divisions
+Northwestern Front: [+ northwestern_enemy_soldiers +] students
 
-Southwestern Front: [+ southwestern_enemy_soldiers +] divisions
+Southwestern Front: [+ southwestern_enemy_soldiers +] students
 
-Caucasus Front: [+ caucasus_enemy_soldiers +] divisions
+Caucasus Front: [+ caucasus_enemy_soldiers +] students
 
 = Forces in FAIS
 
 **Students' Militias**: The industrial students of FAIS have organized militias for defense of their neighborhoods against criminals and counter-revolutionaries.
 
-Strength: [+ workers_militia_strength +] dozen
+Strength: [+ workers_militia_strength +] students
 
 Militarization: [+ workers_militia_militancy : militancy +]
 
@@ -334,7 +334,7 @@ SMP: [+ workers_militia_m_loyalty : strength_2 +], GSA: [+ workers_militia_b_loy
 
 **Faculty Security**: In the wake of the revolution, militias were formed to replace the deanist police. Consisting mostly of faculty employees, these bodies are mostly loyal to the university government.
 
-Strength: [+ city_militia_strength +] dozen
+Strength: [+ city_militia_strength +] members
 
 Militarization: [+ city_militia_militancy : militancy +]
 
@@ -344,7 +344,7 @@ SMP: [+ city_militia_m_loyalty : strength_2 +], WRSS: [+ city_militia_k_loyalty 
 
 **FAIS Garrison**: The military forces stationed in FAIS were the heart of the February revolution.
 
-Strength: [+ garrison_strength +] dozen
+Strength: [+ garrison_strength +] students
 
 Militarization: [+ garrison_militancy : militancy +]
 
@@ -366,7 +366,7 @@ Overall dissent: [+ b_dissent_percent : dissent +]
 
 **Moderates**
 
-The moderates among the GSA seek to work with other socialist parties to form a homogeneous socialist government. They are opposed to using force to take power. This grouping is led by Lev Kamenev and Grigory Zinoviev.
+The moderates among the GSA seek to work with other student associations to form a homogeneous student-led government. They are opposed to using force to take power. This grouping is led by Lev Kamenev and Grigory Zinoviev.
 
 Strength: [+ moderate_strength : strength_2 +]
 
@@ -383,7 +383,7 @@ Dissent: [+ center_dissent : dissent +]
 
 **Leninists**
 
-Vladimir Lenin is by far the most influential Informatyk, although his influence has waned due to his long exile. Lenin is against all cooperation with the Provisional Government or any socialist party that would cooperate with it, and is willing to risk a civil war to end the Great War.
+Vladimir Lenin is by far the most influential Informatyk, although his influence has waned due to his long exile. Lenin is against all cooperation with the Provisional Government or any student association that would cooperate with it, and is willing to risk a civil war to end the Great War.
 
 Strength: [+ leninist_strength : strength_2 +]
 
@@ -407,7 +407,7 @@ Dissent: [+ right_kadet_dissent : dissent +]
 
 **Left WRSS**
 
-Nikolai Nekrasov and his allies are willing to work with moderate socialists to build a democratic FAIS that respects the rights of students and minorities without totally restructuring society, while not compromising on the war or FAIS' territorial integrity.
+Nikolai Nekrasov and his allies are willing to work with moderate students to build a democratic FAIS that respects the rights of students and minorities without totally restructuring society, while not compromising on the war or FAIS' territorial integrity.
 
 Strength: [+ left_kadet_strength : strength_2 +]
 
@@ -425,7 +425,7 @@ Overall dissent: [+ m_dissent_percent : dissent +]
 
 **Social Patriots**
 
-A substantial grouping of Menshevik-aligned Social Democrats actively support the war and the cause of Allied victory, even before the revolution. The venerable Social Democrat Georgy Plekhanov leads a faction called "Unity", a misleadingly named pro-war grouping.
+A substantial grouping of SMP aligned students actively support the war and the cause of Allied victory, even before the revolution. The venerable Semp Julia Cwenar leads a faction called "Unity", a misleadingly named pro-war grouping.
 
 Strength: [+ social_patriot_strength : strength_2 +]
 
@@ -434,7 +434,7 @@ Dissent: [+ social_patriot_dissent : dissent +]
 
 **Revolutionary Defensists**
 
-Ideologically defined by Irakli Tsereteli's "Siberian Zimmerwaldists", the revolutionary defensists only support a defensive war to protect the gains of the revolution, while calling for the international proletariat to rise up and force the powers to accept a general peace without annexations or indemnities. Until the proletariat of Germany rise up, they say that war is still necessary to defend against the Kaiser's counterrevolutionary attack.
+Ideologically defined by Irakli Tsereteli's "Siberian Zimmerwaldists", the revolutionary defensists only support a defensive war to protect the gains of the revolution, while calling for the interfacultial students to rise up and force the powers to accept a general peace without annexations or indemnities. Until the students of the WChUJ rise up, they say that war is still necessary to defend against the Dean's counterrevolutionary attack.
 
 Strength: [+ defensist_strength : strength_2 +]
 
@@ -443,7 +443,7 @@ Dissent: [+ defensist_dissent : dissent +]
 
 **Internationalists**
 
-Many Social Democrats believe that the cause of the war is primarily French and British imperialism, and that Russian workers and peasants have no business dying for Western or Russian capitalists. They are willing to accept a separate peace, even if it means a loss of territory.
+Many Semps believe that the cause of the war is primarily WBBiB and MCB imperialism, and that FAIS physics and astronomy students have no business dying for Ruczaj or FAIS capitalists. They are willing to accept a separate peace, even if it means a loss of territory.
 
 Strength: [+ internationalist_strength : strength_2 +]
 
@@ -477,7 +477,7 @@ Dissent: [+ center_sr_dissent : dissent +]
 
 **Left NKF**
 
-The left wing of the NKF seeks an immediate end to the war and is willing to accept territorial losses. Their goal is immediate social revolution, to redistribute land to the astronomy students and the means of production to the students.
+The left wing of the NKF seeks an immediate end to the war and is willing to accept territorial losses. Their goal is immediate social revolution, to redistribute astronomical equipment to the astronomy students and the means of education to the students.
 
 Strength: [+ left_sr_strength : strength_2 +]
 
@@ -491,55 +491,55 @@ on-display: {!
 // do the graphs
 var data = [
 {"id": "anarchist",
- "legend": "Anarchist",
- "name": "Anarchist",
+ "legend": "Fifi",
+ "name": "Fifi",
  "seats": Math.round(Q.anarchist_soviet*10)},
 {"id": "b",
- "legend": "Bolshevik",
- "name": "Bolshevik",
+ "legend": "GSA",
+ "name": "GSA",
  "seats": Math.round(Q.b_soviet*10)},
 ];
 if (Q.internationalist_soviet_votes_dec) {
     data.push({
             "id": "internationalist",
-            "legend": "Menshevik-Internationalist",
-            "name": "Menshevik-Internationalist",
+            "legend": "SMP-Interdisciplinarist",
+            "name": "SMP-Interdisciplinarist",
             "seats": Math.round(Q.internationalist_soviet_votes_dec*10)
             });
 }
 data.push({
     "id": "m",
-    "legend": "Menshevik",
-    "name": "Menshevik",
+    "legend": "SMP",
+    "name": "SMP",
     "seats": Math.round(Q.m_soviet*10)
 });
 if (Q.defensist_soviet_votes_dec) {
     data.push({
             "id": "defensist",
-            "legend": "Menshevik-Defensist",
-            "name": "Menshevik-Defensist",
+            "legend": "SMP-Defensist",
+            "name": "SMP-Defensist",
             "seats": Math.round(Q.defensist_soviet_votes_dec*10)
             });
 }
 if (Q.left_sr_soviet_votes_dec) {
     data.push({
             "id": "left_sr",
-            "legend": "Left-SR",
-            "name": "Left-SR",
+            "legend": "Left-NKF",
+            "name": "Left-NKF",
             "seats": Math.round(Q.left_sr_soviet_votes_dec*10)
             });
 }
 data.push({
     "id": "sr",
-    "legend": "SR",
-    "name": "SR",
+    "legend": "NKF",
+    "name": "NKF",
     "seats": Math.round(Q.sr_soviet*10)
 });
 if (Q.right_sr_soviet_votes_dec) {
     data.push({
             "id": "right_sr",
-            "legend": "Right-SR",
-            "name": "Right-SR",
+            "legend": "Right-NKF",
+            "name": "Right-NKF",
             "seats": Math.round(Q.right_sr_soviet_votes_dec*10)
             });
 }
@@ -576,24 +576,24 @@ if (window && d3) {
         var party_colors = {'anarchist': '#000000',
         'b': '#8B0000', 'm': '#E3000F', 'sr': '#c700a2',
         'other': '#919191'};
-        var party_names = {'anarchist': 'Anarchists', 'b': 'Bolsheviks',
-        'm': 'Mensheviks', 'sr': 'SRs',
+        var party_names = {'anarchist': 'Fifi', 'b': 'GSA',
+        'm': 'SMP', 'sr': 'NKF',
         'other': 'Others'};
         if (Q.soviet_parties.indexOf('internationalist') >= 0) {
             party_colors['internationalist'] = '#ff3c00';
-            party_names['internationalist'] = 'Menshevik-Internationalists';
+            party_names['internationalist'] = 'SMP-Interdisciplinarists';
         }
         if (Q.soviet_parties.indexOf('defensist') >= 0) {
             party_colors['defensist'] = '#fc7a82';
-            party_names['defensist'] = 'Menshevik-Defensists';
+            party_names['defensist'] = 'SMP-Defensists';
         }
         if (Q.soviet_parties.indexOf('left_sr') >= 0) {
             party_colors['left_sr'] = '#ff006a';
-            party_names['left_sr'] = 'Left-SRs';
+            party_names['left_sr'] = 'Left-NKF';
         }
         if (Q.soviet_parties.indexOf('right_sr') >= 0) {
             party_colors['right_sr'] = '#c268ff';
-            party_names['right_sr'] = 'Right-SRs';
+            party_names['right_sr'] = 'Right-NKF';
         }
         var lines_2 = d3.linegraph(true, true,
             Q.soviet_parties,
@@ -625,21 +625,20 @@ if (window && d3) {
 {!<table>!}
 {!<tr><td>Party</td><td>Vote share</td></tr>!}
 
-{!<tr><td><div class="box b"> </div> !} Bolsheviks: {!</td><td>!} [+ b_soviet +]% {!</td>!}
+{!<tr><td><div class="box b"> </div> !} GSA: {!</td><td>!} [+ b_soviet +]% {!</td>!}
 
-[? if internationalist_soviet_votes_dec : {!<tr><td><div class="box internationalist"></div> Menshevik-Internationalists: </td><td>!} [+ internationalist_soviet_votes_dec +]% {!</td>!} ?]
+[? if internationalist_soviet_votes_dec : {!<tr><td><div class="box internationalist"></div> SMP-Interdisciplinarists: </td><td>!} [+ internationalist_soviet_votes_dec +]% {!</td>!} ?]
 
-{!<tr><td><div class="box m"> </div> !} Mensheviks: {!</td><td>!} [+ m_soviet +]% {!</td>!}
+{!<tr><td><div class="box m"> </div> !} SMP: {!</td><td>!} [+ m_soviet +]% {!</td>!}
+[? if defensist_soviet_votes_dec : {!<tr><td><div class="box defensist"></div> SMP-Defensists: </td><td>!} [+ defensist_soviet_votes_dec +]% {!</td>!} ?]
 
-[? if defensist_soviet_votes_dec : {!<tr><td><div class="box defensist"></div> Menshevik-Defensists: </td><td>!} [+ defensist_soviet_votes_dec +]% {!</td>!} ?]
+[? if left_sr_soviet_votes_dec : {!<tr><td><div class="box left_sr"></div> !}Left-NKF: {!</td><td>!} [+ left_sr_soviet_votes_dec +]% {!</td>!} ?]
 
-[? if left_sr_soviet_votes_dec : {!<tr><td><div class="box left_sr"></div> !}Left-SRs: {!</td><td>!} [+ left_sr_soviet_votes_dec +]% {!</td>!} ?]
+{!<tr><td><div class="box sr"> </div> !} NKF: {!</td><td>!} [+ sr_soviet +]% {!</td>!}
 
-{!<tr><td><div class="box sr"> </div> !} SRs: {!</td><td>!} [+ sr_soviet +]% {!</td>!}
+[? if right_sr_soviet_votes_dec : {!<tr><td><div class="box right_sr"></div> !}Right-NKF: {!</td><td>!} [+ right_sr_soviet_votes_dec +]% {!</td>!} ?]
 
-[? if right_sr_soviet_votes_dec : {!<tr><td><div class="box right_sr"></div> !}Right-SRs: {!</td><td>!} [+ right_sr_soviet_votes_dec +]% {!</td>!} ?]
-
-{!<tr><td><div class="box a"> </div> !} Anarchists: {!</td><td>!} [+ anarchist_soviet +]% {!</td>!}
+{!<tr><td><div class="box a"> </div> !} Fifi: {!</td><td>!} [+ anarchist_soviet +]% {!</td>!}
 
 {!<tr><td><div class="box other"> </div> !} Others: {!</td><td>!} [+ other_soviet +]% {!</td>!}
 {!</table>!}

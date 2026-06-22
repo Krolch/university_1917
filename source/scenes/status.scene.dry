@@ -69,7 +69,7 @@ if (Q.defensist_in_exco) {
     Q.exco_parties.push("SMP-Defensists");
 }
 if (Q.internationalist_in_exco) {
-    Q.exco_parties.push("SMP-Internationalists");
+    Q.exco_parties.push("SMP-Interdisciplinarists");
 }
 if (Q.sr_in_exco) {
     Q.exco_parties.push("NKF");
@@ -139,7 +139,7 @@ NKF: [+ sr_soviet +]%
 Fifi: [+ anarchist_soviet +]%
 Others: [+ other_soviet +]%
 [? if defensist_split: SMP-Defensists: [+ defensist_soviet_votes_dec +]% ?]
-[? if internationalist_split: SMP-Internationalists: [+ internationalist_soviet_votes_dec +]% ?]
+[? if internationalist_split: SMP-Interdisciplinarists: [+ internationalist_soviet_votes_dec +]% ?]
 [? if right_sr_split: Right-NKF: [+ right_sr_soviet_votes_dec +]% ?]
 [? if left_sr_split: Left-NKF: [+ left_sr_soviet_votes_dec +]% ?]
 
@@ -219,7 +219,7 @@ switch (Q.player_party) {
 
 # TODO: inter-party relationships
 
-= Inter-party Relationships
+= Inter-association Relationships
 
 [? if player_party != "m": SMP: [+ m_relation : relationships +] ?]
 [? if player_party != "m": </br> Leadership: [+ m_leadership : m_leadership +] ?]
@@ -235,7 +235,7 @@ switch (Q.player_party) {
 [? if player_party != "k": WRSS: [+ k_relation : relationships +] ?]
 [? if player_party != "k": </br> Leadership: [+ k_leadership : k_leadership +] ?]
 
-[? if player_party == "k": Conservatives: [+ k_conservative_relation : relationships +] ?]
+[? if player_party == "k": Professor: [+ k_conservative_relation : relationships +] ?]
 
 = Internal factions
 
@@ -248,19 +248,19 @@ switch (Q.player_party) {
 [? if player_party == "b": Leninist ?]
 [? if player_party == "b": dissent: [+ leninist_dissent : dissent +], strength: [+ leninist_strength : strength_2 +]?]
 
-[? if player_party == "m": Social Patriot ?]
+[? if player_party == "m": Student Patriot ?]
 [? if player_party == "m": dissent: [+ social_patriot_dissent : dissent +], strength: [+ social_patriot_strength : strength_2 +]?]
 
 [? if player_party == "m": Revolutionary Defensist  ?]
 [? if player_party == "m": dissent: [+ defensist_dissent : dissent +], strength: [+ defensist_strength : strength_2 +]?]
 
-[? if player_party == "m": Internationalist ?]
+[? if player_party == "m": Interdisciplinarist ?]
 [? if player_party == "m": dissent: [+ internationalist_dissent : dissent +], strength: [+ internationalist_strength : strength_2 +]?]
 
-[? if player_party == "k": Right-Kadet ?]
+[? if player_party == "k": Right-WRSS ?]
 [? if player_party == "k": dissent: [+ right_kadet_dissent : dissent +], strength: [+ right_kadet_strength : strength_2 +]?]
 
-[? if player_party == "k": Left-Kadet ?]
+[? if player_party == "k": Left-WRSS ?]
 [? if player_party == "k": dissent: [+ left_kadet_dissent : dissent +], strength: [+ left_kadet_strength : strength_2 +]?]
 
 [? if player_party == "sr": Right-NKF ?]
@@ -323,7 +323,7 @@ Government legitimacy: [+ prov_gov_legitimacy : legitimacy +]
 
 Chair: [+ soviet_chair +] ([+ soviet_chair_party +])
 
-Executive committee: [? if m_in_exco: SMP, ?] [? if sr_in_exco: NKF ?] [? if b_in_exco: GSA ?][? if defensist_in_exco:, Menshevik-Defensists ?][? if internationalist_in_exco:, Menshevik-Internationalists ?][? if left_sr_in_exco:, Left-SRs ?][? if right_sr_in_exco:, Right-SRs ?]
+Executive committee: [? if m_in_exco: SMP, ?] [? if sr_in_exco: NKF ?] [? if b_in_exco: GSA ?][? if defensist_in_exco:, SMP-Defensists ?][? if internationalist_in_exco:, SMP-Interdisciplinarists ?][? if left_sr_in_exco:, Left-SRs ?][? if right_sr_in_exco:, Right-SRs ?]
 
 Overal composition:
 SMP: [+ m_soviet +]%
@@ -332,7 +332,7 @@ NKF: [+ sr_soviet +]%
 Fifi: [+ anarchist_soviet +]%
 Others: [+ other_soviet +]%
 [? if defensist_split: SMP-Defensists: [+ defensist_soviet_votes_dec +]% ?]
-[? if internationalist_split: SMP-Internationalists: [+ internationalist_soviet_votes_dec +]% ?]
+[? if internationalist_split: SMP-Interdisciplinarists: [+ internationalist_soviet_votes_dec +]% ?]
 [? if right_sr_split: Right-NKF: [+ right_sr_soviet_votes_dec +]% ?]
 [? if left_sr_split: Left-NKF: [+ left_sr_soviet_votes_dec +]% ?]
 
@@ -456,11 +456,11 @@ Garrison: [+ garrison_strength +] soldiers
 
 Garrison allegiance: SMP: [+ garrison_m_loyalty : strength +], GSA: [+ garrison_b_loyalty : strength +], WRSS: [+ garrison_k_loyalty : strength +], NKF: [+ garrison_sr_loyalty : strength +], Independent: [+ garrison_independent : strength +]
 [? if defensist_split: SMP-Defensists: [+ garrison_defensist_loyalty : strength_2 +] ?]
-[? if internationalist_split: SMP-Internationalists: [+ garrison_internationalist_loyalty : strength_2 +] ?]
+[? if internationalist_split: SMP-Interdisciplinarists: [+ garrison_internationalist_loyalty : strength_2 +] ?]
 [? if right_sr_split: Right-NKF: [+ garrison_right_sr_loyalty : strength_2 +] ?]
 [? if left_sr_split: Left-NKF: [+ garrison_left_sr_loyalty : strength_2 +] ?]
 
-[? if loyal_troops > 0 : Loyal troops (Battalions of Death): [+ loyal_troops_strength +] thousand ?]
+[? if loyal_troops > 0 : Loyal troops (Battalions of Death): [+ loyal_troops_strength +] members ?]
 
 = Social Issues
 

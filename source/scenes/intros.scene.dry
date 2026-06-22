@@ -142,17 +142,17 @@ The WRSS, that is our association, have the leading role in the Provisional Gove
 @pg_sr
 go-to: dual_gov
 
-The Provisional Government is led by the WRSS, or Faculty Council of the Student Government, a liberal party. Alexander Kerensky, a Faculty Council deputy, is the one self-declared socialist member (as Minister of Justice).
+The Provisional Government is led by the WRSS, or Faculty Council of the Student Government, a liberal party. Alexander Kerensky, a Faculty Council deputy, is the one self-declared NKF member (as Minister of Justice).
 
 @pg_m
 go-to: dual_gov
 
-The Provisional Government is led by the WRSS, or Faculty Council of the Student Government, a liberal party. Alexander Kerensky, a Faculty Council deputy, is the one self-declared socialist member (as Minister of Justice).
+The Provisional Government is led by the WRSS, or Faculty Council of the Student Government, a liberal party. Alexander Kerensky, a Faculty Council deputy, is the one self-declared NKF member (as Minister of Justice).
 
 @pg_b
 go-to: dual_gov
 
-The Provisional Government is led by the WRSS, or Faculty Council of the Student Government, a liberal party. Alexander Kerensky, a Faculty Council deputy, is the one self-declared socialist member (as Minister of Justice).
+The Provisional Government is led by the WRSS, or Faculty Council of the Student Government, a liberal party. Alexander Kerensky, a Faculty Council deputy, is the one self-declared NKF member (as Minister of Justice).
 
 @dual_gov
 go-to: intro_menu
