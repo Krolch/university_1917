@@ -254,7 +254,7 @@ go-to: menu
 **Gamedev Students Association (GSA)** - The "majority" faction of the RSDLP is in fact the smaller party. Created largely by Vladimir Lenin's arguments in the various RSDLP congresses, the Bolsheviks are seen as more radical. They are a disciplined party of revolutionaries.
 
 [? if player_party = "m": Current relations: [+ menshevik_bolshevik_relation : relationships +] ?]
-[? if player_party = "sr": Current relations: [+ sr_bolshevik_relation : relationships +] ?]
+[? if player_party = "sr": Current relations: [+ b_sr_relation : relationships +] ?]
 [? if player_party = "k": Current relations: [+ kadet_bolshevik_relation : relationships +] ?]
 
 **Physics Students Association (NKF)** - The SRs are based in the Russian ideology of *narodism*, or populism, which is an agrarian socialism that sees the traditional Russian village (the *obshchina*) as the basis of a future socialist society. Their support is strongest in the peasantry, but they have substantial support among workers as well. The SRs are deeply divided between left and right wings based on their attitudes towards the war and participation in government.
@@ -268,7 +268,7 @@ go-to: menu
 
 [? if player_party = "m": Current relations: [+ menshevik_kadet_relation : relationships +] ?]
 [? if player_party = "b": Current relations: [+ bolshevik_kadet_relation : relationships +] ?]
-[? if player_party = "sr": Current relations: [+ sr_kadet_relation : relationships +] ?]
+[? if player_party = "sr": Current relations: [+ sr_k_relation : relationships +] ?]
 
 **Other associations:**
 
