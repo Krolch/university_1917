@@ -47,7 +47,7 @@ Yushchuk is advocating in favor of the internationalism within the association[?
 title: Support a student patriot position.
 subtitle: We must fight the war until we win.
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] weeks before next advisor action. ?]
-view-if: m_war_policy < 0 and social_patriot_strength < internationalist_strength
+view-if: social_patriot_strength < internationalist_strength
 on-arrival: social_patriot_strength += 4; social_patriot_dissent -= 5; internationalist_dissent += 5; defensist_dissent += 4
 
 Yushchuk is advocating in favor of the student patriotism within the association [? if m_war_policy = 1 : .?][? if m_war_policy != 1 : , so that we may eventually adopt this position.?]
