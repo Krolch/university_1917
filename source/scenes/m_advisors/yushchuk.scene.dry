@@ -13,9 +13,9 @@ Anastasiya Yushchuk is one of the more ideologically advanced member of the SMP.
 # actions: relations with the NKF, support revdef, adopt revdef, support inter, adopt inter
 
 - @improve_relations
-- @support_defensism 
-- @internationalism
-- @adopt_internationalism
+- @support_defensism
+- @support_internationalism
+- @support_patriotism
 - @root: Return to main
 
 @improve_relations
@@ -32,21 +32,22 @@ choose-if: advisor_action_timer <= 0
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] weeks before next advisor action. ?]
 on-arrival: advisor_action_timer = 4; defensist_strength += m_support_change; defensist_dissent -= 5; internationalist_strength -= 4;
 
-Tsereteli is advocating in favor of the Revolutionary Defensist position. 
+Yushchuk is advocating in favor of the revolutionary defensism within the association[? if m_war_policy = 0 : .?][? if m_war_policy != 0 : , so that we may eventually adopt this position.?]
 
-@internationalism
+@support_internationalism
 title: Support Internationalism
 subtitle: Increase support for internationalism among our association.
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] weeks before next advisor action. ?][? if m_war_policy = 2 : We already have an internationalist war policy. ?]
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] weeks before next advisor action. ?]
 choose-if: advisor_action_timer <= 0 and m_war_policy != 2
 on-arrival: advisor_action_timer = 4; internationalist_strength += m_support_change; internationalist_dissent -= 3; defensist_dissent += 5
 
-We are building up support for internationalism within the association, so that we may eventually adopt this position.
+Yushchuk is advocating in favor of the internationalism within the association[? if m_war_policy = 2 : .?][? if m_war_policy != 2 : , so that we may eventually adopt this position.?]
 
-@adopt_internationalism
-title: Adopt Internationalism as our association policy.
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] weeks before next advisor action. ?][? if m_war_policy = 2 : We already have an internationalist war policy. ?][? if internationalist_strength < defensist_strength + social_patriot_strength: There is not enough support for this position within the association. ?]
-choose-if: advisor_action_timer <= 0 and internationalist_strength >= defensist_strength + social_patriot_strength and m_war_policy != 2
-on-arrival: advisor_action_timer = 4; m_war_policy = 2; internationalist_strength += 5; internationalist_dissent -= 5; defensist_dissent += 15; social_patriot_dissent += 30; m_leadership = 1;
+@support_patriotism
+title: Support a student patriot position.
+subtitle: We must fight the war until we win.
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] weeks before next advisor action. ?]
+view-if: m_war_policy < 0 and social_patriot_strength < internationalist_strength
+on-arrival: social_patriot_strength += 4; social_patriot_dissent -= 5; internationalist_dissent += 5; defensist_dissent += 4
 
-We have adopted an internationalist position, calling for an immediate end to the war.
+Yushchuk is advocating in favor of the student patriotism within the association [? if m_war_policy = 1 : .?][? if m_war_policy != 1 : , so that we may eventually adopt this position.?]
