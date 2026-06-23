@@ -161,9 +161,9 @@ Computer Science Students unrest: [+ soldier_unrest : war_weariness +]
 
 = Astronomy
 
-Land reform policy: [+ land_reform : land_reform +]
+Instruments reform policy: [+ land_reform : land_reform +]
 
-Land reform progress: [+ land_reform_progress : land_reform_progress +]
+Instruments reform progress: [+ land_reform_progress : land_reform_progress +]
 
 Astronomy Students unrest: [+ rural_unrest : war_weariness +]
 
@@ -235,7 +235,7 @@ switch (Q.player_party) {
 [? if player_party != "k": WRSS: [+ k_relation : relationships +] ?]
 [? if player_party != "k": </br> Leadership: [+ k_leadership : k_leadership +] ?]
 
-[? if player_party == "k": Professor: [+ k_conservative_relation : relationships +] ?]
+[? if player_party == "k": Professors: [+ k_conservative_relation : relationships +] ?]
 
 = Internal factions
 
@@ -280,9 +280,9 @@ Labor policy: [? if player_party = "m": [+ m_industrial_policy : industrial_poli
 
 War policy: [? if player_party = "m": [+ m_war_policy : war_policy +]?][? if player_party = "sr": [+ sr_war_policy : war_policy +]?][? if player_party = "k": [+ k_war_policy : war_policy +]?][? if player_party = "b": [+ b_war_policy : war_policy +]?]
 
-Land/agricultural policy: [? if player_party = "m": [+ m_land_policy : land_policy +], [+ m_agricultural_policy : agricultural_policy +]?][? if player_party = "sr": [+ sr_land_policy : land_policy +], [+ sr_agricultural_policy : agricultural_policy +]?][? if player_party = "k": [+ k_land_policy : land_policy +], [+ k_agricultural_policy : agricultural_policy +]?][? if player_party = "b": [+ b_land_policy : land_policy +], [+ b_agricultural_policy : agricultural_policy +]?]
+Astronomical instruments policy: [? if player_party = "m": [+ m_land_policy : land_policy +], [+ m_agricultural_policy : agricultural_policy +]?][? if player_party = "sr": [+ sr_land_policy : land_policy +], [+ sr_agricultural_policy : agricultural_policy +]?][? if player_party = "k": [+ k_land_policy : land_policy +], [+ k_agricultural_policy : agricultural_policy +]?][? if player_party = "b": [+ b_land_policy : land_policy +], [+ b_agricultural_policy : agricultural_policy +]?]
 
-Nationality policy: [? if player_party = "m": [+ m_nationality_policy : nationality_policy +]?][? if player_party = "sr": [+ sr_nationality_policy : nationality_policy +]?][? if player_party = "k": [+ k_nationality_policy : nationality_policy +]?][? if player_party = "b": [+ b_nationality_policy : nationality_policy +]?]
+Hometownity policy: [? if player_party = "m": [+ m_nationality_policy : nationality_policy +]?][? if player_party = "sr": [+ sr_nationality_policy : nationality_policy +]?][? if player_party = "k": [+ k_nationality_policy : nationality_policy +]?][? if player_party = "b": [+ b_nationality_policy : nationality_policy +]?]
 
 @gov
 title: Government
@@ -301,7 +301,7 @@ Finance [+ government_form : minister +]: [+ finance_minister +] ([+ finance_min
 
 Justice [+ government_form : minister +]: [+ justice_minister +] ([+ justice_minister_party +])
 
-Agriculture [+ government_form : minister +]: [+ agriculture_minister +] ([+ agriculture_minister_party +])
+Astronomy [+ government_form : minister +]: [+ agriculture_minister +] ([+ agriculture_minister_party +])
 
 Transport [+ government_form : minister +]: [+ transport_minister +] ([+ transport_minister_party +])
 
@@ -355,7 +355,7 @@ Military: [+ military_industry +]%
 
 Civilian goods: [+ civilian_industry +]%
 
-Agricultural equipment: [+ agricultural_industry +]%
+Astronomical equipment: [+ agricultural_industry +]%
 
 Transportation equipment: [+ transportation_industry +]%
 
@@ -379,11 +379,11 @@ Food sold to cities and towns: [+ food_sold_disp +]%
 
 Food requisitioned by the military: [+ food_requisitioned_disp +]%
 
-= Land Reform
+= Astronomy Instruments Reform
 
-Land reform policy: [+ land_reform : land_reform +]
+Instruments reform policy: [+ land_reform : land_reform +]
 
-Land reform progress: [+ land_reform_progress : land_reform_progress +]
+Instruments reform progress: [+ land_reform_progress : land_reform_progress +]
 
 = Finances and Debt
 
