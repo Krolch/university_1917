@@ -1,4 +1,4 @@
-title: Inter-Party Relationships
+title: Inter-Association Relationships
 new-page: true
 view-if: k_inter_party_relationships_timer <= 0 and player_party = "k"
 is-card: true
@@ -7,9 +7,9 @@ card-image: img/rsdlp.jpg
 max-visits: 12
 tags: k_party
 
-= Inter-Party Relationships
+= Inter-Association Relationships
 
-We can improve our relations with the parties on our left or the right.
+We can improve our relations with the associations on our left or the right.
 
 - @sr
 - @m
@@ -20,25 +20,25 @@ We can improve our relations with the parties on our left or the right.
 
 
 @sr
-title: Improve our relations with the Socialist-Revolutionaries.
+title: Improve our relations with the NKF.
 on-arrival: sr_k_relation += ipr_change*(1-k_dissent); k_resources -= 1; sr_k_relation -= ipr_change/2 if left_sr_strength > right_sr_strength;
 choose-if: k_resources >= 1
 subtitle: -1 resource
 
-We have improved our relations with the Party of Socialist-Revolutionaries. [? if left_sr_strength > right_sr_strength: The left-wing alignment of the SRs makes it difficult to improve relations. ?]
+We have improved our relations with the Physics Students' Association. [? if left_sr_strength > right_sr_strength: The left-wing alignment of the NKF makes it difficult to improve relations. ?]
 
 @m
-title: Improve our relations with the Mensheviks.
+title: Improve our relations with the SMP.
 on-arrival: m_k_relation += ipr_change*(1-k_dissent); m_k_relation -= ipr_change/2 if internationalist_strength >= defensist_strength + social_patriot_strength; k_resources -= 1;
 choose-if: k_resources >= 1
 subtitle: -1 resource
 
-We are building our ties with the Mensheviks. [? if internationalist_strength >= defensist_strength + social_patriot_strength: The internationalist alignment of the Mensheviks makes it difficult to improve relations. ?]
+We are building our ties with the Mathematical and Natural Sciences Students Association. [? if internationalist_strength >= defensist_strength + social_patriot_strength: The interdisciplinarist alignment of the SMP makes it difficult to improve relations. ?]
 
 @con
-title: Improve our relations with the conservative factions to our right.
+title: Improve our relations with the proffesor factions to our right.
 on-arrival: k_conservative_relation += (ipr_change+5)*(1-k_dissent); k_conservative_relation -= (ipr_change/2) if left_kadet_strength > right_kadet_strength; k_resources -= 1;
 choose-if: k_resources >= 1
 subtitle: -1 resource
 
-The conservative and monarchist right has largely been marginalized since the revolution, but they still have important contacts within the military, church, and upper-level bureaucracy. We attempt to build our relations with them.
+The proffesors and deanists right has largely been marginalized since the revolution, but they still have important contacts within the military, church, and upper-level bureaucracy. We attempt to build our relations with them.

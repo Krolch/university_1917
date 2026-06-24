@@ -1,4 +1,4 @@
-title: Right-SR Split
+title: Right-NKF Split
 view-if: right_sr_dissent > sr_split_threshold
 max-visits: 1
 on-arrival: {!
@@ -115,8 +115,8 @@ if (Q.gmurowska_advisor) {
 }
 !}
 
-The Right-SRs are splitting to form a new party. Right-SR leaders have resigned from the party's leadership, and their supporters will follow them. [? if sr_drop_gov: Most of the SR-affiliated ministers in the Provisional Government are no longer affiliated with the party. ?]
+The Right-NKF are splitting to form a new association. Right-NKF leaders have resigned from the party's leadership, and their supporters will follow them. [? if sr_drop_gov: Most of the NKF-affiliated ministers in the Provisional Government are no longer affiliated with the association. ?]
 
-This will result in a new election for the Petrograd Soviet leadership.
+This will result in a new election for the FAIS Students' Council leadership.
 
-- @soviet_leadership_election: Conduct the Soviet leadership election.
+- @soviet_leadership_election: Conduct the Council leadership election.

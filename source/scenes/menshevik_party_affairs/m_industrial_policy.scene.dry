@@ -15,33 +15,33 @@ What should our policy be with respect to labor and industries?
 - @nationalization
 
 @unions
-title: Maintain the current ownership and management structure, but with freedom for trade unions to organize.
+title: Maintain the current ownership and education structure, but with freedom for student unions to organize.
 subtitle: [? if m_industrial_policy = 0 : This is our current position. ?]
 on-arrival: m_industrial_policy = 0;
 
-Our policy is to maintain a capitalist ownership and management structure for now, but that workers should have the right to organize and strike.
+Our policy is to maintain a doctorial ownership and management structure for now, but that students should have the right to organize and strike.
 
 @supervision
-title: In addition to trade union rights, workers' councils should supervise management.
+title: In addition to student union rights, students' councils should supervise education.
 subtitle: [? if m_industrial_policy = 1 : This is our current position. ?]
 on-arrival: social_patriot_dissent += 5 if m_industrial_policy = 0; defensist_dissent += 5 if m_industrial_policy = 0; internationalist_strength += 4 if m_industrial_policy = 0; m_industrial_policy = 1; m_k_relation -= 2;
 
-Our policy is that workers' councils should have the right to supervise management decisions.
+Our policy is that students' councils should have the right to supervise education decisions.
 
 @syndicalism
-title: In addition to the above, workers' councils should take over management and ownership.
+title: In addition to the above, students' councils should take over management and ownership.
 choose-if: m_industrial_policy >= 1
 subtitle: [? if m_industrial_policy = 2 : This is our current position. ?]
 unavailable-subtitle: This position is currently too radical for our party.
 on-arrival: social_patriot_dissent += 10 if m_industrial_policy < 2; defensist_dissent += 8 if m_industrial_policy < 2; m_industrial_policy = 2; m_k_relation -= 2;
 
-Our policy is that workers' councils should take over enterprise management and ownership directly. This is a syndicalist position, which is popular among the worker grassroots but less popular among our intellectual leadership.
+Our policy is that students' councils should take over education management and ownership directly. This is a syndicalist position, which is popular among the student grassroots but less popular among our intellectual leadership.
 
 @nationalization
-title: The state should nationalize all major industries.
+title: The faculty should nationalize all majors.
 choose-if: m_industrial_policy >= 1
 subtitle: [? if m_industrial_policy = 1 : This is our current position. ?]
 unavailable-subtitle: This position is currently too radical for our party.
 on-arrival: social_patriot_dissent += 5 if m_industrial_policy < 2; defensist_dissent += 5 if m_industrial_policy < 2; m_industrial_policy = 3; m_k_relation -= 2;
 
-Our policy is that the state should nationalize all major industries.
+Our policy is that the faculty should nationalize all majors.

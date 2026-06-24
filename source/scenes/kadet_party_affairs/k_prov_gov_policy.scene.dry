@@ -26,7 +26,7 @@ title: We should join the Provisional Government as part of a broad coalition.
 subtitle: [? if k_prov_gov_policy = 0 : This is our current position. ?][? if k_in_gov and k_in_gov: This is already our de facto policy. ?]
 on-arrival: internationalist_dissent += 5 if k_prov_gov_policy != 0 and not k_in_gov; k_prov_gov_policy = 0;
 
-Our policy is to join the Provisional Government as part of a coalition government that may include liberals. This policy is opposed by our left wing, who would favor an all-socialist government.
+Our policy is to join the Provisional Government as part of a coalition government that may include liberals. This policy is opposed by our left wing, who would favor an all-student government.
 
 @opposition
 title: We should be in opposition to the Provisional Government.
@@ -36,8 +36,8 @@ on-arrival: social_patriot_dissent += 4 if k_prov_gov_policy < 2; defensist_diss
 Our policy is to act as an external opposition to the bourgeois Provisional Government, critiquing its policies.
 
 @opposition_2
-title: We should seek the formation of an all-socialist government to replace the Provisional Government.
+title: We should seek the formation of an all-student government to replace the Provisional Government.
 subtitle: [? if k_prov_gov_policy = 3 : This is our current position. ?]
 on-arrival: defensist_dissent += 4 if k_prov_gov_policy != 3; social_patriot_dissent += 6 if k_prov_gov_policy != 3; k_prov_gov_policy = 3; 
 
-Our policy is to aim for the replacement of the bourgeois Provisional Government by a coalition of socialist parties.
+Our policy is to aim for the replacement of the bourgeois Provisional Government by a coalition of student associations.

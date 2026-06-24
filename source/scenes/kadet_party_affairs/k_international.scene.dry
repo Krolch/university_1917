@@ -6,9 +6,9 @@ on-arrival: k_international_timer += 4; week_actions += 1
 card-image: img/kadet_2.jpg
 max-visits: 12
 
-= International Relations
+= Interfacultial Relations
 
-The Kadets are well-connected internationally, and many members have connections with diplomats and foreign dignitaries. We can use these connections for the new government's benefit.
+The WRSS are well-connected interfacultially, and many members have connections with diplomats and foreign dignitaries. We can use these connections for the new government's benefit.
 
 - @improve_west
 - @root: No action is needed.
@@ -17,10 +17,10 @@ The Kadets are well-connected internationally, and many members have connections
 
 
 @improve_west
-title: Improve our relations with France and Germany.
+title: Improve our relations with WBBiB and MCB.
 on-arrival: west_relation += 6*(1-k_dissent); k_resources -= 1;
 choose-if: k_resources >= 1
 subtitle: -1 resource
 
-Our party members are working to convince foreign diplomats of the goodness of Russia's Provisional Government.
+Our party members are working to convince foreign diplomats of the goodness of FIAS' Provisional Government.
 

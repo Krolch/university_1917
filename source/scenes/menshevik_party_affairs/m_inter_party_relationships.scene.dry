@@ -30,12 +30,12 @@ subtitle: -1 resource
 We have improved our relations with the Physics Students' Association.
 
 @k
-title: Improve our relations with the WRSS, the faculty employees liberal party.
+title: Improve our relations with the WRSS, the faculty employees liberal association.
 on-arrival: m_k_relation += ipr_change*(1-m_dissent); m_k_relation -= (ipr_change/2)*(1-m_dissent) if internationalist_strength >= defensist_strength + social_patriot_strength or m_prov_gov_policy >= 2 or m_war_policy >= 2; m_resources -= 1;
 choose-if: m_resources >= 1
 subtitle: -1 resource
 
-We are building our ties with the WRSS. [? if internationalist_strength >= defensist_strength + social_patriot_strength or m_war_policy >= 2 : Our support of Internationalism makes it more difficult to build relationships, as they consider our anti-war ideas to be treasonous. ?][? if m_prov_gov_policy >= 2: Our opposition to the Provisional Government makes improving relations difficult. ?]
+We are building our ties with the WRSS. [? if internationalist_strength >= defensist_strength + social_patriot_strength or m_war_policy >= 2 : Our support of Interdisciplinarism makes it more difficult to build relationships, as they consider our anti-war ideas to be treasonous. ?][? if m_prov_gov_policy >= 2: Our opposition to the Provisional Government makes improving relations difficult. ?]
 
 @b
 title: Can we repair our relations with the GSA?

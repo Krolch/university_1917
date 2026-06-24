@@ -1,4 +1,4 @@
-title: Left-SR Split
+title: Left-NKF Split
 view-if: left_sr_dissent > sr_split_threshold
 max-visits: 1
 on-arrival: {!
@@ -50,6 +50,6 @@ if (Q.natanson_advisor) {
 
 The Left-SRs are splitting into a new party. Most of the Left-SR leadership has resigned, and their supporters will follow them.
 
-This will result in a new election for Petrograd Soviet leadership.
+This will result in a new election for FAIS Students' Council leadership.
 
 - @soviet_leadership_election: Conduct the Soviet leadership election.
