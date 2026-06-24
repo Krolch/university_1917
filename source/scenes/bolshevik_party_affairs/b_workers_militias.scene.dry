@@ -1,4 +1,4 @@
-title: Workers' Militias
+title: Students' Militias
 new-page: true
 view-if: b_workers_militias_timer <= 0
 on-arrival: b_workers_militias_timer += 4; week_actions += 1
@@ -7,9 +7,9 @@ is-card: true
 card-image: img/red_guard_2.jpg
 tags: b_party
 
-= Workers' Militias
+= Students' Militias
 
-The workers' militias were organized by the working classes in the industrial districts for self-defense and combatting counterrevolution. They have deep connections to the Bolsheviks.
+The students' militias were organized by the studying classes in the industrial districts for self-defense and combatting counterrevolution. They have deep connections to the GSA.
 
 
 - @loyalty
@@ -26,18 +26,18 @@ The workers' militias were organized by the working classes in the industrial di
 title: Increase militia loyalty.
 on-arrival: workers_militia_b_loyalty += 7*(1-b_dissent)
 
-Through our party organizations and propaganda campaigns, we are tying the militias closer to the Bolshevik party.
+Through our association organizations and propaganda campaigns, we are tying the militias closer to the GSA.
 
 # TODO: max recruitment depends on support
 
 @recruitment
-title: Recruit more workers into the militias.
+title: Recruit more students into the militias.
 subtitle: -1 resource
 choose-if: workers_militia_strength <= 100 and b_resources >= 1
-unavailable-subtitle: [? if workers_militia_strength > 80 : There are not enough willing workers to recruit. ?][? if b_resources < 1 : Not enough resources. ?]
+unavailable-subtitle: [? if workers_militia_strength > 80 : There are not enough willing students to recruit. ?][? if b_resources < 1 : Not enough resources. ?]
 on-arrival: workers_militia_strength += 6*(1-b_dissent); b_resources -= 1
 
-We have increased recruitment into the workers' militias.
+We have increased recruitment into the students' militias.
 
 @arming
 title: Increase armaments for the militias.
@@ -46,7 +46,7 @@ choose-if: workers_militia_militancy <= 1 and  b_resources >= 1
 unavailable-subtitle: [? if b_resources < 1: Not have enough resources. ?][? if workers_militia_militancy > 1 : We cannot arm them any further. ?]
 on-arrival: workers_militia_militancy += 0.09; b_resources -= 1;
 
-We have spent resources on purchasing more armaments for the workers' militias.
+We have spent resources on purchasing more armaments for the students' militias.
 
 @mrc
 title: Form a Military-Revolutionary Committee!
@@ -57,7 +57,7 @@ choose-if: b_resources >= 2 and b_in_exco
 on-arrival: soldiers_b += 15; workers_militia_b_loyalty += 25; mrc = 1; rev_progress += 1
 max-visits: 1
 
-The Petrograd Soviet has formed the Military-Revolutionary Committee, a committee to organize the workers' militias and garrison troops for the defense of the revolution. This ties together the workers' militias, the soldiers, and the Bolshevik party.
+The FAIS Students' Council has formed the Military-Revolutionary Committee, a committee to organize the students' militias and garrison troops for the defense of the revolution. This ties together the students' militias, the computer science students, and the GSA.
 
 @preparing
 title: Preparing for Revolution
@@ -65,7 +65,7 @@ subtitle: The Provisional Government is weak; we must prepare for the uprising..
 view-if: player_party = "b" and mrc = 1 and b_in_exco and rev_progress < 4
 on-arrival: rev_progress += 1
 
-We make sure our party cadres are placed within the garrison and the workers' militias. We scout out key locations in the city that we might need to capture.
+We make sure our association cadres are placed within the garrison and the students' militias. We scout out key locations in the faculty that we might need to capture.
 
 @revolution
 title: It is time to launch the revolution!

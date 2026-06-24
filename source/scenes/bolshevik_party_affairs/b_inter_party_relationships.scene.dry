@@ -32,4 +32,4 @@ on-arrival: m_b_relation += 5*(1-b_dissent); m_b_relation -= 3 if leninist_stren
 choose-if: b_resources >= 1
 subtitle: -1 resource
 
-We have attempted to build closer ties with the SMP, our wayward cousins in the RSDLP. [? if leninist_strength >= moderate_strength : The influence of Lenin makes it difficult for us to build these relationships. ?]
+We have attempted to build closer ties with the SMP, our neighbours from the H section. [? if leninist_strength >= moderate_strength : The influence of Lenin makes it difficult for us to build these relationships. ?]

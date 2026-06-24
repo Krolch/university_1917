@@ -3,12 +3,12 @@ audio: music/RedArmy.mp3
 
 Is it time to finally launch the revolution?
 
-On our side are the troops of the garrison, [+ garrison_strength +] thousand in total. Support for the Bolsheviks is [+ garrison_b_loyalty : strength_2 +], although the our leadership will raise this. The workers' militia has [+ workers_militia_strength +] thousand members, and support for the Bolsheviks is [+ workers_militia_b_loyalty : strength_2 +].
+On our side are the troops of the garrison, [+ garrison_strength +] members in total. Support for the GSA is [+ garrison_b_loyalty : strength_2 +], although the our leadership will raise this. The students' militia has [+ workers_militia_strength +] members, and support for the GSA is [+ workers_militia_b_loyalty : strength_2 +].
 
 [? if rev_progress >= 4: The preparations for the revolution are in place. Everything is ready. ?]
 [? if rev_progress < 4: Despite our popular support, we have not yet made tactical preparations for this action. Our leadership and organization are not yet in place. ?]
 
-Opposing us will be the city militias, the loyal troops (Cossacks and Death Battalions), and the Mensheviks and SRs, most of whose members will oppose us (with the exception of the Left-SRs. [? if prov_gov_legitimacy < 40: The Provisional Government is weak and seen as illegitimate. This is good for us. ?]
+Opposing us will be the faculty security, the loyal troops (Cossacks and Death Battalions), and the SMP and NKF, most of whose members will oppose us (with the exception of the Left-NKF. [? if prov_gov_legitimacy < 40: The Provisional Government is weak and seen as illegitimate. This is good for us. ?]
 
 - @to_battle: To battle!
 - @root: No, now is not the time!
@@ -28,17 +28,16 @@ achievement: rev_failed
 = Provisional Government Victory
 
 In the end, our forces were not strong enough to take on the Provisional Government. With many
- casualties, our troops scattered, and our leadership arrested. This is the end of the Bolshev
-iks, for now. 
+ casualties, our troops scattered, and our leadership arrested. This is the end of the GSA, for now. 
 
 - @game_over
 
 @rev_win
 achievement: red_october
 
-= Bolshevik Victory
+= GSA Victory
 
-We have won! Our forces have taken control of key government locations, and arrested their leaders. The bourgeois government will be consigned to the dustbin of history, and the dictatorship of the proletariat will commence.
+We have won! Our forces have taken control of key government locations, and arrested their leaders. The employee government will be consigned to the dustbin of history, and the dictatorship of the students will commence.
 
 - @game_over
 

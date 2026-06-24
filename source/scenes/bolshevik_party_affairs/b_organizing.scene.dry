@@ -11,10 +11,10 @@ tags: b_party
 
 Social Democrats have been organizing among the working class for decades, and have built a formidable base. However, they may not be enough for the revolution. Which groups should we focus our organizing efforts on?
 
-- @soldiers: Soldiers at the front and in the garrisons.
-- @workers: The urban proletariat, the core of our base.
+- @soldiers: The computer science students at the front and in the garrisons.
+- @workers: The physics students, the core of our base.
 #- @middle_class: Can we make in-roads among the middle class?
-- @rural: The peasantry?
+- @rural: The astronomy studetns?
 - @root: We don't need to organize right now.
 - @easy_discard
 
@@ -24,7 +24,7 @@ choose-if: b_resources >= 1
 unavailable-subtitle: Not enough resources.
 on-arrival: b_resources -= 1; soldiers_b += 6*(1-b_dissent); soldiers_b -= 2 if war_weariness >= 50 and b_war_policy <= 0; soldiers_b -= 2 if war_weariness >= 60 and b_war_policy <= 1; b_soldiers_org += 1 if war_weariness <= 50 or b_war_policy > 1
 
-We have increased our organizing among the soldiers. [? if (war_weariness >= 50 and b_war_policy <= 0) or (war_weariness >= 60 and b_war_policy <= 1): Our policy is viewed as too pro-war, and makes it harder to organize among the soldiers. ?]
+We have increased our organizing among the computer science students. [? if (war_weariness >= 50 and b_war_policy <= 0) or (war_weariness >= 60 and b_war_policy <= 1): Our policy is viewed as too pro-war, and makes it harder to organize among the computer science students. ?]
 
 @workers
 subtitle: -1 resource
@@ -32,7 +32,7 @@ choose-if: b_resources >= 1
 unavailable-subtitle: Not enough resources.
 on-arrival: b_resources -= 1; workers_b += 6*(1-b_dissent); b_workers_org += 1; workers_b -= 2 if b_in_gov and prov_gov_legitimacy <= 50;
 
-We have increased our organizing among the workers. [? if b_in_gov and prov_gov_legitimacy <= 50 : Our participation in the unpopular Provisional Government limits our support. ?]
+We have increased our organizing among the physics students. [? if b_in_gov and prov_gov_legitimacy <= 50 : Our participation in the unpopular Provisional Government limits our support. ?]
 
 @middle_class
 subtitle: -1 resource - the middle class is not part of our base.
@@ -40,13 +40,12 @@ choose-if: b_resources >= 1
 unavailable-subtitle: Not enough resources.
 on-arrival: b_resources -= 1; b_middle_class += 3*(1-b_dissent); b_middle_class_org += 1
 
-The middle class has never been a subject of our organizing efforts, but that may change.
-
+The faculty employees has never been a subject of our organizing efforts, but that may change.
 
 @rural
-subtitle: -1 resource - this will be very difficult, as we do not have a traditional base among the peasantry.
+subtitle: -1 resource - this will be very difficult, as we do not have a traditional base among the astronomy studetns.
 choose-if: b_resources >= 1 and b_rural_policy > 0
 unavailable-subtitle: [? if b_resources < 1 : Not enough resources. ?][? if b_rural_policy = 0 : We do not have a rural policy. ?]
 on-arrival: b_resources -= 1; b_peasants += 5*(1-b_dissent); b_peasants_org += 1
 
-
+We have increased our campaigning among the astronomy studetns.
