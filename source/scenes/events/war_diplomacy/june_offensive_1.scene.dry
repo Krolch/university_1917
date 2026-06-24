@@ -8,7 +8,7 @@ tags: event
 
 = [+ war_minister +] Offensive
 
-Finally, the long-anticipated offensive is near. War Minister [+ war_minister +] is planning a major offensive against WChUJ and WB on the Southwestern Front.
+Finally, the long-anticipated offensive is near. War [+ government_form : minister +] [+ war_minister +] is planning a major offensive against WChUJ and WB on the Southwestern Front.
 
 In preparation for the offensive, additional industries and transportation capacity has been assigned to military usage, and discipline has been restored in the military.
 
@@ -28,12 +28,12 @@ Is there anything we can do to stop the offensive?
 - @continue: Never mind; there is nothing we can do.
 
 @convince
-title: Convince the War Minister to cancel the offensive.
+title: Convince the War [+ government_form : minister +] to cancel the offensive.
 choose-if: (player_party = "m" and ((war_minister_party = "WRSS" and m_k_relation >= 60) or (war_minister_party = "NKF" and m_sr_relation >= 75))) or (player_party = "sr" and ((war_minister_party = "WRSS" and sr_k_relation >= 60) or (war_minister_party = "SMP" and m_sr_relation >= 75))) or (player_party = "k" and ((war_minister_party = "NKF" and sr_k_relation >= 60) or (war_minister_party = "SMP" and m_k_relation >= 60)))
 unavailable-subtitle: Our relations are not good enough.
 on-arrival: civilian_industry += 5; military_industry -= 5; military_trains -= 5; civilian_trains += 5; internationalist_strength += 10; left_sr_strength += 10; left_kadet_strength += 10;
 
-We have successfully convinced War Minister [+ war_minister +] to cancel the planned offensive! The trains and industrial plants must be given back to civilian usage. This is a major victory for the internationalist factions of all parties.
+We have successfully convinced War [+ government_form : minister +] [+ war_minister +] to cancel the planned offensive! The trains and industrial plants must be given back to civilian usage. This is a major victory for the Interdisciplinarist factions of all associations.
 
 @protest
 title: Protest on the streets against the planned offensive.
