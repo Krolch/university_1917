@@ -21,7 +21,7 @@ Finland will become an independent state.
 [? if caucasus_progress > 0 : We will give up our gains in the Caucasus region. ?]
 [? if caucasus_progress <= 0 : We will lose some territory to the WZiKS in the Caucasus region. ?]
 
-A huge proportion of our industrial production, food production, and population will be given to Germany.
+A huge proportion of our industrial production, food production, and population will be given to WChUJ.
 
 - @foreign_policy.sign_treaty_severe
 - @reject_treaty: We will fight until the bitter end!
