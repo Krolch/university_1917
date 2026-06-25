@@ -1107,7 +1107,7 @@ title: Gamedev Students Association (GSA)
 choose-if: achievement_game_completed
 unavailable-subtitle: Complete the game as one of the other parties first.
 
-**Gamedev Students Association (GSA)** - The "majority" faction of the RSDLP is in fact the smaller party. Established by Vladimir Lenin's arguments in the various RSDLP congresses, the Bolsheviks are seen as more radical than the Mensheviks. They are a disciplined and centralized party of professional revolutionaries who aim to act as the vanguard of a proletarian revolution. During Lenin's exile, the remaining members in Russia have become more moderate and accommodating.
+**Gamedev Students Association (GSA)** - A group of game development enthusiasts based at the Faculty of Physics, Astronomy, and Applied Computer Science at Jagiellonian University. Their goal is to develop all skills related to video games—including those in computer science, the humanities, and mathematics. As part of its activities, they organize workshops and lectures led by students, faculty members, and industry professionals; they facilitate participation in industry conferences; and they provide access to equipment and expert consultations. They also organize Game Jams and social events. By joining GSA, one'll have the opportunity to build valuable connections with both fellow students and industry representatives. It welcomes all students interested in the broad field of games and computer science, regardless of their prior experience.
 
 - @bolsheviks_2: Yes, I am an Informatyk!
 - @party_selection: No, select a different association.
@@ -1120,7 +1120,7 @@ go-to: intros
 @mensheviks
 title: Mathematical and Natural Sciences Students Association (SMP)
 
-**Mathematical and Natural Sciences Students Association (SMP)** - The "minority" faction of the RSDLP, the Mensheviks emerged from party splits, reunifications, and further splits in the 1900s. It is in fact the larger party, seeking to organize a mass party among the working class. A social-democratic party based on the teachings of Karl Marx, the party argues that the current revolution is the "bourgeois" revolution. The task of socialists is to achieve a democratic republic and gain political and economic rights for workers. The Mensheviks are deeply divided on their attitudes towards the war and participation in a bourgeois government.
+**Mathematical and Natural Sciences Students Association (SMP)** - The association was founded in 1998, and since then it has brought together students from all majors within the Interdepartmental Studies in Mathematics and Natural Sciences. After many ups and downs and relocations, it ended up at the Jagiellonian University’s Faculty of Physics, Astronomy, and Applied Computer Science, where one can still find it today. What has always set the SMP apart is its interdisciplinary nature; unlike most student organizations of this type, in the GSA one can find mathematicians as well as computer scientists, chemists, physicists, biologists, and geologists. This diversity of interests, though sometimes causing a bit of confusion, allows members to broaden their knowledge and curiosity in fields completely different from their majors. The association members give presentations as diverse as they are, and during pancake days, pizza days, post-seminar beer outings, or the mountain trips organized several times a year, one can also get to know each other in a less academic and more friendly setting.
 
 - @mensheviks_2: Yes, I am a Semp!
 - @party_selection: No, select a different association.
@@ -1135,7 +1135,7 @@ go-to: intros
 @sr
 title: Physics Students Association (NKF)
 
-**Physics Students Association (NKF)** - The SRs are based in the Russian ideology of *narodism*, or populism, which is an agrarian socialism that sees the traditional Russian village (the *obshchina*) as the basis of a future socialist society. Their support is strongest in the peasantry, but they have substantial support among workers as well. The SRs are deeply divided between left and right wings based on their attitudes towards the war and participation in government.
+**Physics Students Association (NKF)** - The history of the Physics Students Scientific Association at the Jagiellonian University dates back to 1893 when 20 mathematics and physics students decided to establish the Mathematical-Physical Association of Students of the Jagiellonian University. In 1959, after the reactivation of the Association's activities, it split into two parts: the Physics Students Scientific Association at the Jagiellonian University and the Association of Mathematics Students at the Jagiellonian University. Since its inception, the Association has organised seminars, lectures, and conferences. Contemporary fruits of this activity include the Interuniversity Student Physics Conference, the fourth edition of which we are all co-creating. Recent achievements of the Associotion include: the publication of Professor Sokołowski's script on the Special Theory of Relativity, organising a series of winter and summer schools, a scientific trip to Chernobyl, and a meeting with (later) Nobel laureate Roger Penrose in 2016.
 
 - @sr_2: Yes, I am a NKFowicz!
 - @party_selection: No, select a different association.
@@ -1148,7 +1148,7 @@ go-to: intros
 @kadets
 title: Faculty Council of the Student Government (WRSS)
 
-**Faculty Council of the Student Government (WRSS)** - The Kadets were formerly on the left of the political spectrum, but they have moved to the center-right following the revolution. They are a liberal party whose goal is to establish a democratic republic or constitutional monarchy with moderate social reforms, while winning the war. They consider themselves a party representing all of Russian society, but are predominantly based in the middle class.
+**Faculty Council of the Student Government (WRSS)** - The Faculty Student Council of the Faculty of Physics, Astronomy, and Applied Computer Science (WRSS WFAIS) represents all students enrolled in degree programs (including the SMP) offered by the WFAIS at the Jagiellonian University. It provide information, offer advice, and work to ensure good study conditions at the Faculty. Its committees are responsible, among other things, for reviewing study programs (Faculty Teaching Committee), promoting semester-end course evaluation surveys (Faculty Teaching Committee and Faculty Information and Promotion Committee), and organizing cultural and social events for students (Faculty Project Committee).
 
 - @kadets_2: Yes, I am a WRSS!
 - @party_selection: No, select a different association.
