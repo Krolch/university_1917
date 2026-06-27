@@ -323,7 +323,7 @@ Government legitimacy: [+ prov_gov_legitimacy : legitimacy +]
 
 Chair: [+ soviet_chair +] ([+ soviet_chair_party +])
 
-Executive committee: [? if m_in_exco: SMP, ?] [? if sr_in_exco: NKF ?] [? if b_in_exco: GSA ?][? if defensist_in_exco:, SMP-Defensists ?][? if internationalist_in_exco:, SMP-Interdisciplinarists ?][? if left_sr_in_exco:, Left-SRs ?][? if right_sr_in_exco:, Right-SRs ?]
+Executive committee: [? if m_in_exco: SMP, ?] [? if sr_in_exco: NKF ?] [? if b_in_exco: GSA ?][? if defensist_in_exco:, SMP-Defensists ?][? if internationalist_in_exco:, SMP-Interdisciplinarists ?][? if left_sr_in_exco:, Left-NKF ?][? if right_sr_in_exco:, Right-NKF ?]
 
 Overal composition:
 SMP: [+ m_soviet +]%
