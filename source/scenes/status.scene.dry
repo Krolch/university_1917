@@ -134,7 +134,7 @@ Executive committee: [+ exco_parties_str +]
 
 
 Overal composition:
-SMP: [+ m_soviet +]% ([+  math.floor(Q.m_soviet * 250) +])
+SMP: [+ m_soviet +]% ({!  Math.floor(Q.m_soviet * 250) !})
 GSA: [+ b_soviet +]%
 NKF: [+ sr_soviet +]%
 Fifi: [+ anarchist_soviet +]%
