@@ -143,22 +143,20 @@ if (window && d3) {
 {!<svg id="soviet" style="width: 500px; height: 250px;"> </svg>!}
 
 {!<table>!}
-{!<tr><td>Party</td><td>Vote share</td></tr>!}
+{!<tr><td>Association</td><td>Vote share</td></tr>!}
 
 {!<tr><td><div class="box b"> </div> !} GSA: {!</td><td>!} [+ b_soviet +]% {!</td>!}
 
-[? if internationalist_soviet_votes_dec : {!<tr><td><div class="box internationalist"></div> Menshevik-Internationalists: </td><td>!} [+ internationalist_soviet_votes_dec +]% {!</td>!} ?]
+[? if internationalist_soviet_votes_dec : {!<tr><td><div class="box internationalist"></div> SMP-Interdisciplinarists: </td><td>!} [+ internationalist_soviet_votes_dec +]% {!</td>!} ?]
 
 {!<tr><td><div class="box m"> </div> !} SMP: {!</td><td>!} [+ m_soviet +]% {!</td>!}
 
-[? if defensist_soviet_votes_dec : {!<tr><td><div class="box defensist"></div> Menshevik-Defensists: </td><td>!} [+ defensist_soviet_votes_dec +]% {!</td>!} ?]
-
-[? if left_sr_soviet_votes_dec : {!<tr><td><div class="box left_sr"></div> !}Left-SRs: {!</td><td>!} [+ left_sr_soviet_votes_dec +]% {!</td>!} ?]
+[? if defensist_soviet_votes_dec : {!<tr><td><div class="box defensist"></div> SMP-Defensists: </td><td>!} [+ defensist_soviet_votes_dec +]% {!</td>!} ?]
+[? if left_sr_soviet_votes_dec : {!<tr><td><div class="box left_sr"></div> !}Left-NKF: {!</td><td>!} [+ left_sr_soviet_votes_dec +]% {!</td>!} ?]
 
 {!<tr><td><div class="box sr"> </div> !} NKF: {!</td><td>!} [+ sr_soviet +]% {!</td>!}
 
-[? if right_sr_soviet_votes_dec : {!<tr><td><div class="box right_sr"></div> !}Right-SRs: {!</td><td>!} [+ right_sr_soviet_votes_dec +]% {!</td>!} ?]
-
+[? if right_sr_soviet_votes_dec : {!<tr><td><div class="box right_sr"></div> !}Right-NKF: {!</td><td>!} [+ right_sr_soviet_votes_dec +]% {!</td>!} ?]
 {!<tr><td><div class="box a"> </div> !} Fifi: {!</td><td>!} [+ anarchist_soviet +]% {!</td>!}
 
 {!<tr><td><div class="box other"> </div> !} Others: {!</td><td>!} [+ other_soviet +]% {!</td>!}
@@ -166,13 +164,13 @@ if (window && d3) {
 
 **Blocs:**
 
-Internationalist bloc - GSA + Fifi [? if m_leadership = 1 and not m_independent : + SMP ?][? if sr_leadership = 1 and not sr_independent : + NKF ?][? if left_sr_soviet_votes_dec: + Left-SRs ?][? if internationalist_soviet_votes_dec: + Menshevik-Internationalists ?] : [+ internationalist_bloc +]%
+Interdisciplinarists bloc - GSA + Fifi [? if m_leadership = 1 and not m_independent : + SMP ?][? if sr_leadership = 1 and not sr_independent : + NKF ?][? if left_sr_soviet_votes_dec: + Left-NKF ?][? if internationalist_soviet_votes_dec: + SMP-Interdisciplinarists ?] : [+ internationalist_bloc +]%
 
-Defensist bloc - [? if m_leadership = 0 and sr_leadership = 0 and not m_independent and not sr_independent : SMP + NKF ?][? if m_leadership = 0 and sr_leadership = 1 and not m_independent : SMP ?][? if m_leadership = 1 and sr_leadership = 0 and not sr_independent : NKF ?][? if right_sr_soviet_votes_dec: + Right-SRs ?][? if defensist_soviet_votes_dec: + Menshevik-Defensists ?] : [+ defensist_bloc +]%
+Defensist bloc - [? if m_leadership = 0 and sr_leadership = 0 and not m_independent and not sr_independent : SMP + NKF ?][? if m_leadership = 0 and sr_leadership = 1 and not m_independent : SMP ?][? if m_leadership = 1 and sr_leadership = 0 and not sr_independent : NKF ?][? if right_sr_soviet_votes_dec: + Right-NKF ?][? if defensist_soviet_votes_dec: + SMP-Defensists ?] : [+ defensist_bloc +]%
 
 # note - this is not an autonomous scene; it's used as a redirect from other events.
 
-[? if internationalist_bloc > defensist_bloc : The internationalists have a plurality, and can thus choose leadership. ?]
+[? if internationalist_bloc > defensist_bloc : The interdisciplinarists have a plurality, and can thus choose leadership. ?]
 
 [? if defensist_bloc >= internationalist_bloc : The defensists have a plurality, and can thus choose leadership. ?]
 
@@ -185,7 +183,7 @@ Defensist bloc - [? if m_leadership = 0 and sr_leadership = 0 and not m_independ
 - @switch_positions
 
 @walk_out
-title: We must walk out of the Soviet rather than letting the GSA form their executive committee!
+title: We must walk out of the Council rather than letting the GSA form their executive committee!
 view-if: revolutionary_bloc > 50 and (player_party = "m" or (player_party = "sr" and not right_sr_split))
 on-arrival: soviet_chair = "Trotsky" if trotsky_available else soviet_chair = "Kamenev"; soviet_chair_party = "GSA"; in_revolutionary_coalition = 1; b_in_exco = 1; left_sr_in_exco = 1 if left_sr_split; b_threat += 1; m_b_relation -= 7 if player_party = "m"; b_sr_relation -= 7 if player_party = "sr"; m_k_relation += 5 if player_party = "m"; sr_k_relation += 5 if player_party = "sr"
 
@@ -208,7 +206,7 @@ on-arrival: soviet_chair = "Trotsky" if trotsky_available else soviet_chair = "K
 @defensist_leadership
 title: The Defensists will lead.
 view-if: defensist_bloc >= internationalist_bloc
-on-arrival: soviet_chair = "Chkheidze"; soviet_chair_party = "Menshevik" if m_leadership = 0 else soviet_chair_party = "Menshevik-Defensist"; m_in_exco = 1 if m_leadership = 0 and not m_independent; sr_in_exco = 1 if sr_leadership = 0 and not sr_independent; defensist_in_exco = 1 if defensist_split; right_sr_in_exco = 1 if right_sr_split; in_defensist_coalition = 1
+on-arrival: soviet_chair = "Chkheidze"; soviet_chair_party = "SMP" if m_leadership = 0 else soviet_chair_party = "SMP-Defensist"; m_in_exco = 1 if m_leadership = 0 and not m_independent; sr_in_exco = 1 if sr_leadership = 0 and not sr_independent; defensist_in_exco = 1 if defensist_split; right_sr_in_exco = 1 if right_sr_split; in_defensist_coalition = 1
 
 The Defensist bloc will be the leaders of the Council. Who should be appointed the Chair of the Council?
 
@@ -218,29 +216,29 @@ The Defensist bloc will be the leaders of the Council. Who should be appointed t
 
 
 @internationalist_leadership
-title: The Internationalists will lead.
+title: The Interdisciplinarists will lead.
 view-if: internationalist_bloc > defensist_bloc
 on-arrival: m_in_exco = 1 if m_leadership = 1 and not m_independent; sr_in_exco = 1 if sr_leadership = 1 and not m_independent; b_in_exco = 1; mrc_timer = 4 if mrc = 0; left_sr_in_exco = 1 if left_sr_split; internationalist_in_exco = 1 if internationalist_split; in_internationalist_coalition = 1
 go-to: trotsky_chair if ((player_party = "m" and m_leadership = 0) or (player_party = "sr" and sr_leadership = 0) or player_party = "k"); choose_i_chair if ((player_party = "m" and m_leadership = 1) or (player_party = "sr" and sr_leadership = 1) or player_party = "b")
 
-The Internationalist bloc will be the leaders of the Council.
+The Interdisciplinarists bloc will be the leaders of the Council.
 
 @internationalist_bloc_no_bolsheviks
-title: Can we form a "moderate Internationalist" bloc without the GSA and physics for business students?
+title: Can we form a "moderate Interdisciplinarist" bloc without the GSA and physics for business students?
 unavailable-subtitle: This bloc is not large enough.
 view-if: (player_party = "m" and m_leadership = 1) or (player_party = "sr" and sr_leadership = 1)
 choose-if: moderate_internationalist_bloc >= defensist_bloc and moderate_internationalist_bloc >= b_soviet
 on-arrival: m_in_exco = 1 if m_leadership = 1 and not m_independent; sr_in_exco = 1 if sr_leadership = 1 and not m_independent; internationalist_in_exco = 1 if internationalist_split; left_sr_in_exco = 1 if left_sr_split; in_anti_bolshevik_coalition = 1
 go-to: choose_i_chair
 
-We have formed a "moderate Internationalist" executive committee of the FAIS Students' Council, consisting of the [? if m_leadership = 1 and sr_leadership = 1 : SMP and NKF ?][? if m_leadership = 0 and sr_leadership = 1 : NKF ?][? if m_leadership = 1 and sr_leadership = 0 : SMP ?] but not the GSA or physics for business students.
+We have formed a "moderate Interdisciplinarist" executive committee of the FAIS Students' Council, consisting of the [? if m_leadership = 1 and sr_leadership = 1 : SMP and NKF ?][? if m_leadership = 0 and sr_leadership = 1 : NKF ?][? if m_leadership = 1 and sr_leadership = 0 : SMP ?] but not the GSA or physics for business students.
 
 @anti_bolshevik_coalition
 title: Can we form an anti-GSA "coalition" of all the non-GSA-aligned groups?
-subtitle: SMP [? if not right_sr_split: + SRs ?][? if right_sr_split: + Right-SRs ?][? if defensist_split: + Menshevik-Defensists ?][? if internationalist_split: + Menshevik-Internationalists ?] + Others
+subtitle: SMP [? if not right_sr_split: + NKF ?][? if right_sr_split: + Right-NKF ?][? if defensist_split: + SMP-Defensists ?][? if internationalist_split: + SMP-Interdisciplinarists ?] + Others
 view-if: (player_party = "m" or player_party = "sr") 
 choose-if: (m_sr_relation >= 55) and (b_threat >= 1) and anti_bolshevik_bloc >= revolutionary_bloc and anti_bolshevik_bloc >= defensist_bloc and (not player_party = "sr" or not right_sr_split)
-unavailable-subtitle: [? if m_sr_relation < 55: [? if player_party = "m": Our relations with the NKF are not good enough. ?][? if player_party = "sr": Our relations with the SMP are not good enough. ?]?][? if b_threat < 1 : The parties of the Council do not see the GSA as a threat. ?][? if anti_bolshevik_bloc < revolutionary_bloc or anti_bolshevik_bloc < defensist_bloc: The anti-GSA bloc is not large enough. ?][? if player_party = "sr" and right_sr_split : The Left-SR leadership has no interest in this sort of coalition. ?]
+unavailable-subtitle: [? if m_sr_relation < 55: [? if player_party = "m": Our relations with the NKF are not good enough. ?][? if player_party = "sr": Our relations with the SMP are not good enough. ?]?][? if b_threat < 1 : The parties of the Council do not see the GSA as a threat. ?][? if anti_bolshevik_bloc < revolutionary_bloc or anti_bolshevik_bloc < defensist_bloc: The anti-GSA bloc is not large enough. ?][? if player_party = "sr" and right_sr_split : The Left-NKF leadership has no interest in this sort of coalition. ?]
 on-arrival: m_in_exco = 1; sr_in_exco = 1 if not right_sr_split; defensist_in_exco = 1 if defensist_split; internationalist_in_exco = 1 if internationalist_split; in_anti_bolshevik_coalition = 1;
 
 We have formed a "grand coalition" of all the non-GSA-aligned forces in the Council! Who should be appointed the Council chair?
@@ -251,8 +249,8 @@ We have formed a "grand coalition" of all the non-GSA-aligned forces in the Coun
 - @sukhanov_chair
 
 @tsereteli_chair
-title: Irakli Tsereteli, the Menshevik Defensist.
-on-arrival: soviet_chair = "Tsereteli"; soviet_chair_party = "SMP" if not defensist_split else soviet_chair_party = "Menshevik-Defensist"
+title: Irakli Tsereteli, the Semp Defensist.
+on-arrival: soviet_chair = "Tsereteli"; soviet_chair_party = "SMP" if not defensist_split else soviet_chair_party = "SMP-Defensist"
 view-if: in_soviet_government = 1
 
 Irakli Tsereteli, a Semp, has been elected as the chair of the FAIS Students' Council.
@@ -262,16 +260,16 @@ Irakli Tsereteli, a Semp, has been elected as the chair of the FAIS Students' Co
 
 
 @chkheidze_chair
-title: Nikolai Chkheidze, the Menshevik Defensist.
-on-arrival: soviet_chair = "Chkheidze"; soviet_chair_party = "SMP" if not defensist_split else soviet_chair_party = "Menshevik-Defensist"
+title: Nikolai Chkheidze, the Semp Defensist.
+on-arrival: soviet_chair = "Chkheidze"; soviet_chair_party = "SMP" if not defensist_split else soviet_chair_party = "SMP-Defensist"
 
 Nikolai Chkheidze, a Semp, has been elected as the chair of the FAIS Students' Council.
 
 - @soviet_government_formation
 
 @kerensky_chair
-title: Alexander Kerensky, the Right-SR.
-on-arrival: soviet_chair = "Kerensky"; soviet_chair_party = "NKF" if not right_sr_split else soviet_chair_party = "Right-SR"
+title: Alexander Kerensky, the Right-NKFowicz.
+on-arrival: soviet_chair = "Kerensky"; soviet_chair_party = "NKF" if not right_sr_split else soviet_chair_party = "Right-NKF"
 view-if: in_soviet_government = 1
 
 Alexander Kerensky has been elected as the chair of the FAIS Students' Council.
@@ -303,25 +301,25 @@ Leon Trotsky, an Informatyk, has been elected as chair of the FAIS Students' Cou
 
 
 @martov_chair
-title: Julius Martov, the Menshevik Internationalist
+title: Julius Martov, the Menshevik Interdisciplinarist
 view-if: martov_available = 1
-on-arrival: soviet_chair = "Martov"; soviet_chair_party = "SMP"; soviet_chair_party = "Menshevik-Internationalist" if m_leadership = 0
+on-arrival: soviet_chair = "Martov"; soviet_chair_party = "SMP"; soviet_chair_party = "SMP-Interdisciplinarist" if m_leadership = 0
 
-Julius Martov, a Semp Internationalist, has been elected as chair of the FAIS Students' Council.
+Julius Martov, a Semp Interdisciplinarist, has been elected as chair of the FAIS Students' Council.
 
 - @soviet_government_formation
 
 @sukhanov_chair
-title: Nikolai Sukhanov, the Semp Internationalist.
-on-arrival: soviet_chair = "Sukhanov"; soviet_chair_party = "SMP"; soviet_chair_party = "Menshevik-Internationalist" if m_leadership = 0
+title: Nikolai Sukhanov, the Semp Interdisciplinarist.
+on-arrival: soviet_chair = "Sukhanov"; soviet_chair_party = "SMP"; soviet_chair_party = "SMP-Interdisciplinarist" if m_leadership = 0
 
-Nikolai Sukhanov, a Menshevik-aligned Social Democratic Internationalist, has been elected as chair of the FAIS Students' Council.
+Nikolai Sukhanov, a SMP-aligned Interdisciplinarist, has been elected as chair of the FAIS Students' Council.
 
 - @soviet_government_formation
 
 @spiridonova_chair
 view-if: spiridonova_available = 1
-on-arrival: soviet_chair = "Spiridonova"; soviet_chair_party = "NKF"; soviet_chair_party = "Left-SR" if sr_leadership = 0
+on-arrival: soviet_chair = "Spiridonova"; soviet_chair_party = "NKF"; soviet_chair_party = "Left-NKF" if sr_leadership = 0
 
 Maria Spiridonova, a Left-NKFowicz, has been elected as chair of the FAIS Students' Council.
 
@@ -332,7 +330,7 @@ Maria Spiridonova, a Left-NKFowicz, has been elected as chair of the FAIS Studen
 title: Can we switch our party's positions?
 view-if: (player_party = "m") or (player_party = "sr")
 
-Can we switch our party's alignment on the defensist-internationalist axis?
+Can we switch our party's alignment on the defensist-interdisciplinarist axis?
 
 - @m_switch_defensist
 #- @m_switch_nonaligned
@@ -367,14 +365,14 @@ We have switched to a non-aligned position.
 - @soviet_leadership_election: Re-do the leadership vote?
 
 @m_switch_internationalist
-title: Switch to an internationalist position.
+title: Switch to an interdisciplinarist position.
 view-if: player_party = "m" and m_leadership = 0
 choose-if: m_internationalist_strength >= m_defensist_strength
-unavailable-subtitle: The internationalists are not strong enough.
+unavailable-subtitle: The interdisciplinarists are not strong enough.
 on-arrival: m_leadership = 1; m_internationalist_strength += 10; m_internationalist_dissent -= 10; m_defensist_dissent += 20;
 go-to: m_defensist_split if m_defensist_dissent > 50
 
-We have switched our party to an internationalist position.
+We have switched our party to an interdisciplinarist position.
 
 - @soviet_leadership_election: Re-do the leadership vote?
 
@@ -384,16 +382,16 @@ We have switched our party to an internationalist position.
 title: Switch to a defensist position.
 view-if: player_party = "sr" and sr_leadership = 1
 choose-if: right_sr_strength >= left_sr_strength
-unavailable-subtitle: The Right-SRs are not strong enough.
+unavailable-subtitle: The Right-NKF are not strong enough.
 on-arrival: sr_leadership = 0; right_sr_strength += 10; right_sr_dissent -= 10; left_sr_dissent += 20;
 
 - @soviet_leadership_election: Re-do the leadership vote?
 
 @sr_switch_internationalist
-title: Switch to an internationalist position.
+title: Switch to an interdisciplinarist position.
 view-if: player_party = "sr" and sr_leadership = 0
 choose-if: left_sr_strength >= right_sr_strength
-unavailable-subtitle: The Left-SRs are not strong enough.
+unavailable-subtitle: The Left-NKF are not strong enough.
 on-arrival: sr_leadership = 1; left_sr_strength += 10; left_sr_dissent -= 10; right_sr_dissent += 20;
 
 - @soviet_leadership_election: Re-do the leadership vote?
