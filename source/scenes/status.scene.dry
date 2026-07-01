@@ -132,9 +132,25 @@ Chair: [+ soviet_chair +] ([+ soviet_chair_party +])
 
 Executive committee: [+ exco_parties_str +]
 
+{!<svg id="soviet" style="width: 100%; height: 195px;"> </svg>!}
+<script>
+(function() {
+    if (!d3 || !d3.parliament || !window._parliData || window._parliData.length === 0) return;
+    var el = document.getElementById("soviet").style.height = screenWidth/2 + "px";
+    if (!el) return;
+    var w = el.parentElement.offsetWidth || 220;
+    el.setAttribute('width', w);
+    el.setAttribute('height', Math.round(w * 0.55));
+    var parl = d3.parliament();
+    parl.width(w).height(Math.round(w * 0.55)).innerRadiusCoef(0.4);
+    parl.enter.fromCenter(false).smallToBig(false);
+    parl.exit.toCenter(false).bigToSmall(false);
+    d3.select("#soviet").datum(data).call(parl);
+})();
+</script>!}
 
 Overal composition:
-SMP: [+ m_soviet +]% ({!  Math.floor(Q.m_soviet * 250) !})
+SMP: [+ m_soviet +]% ({! Math.floor(Q.m_soviet * 250) !})
 GSA: [+ b_soviet +]%
 NKF: [+ sr_soviet +]%
 Fifi: [+ anarchist_soviet +]%
