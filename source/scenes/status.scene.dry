@@ -136,7 +136,7 @@ Executive committee: [+ exco_parties_str +]
 <script>
 (function() {
     if (!d3 || !d3.parliament || !window._parliData || window._parliData.length === 0) return;
-    var el = document.getElementById("soviet").style.height = screenWidth/2 + "px";
+    var el = document.getElementById("soviet");
     if (!el) return;
     var w = el.parentElement.offsetWidth || 220;
     el.setAttribute('width', w);
