@@ -63,55 +63,55 @@ on-display: {!
 // do the graphs
 var data = [
 {"id": "anarchist",
- "legend": "Anarchist",
+ "legend": "Fifi",
  "name": "Fifi",
  "seats": Math.round(Q.anarchist_soviet*10)},
 {"id": "b",
- "legend": "Bolshevik",
+ "legend": "GSA",
  "name": "GSA",
  "seats": Math.round(Q.b_soviet*10)},
 ];
 if (Q.internationalist_soviet_votes_dec) {
     data.push({
             "id": "internationalist",
-            "legend": "Menshevik-Internationalist",
-            "name": "Menshevik-Internationalist",
+            "legend": "SMP-Interdisciplinarists",
+            "name": "SMP-Interdisciplinarists",
             "seats": Math.round(Q.internationalist_soviet_votes_dec*10)
             });
 }
 data.push({
     "id": "m",
-    "legend": "Menshevik",
+    "legend": "SMP",
     "name": "SMP",
     "seats": Math.round(Q.m_soviet*10)
 });
 if (Q.defensist_soviet_votes_dec) {
     data.push({
             "id": "defensist",
-            "legend": "Menshevik-Defensist",
-            "name": "Menshevik-Defensist",
+            "legend": "SMP-Defensist",
+            "name": "SMP-Defensist",
             "seats": Math.round(Q.defensist_soviet_votes_dec*10)
             });
 }
 if (Q.left_sr_soviet_votes_dec) {
     data.push({
             "id": "left_sr",
-            "legend": "Left-SR",
-            "name": "Left-SR",
+            "legend": "Left-NKF",
+            "name": "Left-NKF",
             "seats": Math.round(Q.left_sr_soviet_votes_dec*10)
             });
 }
 data.push({
     "id": "sr",
-    "legend": "SR",
+    "legend": "NKF",
     "name": "NKF",
     "seats": Math.round(Q.sr_soviet*10)
 });
 if (Q.right_sr_soviet_votes_dec) {
     data.push({
             "id": "right_sr",
-            "legend": "Right-SR",
-            "name": "Right-SR",
+            "legend": "Right-NKF",
+            "name": "Right-NKF",
             "seats": Math.round(Q.right_sr_soviet_votes_dec*10)
             });
 }
