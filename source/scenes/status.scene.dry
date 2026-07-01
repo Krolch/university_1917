@@ -132,8 +132,9 @@ Chair: [+ soviet_chair +] ([+ soviet_chair_party +])
 
 Executive committee: [+ exco_parties_str +]
 
+
 Overal composition:
-SMP: [+ m_soviet +]%
+SMP: [+ m_soviet +]% (math.floor(Q.m_soviet * 250))
 GSA: [+ b_soviet +]%
 NKF: [+ sr_soviet +]%
 Fifi: [+ anarchist_soviet +]%
