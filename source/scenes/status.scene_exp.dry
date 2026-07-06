@@ -92,6 +92,7 @@ Q.exco_parties_str = Q.exco_parties.join(", ");
 Q.monthly_inflation_disp = Q.monthly_inflation.toFixed(1);
 Q.inflation_disp = Q.inflation.toFixed(1);
 Q.unemployed_disp = Q.unemployed.toFixed(1);
+
 !}
 
 = [+ player_party_name +] Status
@@ -132,9 +133,12 @@ Chair: [+ soviet_chair +] ([+ soviet_chair_party +])
 
 Executive committee: [+ exco_parties_str +]
 
+Council Overview: 
+
+
 
 Overal composition:
-SMP: [+ m_soviet +]% ({! Math.floor(Q.m_soviet * 250) !})
+SMP: [+ m_soviet +]%
 GSA: [+ b_soviet +]%
 NKF: [+ sr_soviet +]%
 Fifi: [+ anarchist_soviet +]%
