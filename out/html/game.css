@@ -541,14 +541,14 @@ table {
 /* Use CSS variables for the colors... */
 :root {
   --anarchist: #000000;
-  --b: #8B0000;
-  --m: #E3000F;
-  --d: #fc7a82;
-  --i: #ff3c00;
-  --k: #DCCA4A;
-  --sr: #c700a2;
-  --lsr: #ff006a;
-  --rsr: #c268ff;
+  --b: #943BB3;
+  --m: #41B56D;
+  --d: #6C9478;
+  --i: #3BAFB3;
+  --k: #949494;
+  --sr: #FFFFFF;
+  --lsr: #CE89E0;
+  --rsr: #BDB7B7;
   --usr: #FFBB5A;
   --ps: #fcc761;
   --m_n: #00780A;
@@ -556,7 +556,7 @@ table {
   --j_n: #3F7BC1;
   --other: #919191;
   --dashnak: #fe67ff;
-  --conservative: #0030ff;
+  --conservative: #2D0A3D;
   --cossack: #758fff;
 }
 

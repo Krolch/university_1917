@@ -44,8 +44,8 @@ tags: m_defensist, m_internationalist, m_social_patriot, m_nonfactional
 frequency: 1
 
 - @defensist: Add Revolutionary Defensist advisors.
-- @internationalist: Add Internationalist advisors.
-- @social_patriot: Add Social Patriot advisors.
+- @internationalist: Add Interdisciplinarist advisors.
+- @social_patriot: Add Student Patriot advisors.
 - @rm_main: Remove advisors instead.
 - @remove_none: Stop changing advisors.
 
@@ -291,7 +291,7 @@ on-arrival: martov_advisor = 0; internationalist_dissent += 10; m_n_advisors -= 
 tags: m_rm_advisor
 go-to: rm_main
 
-Martov is no longer an advisor. The Internationalists are not pleased.
+Martov is no longer an advisor. The Interdisciplinarists are not pleased.
 
 @remove_sukhanov
 title: Remove Sukhanov
@@ -300,7 +300,7 @@ on-arrival: sukhanov_advisor = 0; internationalist_dissent += 5; m_n_advisors -=
 tags: m_rm_advisor
 go-to: rm_main
 
-Sukhanov is no longer an advisor. The Internationalists are not pleased.
+Sukhanov is no longer an advisor. The Interdisciplinarists are not pleased.
 
 @remove_groman
 title: Remove Groman
@@ -309,7 +309,7 @@ on-arrival: groman_advisor = 0; internationalist_dissent += 5; m_n_advisors -= 1
 tags: m_rm_advisor
 go-to: rm_main
 
-Groman is no longer an advisor. The Internationalists are not pleased.
+Groman is no longer an advisor. The Interdisciplinarists are not pleased.
 
 
 @remove_axelrod
@@ -319,7 +319,7 @@ on-arrival: axelrod_advisor = 0; internationalist_dissent += 5; m_n_advisors -= 
 tags: m_rm_advisor
 go-to: rm_main
 
-Axelrod is no longer an advisor. The Internationalists are not pleased.
+Axelrod is no longer an advisor. The Interdisciplinarists are not pleased.
 
 @remove_plekhanov
 title: Remove Plekhanov
@@ -385,7 +385,7 @@ on-arrival: winiarski_advisor = 0; internationalist_dissent += 10; m_n_advisors 
 tags: m_rm_advisor
 go-to: rm_main
 
-Winiarski is no longer an advisor. The Internationalists are not pleased. 
+Winiarski is no longer an advisor. The Interdisciplinarists are not pleased. 
 
 @remove_yushchuk
 title: Remove Yushchuk

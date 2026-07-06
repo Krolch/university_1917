@@ -43,9 +43,9 @@ title: Add other advisors.
 tags: left_sr, right_sr, center_sr
 frequency: 1
 
-- @right_sr: Add Right-SR advisors.
-- @left_sr: Add Left-SR advisors.
-- @center_sr: Add Center-SR advisors.
+- @right_sr: Add Right-NKF advisors.
+- @left_sr: Add Left-NKF advisors.
+- @center_sr: Add Center-NKF advisors.
 - @rm_main: Remove advisors instead.
 - @remove_none: Stop changing advisors.
 
@@ -244,7 +244,7 @@ on-arrival: kerensky = 0; right_sr_dissent += 10; sr_n_advisors -= 1
 tags: sr_rm_advisor
 go-to: rm_main
 
-Kerensky is no longer an advisor. The Right-SRs are not pleased.
+Kerensky is no longer an advisor. The Right-NKFowiczes are not pleased.
 
 @remove_avksentiev
 title: Remove Avksentiev
@@ -255,7 +255,7 @@ on-arrival: avksentiev_advisor = 0; right_sr_dissent += 10; sr_n_advisors -= 1
 tags: sr_rm_advisor
 go-to: rm_main
 
-Avksentiev is no longer an advisor. The Right-SRs are not pleased.
+Avksentiev is no longer an advisor. The Right-NKFowiczes are not pleased.
 
 @remove_zenzinov
 title: Remove Zenzinov
@@ -264,7 +264,7 @@ on-arrival: zenzinov_advisor = 0; right_sr_dissent += 5; sr_n_advisors -= 1
 tags: sr_rm_advisor
 go-to: rm_main
 
-Zenzinov is no longer an advisor. The Right-SRs are not pleased.
+Zenzinov is no longer an advisor. The Right-NKFowiczes are not pleased.
 
 @remove_savinkov
 title: Remove Savinkov
@@ -273,7 +273,7 @@ on-arrival: savinkov_advisor = 0; right_sr_dissent += 5; sr_n_advisors -= 1
 tags: sr_rm_advisor
 go-to: rm_main
 
-Savinkov is no longer an advisor. The Right-SRs are not pleased.
+Savinkov is no longer an advisor. The Right-NKFowiczes are not pleased.
 
 @remove_breshkovskaya
 title: Remove Breshkovskaya
@@ -282,7 +282,7 @@ on-arrival: breshkovskaya_advisor = 0; right_sr_dissent += 5; sr_n_advisors -= 1
 tags: sr_rm_advisor
 go-to: rm_main
 
-Breshkovskaya is no longer an advisor. The Right-SRs are not pleased.
+Breshkovskaya is no longer an advisor. The Right-NKFowiczes are not pleased.
 
 
 @remove_spiridonova
@@ -294,7 +294,7 @@ on-arrival: spiridonova_advisor = 0; left_sr_dissent += 10; sr_n_advisors -= 1
 tags: sr_rm_advisor
 go-to: rm_main
 
-Spiridonova is no longer an advisor. The Left-SRs are not pleased.
+Spiridonova is no longer an advisor. The Left-NKFowiczes are not pleased.
 
 @remove_kamkov
 title: Remove Kamkov
@@ -303,7 +303,7 @@ on-arrival: kamkov_advisor = 0; left_sr_dissent += 5; sr_n_advisors -= 1
 tags: sr_rm_advisor
 go-to: rm_main
 
-Kamkov is no longer an advisor. The Left-SRs are not pleased.
+Kamkov is no longer an advisor. The Left-NKFowiczes are not pleased.
 
 @remove_natanson
 title: Remove Natanson
@@ -312,7 +312,7 @@ on-arrival: natanson_advisor = 0; left_sr_dissent += 5; sr_n_advisors -= 1
 tags: sr_rm_advisor
 go-to: rm_main
 
-Natanson is no longer an advisor. The Left-SRs are not pleased.
+Natanson is no longer an advisor. The Left-NKFowiczes are not pleased.
 
 @remove_chernov
 title: Remove Chernov
@@ -332,7 +332,7 @@ on-arrival: kondratiev_advisor = 0; right_sr_dissent += 10; sr_n_advisors -= 1
 tags: sr_rm_advisor
 go-to: rm_main
 
-Kondratiev is no longer an advisor. The Right-SRs are not pleased.
+Kondratiev is no longer an advisor. The Right-NKFowiczes are not pleased.
 
 @remove_krok
 title: Remove Karolina Krok
@@ -341,7 +341,7 @@ on-arrival: krok_advisor = 0; right_sr_dissent += 10; sr_n_advisors -= 1
 tags: sr_rm_advisor
 go-to: rm_main
 
-Karolina Krok is no longer an advisor. The Right-SRs are not pleased. 
+Karolina Krok is no longer an advisor. The Right-NKFowiczes are not pleased. 
 
 @remove_gmurowska
 title: Remove Aleksandra Gmurowska
@@ -350,7 +350,7 @@ on-arrival: gmurowska_advisor = 0; right_sr_dissent += 10; sr_n_advisors -= 1
 tags: sr_rm_advisor
 go-to: rm_main
 
-Aleksandra Gmurowska is no longer an advisor. The Right-SRs are not pleased. 
+Aleksandra Gmurowska is no longer an advisor. The Right-NKFowiczes are not pleased. 
 
 @remove_grewenda
 title: Remove Tomasz Grewenda
