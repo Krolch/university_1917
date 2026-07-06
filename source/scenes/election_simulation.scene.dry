@@ -500,17 +500,17 @@ Q.muslim_national_r = Q.musavat_assembly_votes_dec + Q.alash_assembly_votes_dec 
 
 **Election results:**
 
-SR: [+ sr_r +]%
+NKF: [+ sr_r +]%
 
-Ukrainian SRs: [+ ukrainian_sr_assembly_votes_dec +]%
+Ukrainian NKF: [+ ukrainian_sr_assembly_votes_dec +]%
 
-Mensheviks: [+ m_r +]%
+SMP: [+ m_r +]%
 
-Bolsheviks: [+ b_r +]%
+GSA: [+ b_r +]%
 
-Kadets: [+ k_r +]%
+WRSS: [+ k_r +]%
 
-Conservatives: [+ conservative_r +]%
+Professors: [+ conservative_r +]%
 
 Popular Socialists: [+ popular_socialist_r +]%
 
@@ -543,14 +543,14 @@ Q.other_r = Q.other_soviet_votes_dec + Q.k_soviet_votes_dec + Q.conservative_sov
 
 **Election results:**
 
-SR: [+ sr_r +]
+NKF: [+ sr_r +]
 
-Mensheviks: [+ m_r +]
+SMP: [+ m_r +]
 
-Bolsheviks: [+ b_r +]
+GSA: [+ b_r +]
 
 Popular Socialists: [+ popular_socialist_r +]
 
-Anarchists: [+ anarchist_r +]
+Fifi: [+ anarchist_r +]
 
 Other: [+ other_r +]
