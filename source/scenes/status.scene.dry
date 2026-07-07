@@ -92,6 +92,78 @@ Q.exco_parties_str = Q.exco_parties.join(", ");
 Q.monthly_inflation_disp = Q.monthly_inflation.toFixed(1);
 Q.inflation_disp = Q.inflation.toFixed(1);
 Q.unemployed_disp = Q.unemployed.toFixed(1);
+
+var status_data = [
+{"id": "anarchist",
+ "legend": "Fifi",
+ "name": "Fifi",
+ "seats": Math.round(Q.anarchist_soviet*10)},
+{"id": "b",
+ "legend": "GSA",
+ "name": "GSA",
+ "seats": Math.round(Q.b_soviet*10)},
+];
+if (Q.internationalist_soviet_votes_dec) {
+    status_data.push({
+            "id": "internationalist",
+            "legend": "SMP-Interdisciplinarist",
+            "name": "SMP-Interdisciplinarist",
+            "seats": Math.round(Q.internationalist_soviet_votes_dec*10)
+            });
+}
+status_data.push({
+    "id": "m",
+    "legend": "SMP",
+    "name": "SMP",
+    "seats": Math.round(Q.m_soviet*10)
+});
+if (Q.defensist_soviet_votes_dec) {
+    data.push({
+            "id": "defensist",
+            "legend": "SMP-Defensist",
+            "name": "SMP-Defensist",
+            "seats": Math.round(Q.defensist_soviet_votes_dec*10)
+            });
+}
+if (Q.left_sr_soviet_votes_dec) {
+    status_data.push({
+            "id": "left_sr",
+            "legend": "Left-NKF",
+            "name": "Left-NKF",
+            "seats": Math.round(Q.left_sr_soviet_votes_dec*10)
+            });
+}
+data.push({
+    "id": "sr",
+    "legend": "NKF",
+    "name": "NKF",
+    "seats": Math.round(Q.sr_soviet*10)
+});
+if (Q.right_sr_soviet_votes_dec) {
+    status_data.push({
+            "id": "right_sr",
+            "legend": "Right-NKF",
+            "name": "Right-NKF",
+            "seats": Math.round(Q.right_sr_soviet_votes_dec*10)
+            });
+}
+status_data.push({
+    "id": "other",
+    "legend": "Others",
+    "name": "Others",
+    "seats": Math.round(Q.other_soviet*10)
+});
+
+var _newSig = JSON.stringify(status_data.map(function(p){ return p.id + p.seats; }));
+    var _changed = (_newSig !== window._parliSig);
+    window._parliData = status_data;
+    if (_changed) {
+        window._parliSig = _newSig;
+        window._parliAnimate = true;
+    } else {
+        window._parliAnimate = false;
+    }
+
 !}
 
 = [+ player_party_name +] Status
@@ -132,6 +204,25 @@ Chair: [+ soviet_chair +] ([+ soviet_chair_party +])
 
 Executive committee: [+ exco_parties_str +]
 
+Council overview: 
+
+{!<svg id="status_soviet" style="width: 100%; height: 195px; display: block;"></svg>
+<script>
+(function() {
+    if (!d3 || !d3.parliament || !window._parliData || window._parliData.length === 0) return;
+    var el = document.getElementById('status_soviet');
+    if (!el) return;
+    var w = el.parentElement.offsetWidth || 220;
+    el.setAttribute('width', w);
+    el.setAttribute('height', Math.round(w * 0.55));
+    var parl = d3.parliament();
+    parl.width(w).height(Math.round(w * 0.55)).innerRadiusCoef(0.4);
+    var animate = window._parliAnimate;
+    parl.enter.fromCenter(animate).smallToBig(animate);
+    parl.exit.toCenter(animate).bigToSmall(animate);
+    d3.select('#status_soviet').datum(window._parliData).call(parl);
+})();
+</script>!}
 
 Overal composition:
 SMP: [+ m_soviet +]%
