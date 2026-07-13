@@ -214,9 +214,9 @@ Council overview:
     if (!el) return;
     var w = el.parentElement.offsetWidth;
     el.setAttribute('width', w);
-    el.setAttribute('height', w);
+    el.setAttribute('height', Math.round(w * 0.55));
     var parl = d3.parliament();
-    parl.width(w).height(w).innerRadiusCoef(0.4);
+    parl.width(w).height(Math.round(w * 0.55)).innerRadiusCoef(0.4);
     var animate = window._parliAnimate;
     parl.enter.fromCenter(animate).smallToBig(animate);
     parl.exit.toCenter(animate).bigToSmall(animate);
@@ -226,12 +226,14 @@ Council overview:
 
 Overal composition:
 SMP: [+ m_soviet +]%
+SMP: [+ m_soviet_votes_dec +]%
 GSA: [+ b_soviet +]%
 NKF: [+ sr_soviet +]%
 Fifi: [+ anarchist_soviet +]%
 Others: [+ other_soviet +]%
 [? if defensist_split: SMP-Defensists: [+ defensist_soviet_votes_dec +]% ?]
 [? if internationalist_split: SMP-Interdisciplinarists: [+ internationalist_soviet_votes_dec +]% ?]
+[? if internationalist_split: SMP-Interdisciplinarists: [+ internationalist_soviet +]% ?]
 [? if right_sr_split: Right-NKF: [+ right_sr_soviet_votes_dec +]% ?]
 [? if left_sr_split: Left-NKF: [+ left_sr_soviet_votes_dec +]% ?]
 
