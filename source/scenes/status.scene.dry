@@ -212,11 +212,11 @@ Council overview:
     if (!d3 || !d3.parliament || !window._parliData || window._parliData.length === 0) return;
     var el = document.getElementById('status_soviet');
     if (!el) return;
-    var w = el.parentElement.offsetWidth || 180;
+    var w = el.parentElement.offsetWidth;
     el.setAttribute('width', w);
-    el.setAttribute('height', Math.round(w * 0.55));
+    el.setAttribute('height', w);
     var parl = d3.parliament();
-    parl.width(w).height(Math.round(w * 0.55)).innerRadiusCoef(0.4);
+    parl.width(w).height(w).innerRadiusCoef(0.4);
     var animate = window._parliAnimate;
     parl.enter.fromCenter(animate).smallToBig(animate);
     parl.exit.toCenter(animate).bigToSmall(animate);

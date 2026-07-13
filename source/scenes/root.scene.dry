@@ -35,12 +35,12 @@ Q.month_actions = 0;
 // 0 = normal difficulty, 1 = hard mode, 2 = hard mode no saves
 Q.difficulty = 0;
 Q.historical_mode = 0;
-Q.player_party_name = "Menshevik";
+Q.player_party_name = "SMP";
 Q.player_party = "m";
-Q.party_name_map = {"m": "Menshevik",
-        "b": "Bolshevik",
-        "sr": "SR",
-        "k": "Kadet"};
+Q.party_name_map = {"m": "SMP",
+        "b": "GSA",
+        "sr": "NKF",
+        "k": "WRSS"};
 
 Q.m_is_player = 1;
 Q.sr_is_player = 0;
@@ -954,7 +954,7 @@ Q.enemy_reinforcements_timer = 0
 Q.election_type = "ca";
 Q.ca_progress = 0;
 Q.ca_scheduled = 0;
-Q.next_election_year = 1918;
+Q.next_election_year = 2028;
 Q.next_election_month = 12;
 Q.next_election_week = 0;
 Q.next_election_time = 100;
@@ -1113,7 +1113,7 @@ unavailable-subtitle: Complete the game as one of the other parties first.
 - @party_selection: No, select a different association.
 
 @bolsheviks_2
-on-arrival: player_party_name = "Bolshevik"; player_party = "b"; b_is_player = 1; m_is_player = 0; player_in_soviet = 1; player_in_exco = 0; player_in_gov = 0;
+on-arrival: player_party_name = "GSA"; player_party = "b"; b_is_player = 1; m_is_player = 0; player_in_soviet = 1; player_in_exco = 0; player_in_gov = 0;
 go-to: intros
 
 
